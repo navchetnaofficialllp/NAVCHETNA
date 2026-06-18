@@ -97,7 +97,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-black/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6 py-8 type-xs text-black/40 font-medium">
-          <span>© 2026 Navchetna Technologies. All rights reserved.</span>
+          <span>© 2026 NINELLMS SOLUTIONS LLP. All rights reserved.</span>
           <div className="flex flex-wrap items-center gap-6">
             {socialLinks.map((l) => (
               <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">{l.label}</a>

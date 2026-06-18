@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   title: "NAVCHETNA TECHNOLOGIES — Technology with Awareness",
   description:
     "From education to enterprise, we empower growth through technology, creativity, and conscious innovation.",
+  icons: {
+    icon: "https://navchenta.in/logo.svg",
+    apple: "https://navchenta.in/logo.svg",
+  },
 };
 
 export default function RootLayout({
