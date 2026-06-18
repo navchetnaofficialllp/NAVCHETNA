@@ -51,10 +51,6 @@ export function Footer() {
               Based in India, For India,<br />
               By Students of India
             </p>
-            <div className="mt-6 flex items-center gap-4">
-              <img src="https://lmlens.navchetna.tech/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception Program" className="h-10 w-auto object-contain" />
-              <img src="https://lmlens.navchetna.tech/DPIIT-header.png" alt="DPIIT Recognised" className="h-10 w-auto object-contain" />
-            </div>
 
           </div>
 
@@ -97,6 +93,12 @@ export function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Badge row */}
+        <div style={{ borderTop: "1px solid var(--footer-divider)", padding: "1.5rem 0", display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" as const }}>
+          <img src="/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception" style={{ height: "48px", width: "auto" }} />
+          <img src="/DPIIT-header.png" alt="DPIIT Recognized" className="dpiit-logo" style={{ height: "48px", width: "auto" }} />
         </div>
 
         {/* Bottom bar */}
