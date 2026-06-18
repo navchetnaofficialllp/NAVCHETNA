@@ -96,7 +96,7 @@ export function Footer() {
         </div>
 
         {/* Badge row */}
-        <div style={{ borderTop: "1px solid var(--footer-divider)", padding: "1.5rem 0", display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" as const }}>
+        <div style={{ borderTop: "1px solid rgba(0,0,0,0.08)", padding: "1.5rem 0", display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" as const }}>
           <img src="/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception" style={{ height: "48px", width: "auto" }} />
           <img src="/DPIIT-header.png" alt="DPIIT Recognized" className="dpiit-logo" style={{ height: "48px", width: "auto" }} />
         </div>
