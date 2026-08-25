@@ -5,6 +5,7 @@ import { Products } from "@/components/sections/Products";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
+import { LatestInsights } from "@/components/sections/LatestInsights";
 import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
 
       {/* FAQ */}
       <FAQ />
+
+      {/* Latest Insights / Blogs */}
+      <LatestInsights />
 
       {/* Final CTA */}
       <CTA />

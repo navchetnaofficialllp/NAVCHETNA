@@ -11,8 +11,8 @@ export default function AyushmaanProfilePage() {
       <div className="max-w-4xl mx-auto px-6 sm:px-12">
         {/* Breadcrumb */}
         <ScrollReveal>
-          <div className="mb-10 flex items-center gap-2 text-[11px] font-semibold tracking-widest text-black/40 uppercase">
-            <Link href="/news" className="hover:text-black transition-colors">News</Link>
+          <div className="mb-10 flex items-center gap-2 text-[11px] font-semibold tracking-widest text-black/50 uppercase">
+            <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
             <span>/</span>
             <span className="hover:text-black transition-colors cursor-pointer">Company Updates</span>
             <span>/</span>
@@ -23,7 +23,7 @@ export default function AyushmaanProfilePage() {
         {/* Profile Header */}
         <ScrollReveal delay={50}>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-10">
-            <div className="relative w-40 h-40 md:w-56 md:h-56 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-black/[0.08]">
+            <div className="relative w-40 h-40 md:w-56 md:h-56 shrink-0  overflow-hidden shadow-lg border border-black/[0.08]">
               <Image 
                 src="/assets/ayushmaan.jpg" 
                 alt="Ayushmaan Soni"
@@ -36,32 +36,32 @@ export default function AyushmaanProfilePage() {
             <div className="flex flex-col flex-1 pt-1">
               <h1 
                 className="text-3xl md:text-4xl mb-2 bg-clip-text text-transparent bg-gradient-to-r from-black via-[#7D4835] to-[#333]"
-                style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 500, letterSpacing: "-0.03em" }}
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 500, letterSpacing: "-0.04em" }}
               >
                 Ayushmaan Soni
               </h1>
-              <p className="text-[15px] font-medium tracking-wide text-black/60 uppercase mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                CEO | CTO | Founder <span className="text-black/30 mx-2">•</span> Navchetna Technologies
+              <p className="text-[15px] font-medium tracking-wide text-black/80 uppercase mb-5" style={{ fontFamily: "var(--font-body)" }}>
+                CEO | CTO | Founder <span className="text-black/50 mx-2">•</span> Navchetna Technologies
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
-                  <Lightbulb className="w-3.5 h-3.5 text-black/50" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                  <Lightbulb className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Mathematical Researcher
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
-                  <Briefcase className="w-3.5 h-3.5 text-black/50" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                  <Briefcase className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Tech Entrepreneur
                 </span>
               </div>
 
-              <div className="flex flex-col gap-2 text-[13px] text-black/50" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="flex flex-col gap-2 text-[13px] text-black/80" style={{ fontFamily: "var(--font-body)" }}>
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-black/40" />
+                  <Calendar className="w-4 h-4 text-black/50"  strokeWidth={1.5} />
                   Born February 14, 2005
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-black/40" />
+                  <MapPin className="w-4 h-4 text-black/50"  strokeWidth={1.5} />
                   Jodhpur, Rajasthan, India
                 </div>
               </div>
@@ -74,11 +74,11 @@ export default function AyushmaanProfilePage() {
           <div className="relative mb-12 pl-8 md:pl-12 py-2">
             <span 
               className="absolute -top-4 left-0 text-7xl md:text-9xl text-black/[0.06] leading-none pointer-events-none select-none" 
-              style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}
+              style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}
             >
               "
             </span>
-            <p className="relative z-10 text-base md:text-xl text-black/80 leading-relaxed" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.01em" }}>
+            <p className="relative z-10 text-base md:text-xl text-black/80 leading-relaxed" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
               From a curious child dismantling toys to JEE Mains Jodhpur topper (99.91%) and mathematical researcher — the extraordinary journey of a visionary tech entrepreneur revolutionizing AI education.
             </p>
           </div>
@@ -88,10 +88,10 @@ export default function AyushmaanProfilePage() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16 lg:gap-20">
           
           {/* Left Column: Biography */}
-          <div className="space-y-8 text-black/85" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13.5px", lineHeight: 1.7 }}>
+          <div className="space-y-8 text-black/85" style={{ fontFamily: "var(--font-body)", fontSize: "13.5px", lineHeight: 1.7 }}>
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>The Journey Begins</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>The Journey Begins</h2>
                 <p className="mb-4">
                   I was born on February 14, 2005, in Jodhpur, Rajasthan, into a middle class family. Life was not always smooth. My family went through financial and personal struggles, and those challenges shaped me into who I am today. Instead of breaking me, they became the reason I developed a relentless determination to grow and succeed.
                 </p>
@@ -103,7 +103,7 @@ export default function AyushmaanProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Academic Transformation</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Academic Transformation</h2>
                 <p className="mb-4">
                   I completed my schooling at Kendriya Vidyalaya Number 1 AFS Jodhpur until Class 11. Until Class 7, academics were not my strength. Everything changed when I met my mentor, Mr. Santosh Singh. His tuition classes gave me not only knowledge but also a new outlook on learning. That shift transformed me completely.
                 </p>
@@ -115,7 +115,7 @@ export default function AyushmaanProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>JEE Success & Legal Battle</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>JEE Success & Legal Battle</h2>
                 <p className="mb-4">
                   My first JEE attempt earned me 99.16 percentile in JEE Mains and 207 marks in JEE Advanced, though I missed qualifying in physics. I refused to stop there. I took a drop year and worked harder. In my second attempt, I became Jodhpur's topper in JEE Mains with 99.91 percentile.
                 </p>
@@ -127,7 +127,7 @@ export default function AyushmaanProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Entrepreneurial Journey</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Entrepreneurial Journey</h2>
                 <p className="mb-4">
                   At the age of 17, while still in Class 12, I began working as a software developer at Secure E Techno World Private Limited in Jodhpur. After a year, I left my job to dedicate myself fully to my entrepreneurial journey.
                 </p>
@@ -142,7 +142,7 @@ export default function AyushmaanProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Birth of Osmium AI & Navchetna</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Birth of Osmium AI & Navchetna</h2>
                 <p className="mb-4">
                   To keep exploring bigger ideas, I intentionally joined a private university. There, I met some of my closest collaborators, Varun, Swastik, Suman, and Dhraval. Together we participated in a hackathon where the idea of Osmium AI was born.
                 </p>
@@ -157,7 +157,7 @@ export default function AyushmaanProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Mathematical Research & Innovation</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Mathematical Research & Innovation</h2>
                 <p className="mb-4">
                   Outside of technology, mathematics is a part of me. I often say that mathematics is like a girlfriend to me. It is something I cannot live without. One day, while reading about the Riemann Hypothesis, a question came to me: Why cannot we define factorials for negative numbers?
                 </p>
@@ -172,7 +172,7 @@ export default function AyushmaanProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Philosophy & Vision</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Philosophy & Vision</h2>
                 <p className="mb-4">
                   Today, I continue to learn, to create, and to innovate. My journey from a curious child dismantling toys to becoming the founder of multiple companies and contributing to mathematics has been full of challenges. But every obstacle has been a lesson, every failure a stepping stone.
                 </p>
@@ -190,26 +190,26 @@ export default function AyushmaanProfilePage() {
           <div className="space-y-6">
             {/* Leadership */}
             <ScrollReveal delay={150}>
-              <div className="p-6 rounded-xl bg-black/[0.02] border border-black/[0.06]">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/40 mb-6 flex items-center gap-2">
-                  <Briefcase className="w-3.5 h-3.5" /> Leadership Positions
+              <div className="p-6  bg-black/[0.02] border border-black/[0.06]">
+                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                  <Briefcase className="w-3.5 h-3.5"  strokeWidth={1.5} /> Leadership Positions
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex flex-col">
                     <span className="text-[12.5px] font-semibold text-black/80">CEO, Founder & CTO</span>
-                    <span className="text-[11px] text-black/50 mt-0.5">NINELLMS SOLUTIONS LLP</span>
+                    <span className="text-[11px] text-black/80 mt-0.5">NINELLMS SOLUTIONS LLP</span>
                   </li>
                   <li className="flex flex-col">
                     <span className="text-[12.5px] font-semibold text-black/80">CEO & Founder</span>
-                    <span className="text-[11px] text-black/50 mt-0.5">NINEONE15SQ TECHNOLOGIES PVT LTD</span>
+                    <span className="text-[11px] text-black/80 mt-0.5">NINEONE15SQ TECHNOLOGIES PVT LTD</span>
                   </li>
                   <li className="flex flex-col">
                     <span className="text-[12.5px] font-semibold text-black/80">Director</span>
-                    <span className="text-[11px] text-black/50 mt-0.5">COSMONEXTECH SOLUTIONS PVT LTD</span>
+                    <span className="text-[11px] text-black/80 mt-0.5">COSMONEXTECH SOLUTIONS PVT LTD</span>
                   </li>
                   <li className="flex flex-col">
                     <span className="text-[12.5px] font-semibold text-black/80">CTO</span>
-                    <span className="text-[11px] text-black/50 mt-0.5">TANTRIX SOLUTIONS OPC PVT LTD</span>
+                    <span className="text-[11px] text-black/80 mt-0.5">TANTRIX SOLUTIONS OPC PVT LTD</span>
                   </li>
                 </ul>
               </div>
@@ -217,29 +217,29 @@ export default function AyushmaanProfilePage() {
 
             {/* Quick Stats */}
             <ScrollReveal delay={200}>
-              <div className="p-7 rounded-xl bg-white border border-black/[0.06] shadow-sm">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/40 mb-6 flex items-center gap-2">
-                  <Award className="w-3.5 h-3.5" /> Key Achievements
+              <div className="p-7  bg-white border border-black/[0.06] shadow-sm">
+                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                  <Award className="w-3.5 h-3.5"  strokeWidth={1.5} /> Key Achievements
                 </h3>
                 
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Academic & Research</h4>
-                    <ul className="space-y-2.5 text-[12px] text-black/60 leading-relaxed">
+                    <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>JEE Mains Jodhpur Topper - 99.91%</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Google Associate Android Developer certified</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Mathematical research under review at Mathematical Gazette</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Theory of Factorial of Complex Numbers</span>
                       </li>
                     </ul>
@@ -247,21 +247,21 @@ export default function AyushmaanProfilePage() {
 
                   <div>
                     <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Business & Innovation</h4>
-                    <ul className="space-y-2.5 text-[12px] text-black/60 leading-relaxed">
+                    <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Founded multiple companies generating crores in revenue</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Created Osmium AI - revolutionary AI education platform</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Legal case: Ayushmaan Soni vs Union of India</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.25 h-1.25 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
                         <span>Trained custom large language models</span>
                       </li>
                     </ul>
@@ -275,12 +275,12 @@ export default function AyushmaanProfilePage() {
 
         {/* Back Link */}
         <ScrollReveal>
-          <div className="mt-12 pt-6 border-t border-dotted border-black/20">
+          <div className="mt-12 pt-6 border-t  border-black/20">
             <Link 
               href="/about" 
-              className="inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-black/80 hover:text-black transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4"  strokeWidth={1.5} />
               Back to Company Profile
             </Link>
           </div>

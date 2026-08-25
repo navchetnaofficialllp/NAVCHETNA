@@ -13,7 +13,7 @@ const faqs = [
   { q: "What is Osmium AI and how does it help students?", a: "Osmium AI is our AI-powered learning platform. It helps students prepare smarter by generating personalized study material, quizzes, mock tests, and even career guidance, like a mentor that adapts to your learning style." },
   { q: "What is Natraj and who can use it?", a: "Natraj is an AR/AI-based product for learning anatomy. By pointing your phone's camera at a body part, you can view realistic 3D models of bones or organs in place. Medical students, biology learners, or educators can use it to make complex concepts more interactive and engaging." },
   { q: "How do you charge for services?", a: "Pricing depends on the scope and type of project. We keep it flexible, whether for individuals, startups, or enterprises, so clients only pay for what they really need." },
-  { q: "How can I contact Navchetna for projects or support?", a: "You can reach us through our website or email. We respond quickly and also provide documentation, training, and ongoing support whenever required." },
+  { q: "How can I contact Navchetna for projects or support?", a: "Schedule a meeting through our website and choose a time that works for you. We can then discuss your project, support needs, and the right next step." },
 ];
 
 export function FAQ() {
@@ -25,18 +25,18 @@ export function FAQ() {
 
       <div className="section-container">
         <div className="grid gap-12 lg:grid-cols-[minmax(240px,0.6fr)_minmax(0,1.4fr)]">
-          {/* Left panel — no wrapper */}
+          {/* Left panel */}
           <ScrollReveal>
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">FAQ</p>
+              <p className="mb-4" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.16em", color: "#8b8b8b" }}>FAQ</p>
               <h2 className="section-heading max-w-sm">
                 Common
                 {" "}
-                <span className="serif-italic">inquiries</span>
+                <span style={{ color: "#8b8b8b" }}>inquiries</span>
               </h2>
               <p
                 className="mb-8 max-w-sm"
-                style={{ color: "rgba(0,0,0,0.48)", lineHeight: 1.65, fontSize: "0.9rem" }}
+                style={{ color: "rgba(0,0,0,0.45)", lineHeight: 1.62, fontSize: "0.9rem" }}
               >
                 Find answers to common questions about our services, products, and how we work.
               </p>
@@ -55,25 +55,25 @@ export function FAQ() {
                 >
                   Still have questions?
                 </h3>
-                <p className="mb-5 text-sm text-black/46">
+                <p className="mb-5 text-sm" style={{ color: "#8b8b8b" }}>
                   Get in touch with our team for personalized assistance.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-black/78 transition-opacity hover:opacity-70"
+                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/70 transition-opacity hover:opacity-60"
                 >
                   Reach out to us
-                  <ArrowUpRight weight="bold" className="size-3.5" />
+                  <ArrowUpRight weight="bold" className="size-3.5"  strokeWidth={1.5} />
                 </Link>
               </div>
             </div>
           </ScrollReveal>
 
-          {/* Right — accordion, no wrapper */}
+          {/* Right — accordion */}
           <div className="flex flex-col">
             {faqs.map((faq, index) => (
               <ScrollReveal key={faq.q} delay={index * 35}>
-                <div className="py-1 border-b border-dotted border-black/[0.15]">
+                <div className="py-1" style={{ borderBottom: "1px solid rgba(10,10,10,0.12)" }}>
                   <button
                     onClick={() => setOpenIdx(openIdx === index ? null : index)}
                     className="flex w-full items-center justify-between gap-6 py-4 text-left"
@@ -82,7 +82,7 @@ export function FAQ() {
                       style={{
                         fontFamily: "var(--font-waldenburg)",
                         fontSize: "clamp(0.98rem, 1.4vw, 1.08rem)",
-                        fontWeight: 500,
+                        fontWeight: 400,
                         letterSpacing: "-0.015em",
                         color: "rgba(0,0,0,0.8)",
                       }}
@@ -90,10 +90,11 @@ export function FAQ() {
                       {faq.q}
                     </span>
                     <span
-                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
+                      className="flex h-6 w-6 shrink-0 items-center justify-center"
                       style={{
                         background: openIdx === index ? "#0A0A0A" : "rgba(0,0,0,0.04)",
                         color: openIdx === index ? "#FFFFFF" : "rgba(0,0,0,0.32)",
+                        borderRadius: "2px",
                       }}
                     >
                       {openIdx === index ? (
@@ -113,7 +114,7 @@ export function FAQ() {
                   >
                     <p
                       className="max-w-3xl pb-4 pr-10"
-                      style={{ color: "rgba(0,0,0,0.48)", lineHeight: 1.68, fontSize: "0.9rem" }}
+                      style={{ color: "rgba(0,0,0,0.45)", lineHeight: 1.62, fontSize: "0.9rem" }}
                     >
                       {faq.a}
                     </p>

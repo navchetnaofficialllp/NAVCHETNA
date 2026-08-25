@@ -5,10 +5,10 @@ import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const importantProducts = [
-  { name: "Osmium AI", tag: "EdTech Platform", bg: "/assets/osmium (1).png", href: "/news/product/osmium" },
-  { name: "Natraj", tag: "AR Anatomy", bg: "/assets/nataraj.png", href: "/news/product/natraj" },
-  { name: "Aegis Auth", tag: "Identity Management", bg: "/assets/aegis1.png", href: "/news/product/aegis" },
-  { name: "Kriya", tag: "Organizational AI", bg: "/assets/kriya1.png", href: "/news/product/kriya" },
+  { name: "Osmium AI", tag: "EdTech Platform", bg: "/assets/osmium (1).png", href: "/blog/product/osmium" },
+  { name: "Natraj", tag: "AR Anatomy", bg: "/assets/nataraj.png", href: "/blog/product/natraj" },
+  { name: "Aegis Auth", tag: "Identity Management", bg: "/assets/aegis1.png", href: "/blog/product/aegis" },
+  { name: "Kriya", tag: "Organizational AI", bg: "/assets/kriya1.png", href: "/blog/product/kriya" },
 ];
 
 export function Products() {
@@ -22,28 +22,28 @@ export function Products() {
           {/* Left copy — sticky */}
           <ScrollReveal>
             <div className="lg:sticky lg:top-28 lg:self-start">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Products</p>
+              <p className="mb-4" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.16em", color: "#8b8b8b" }}>Products</p>
               <h2 className="section-heading max-w-sm">
                 Powered by
                 {" "}
-                <span className="serif-italic">conscious intelligence.</span>
+                <span style={{ color: "#8b8b8b" }}>conscious intelligence.</span>
               </h2>
 
               <div className="mb-6 flex flex-wrap gap-2">
                 {["Intelligence Redefined", "Fluid Collaboration", "Endless Possibilities"].map((step) => (
                   <span
                     key={step}
-                    className="text-[11px] font-medium text-black/54 uppercase tracking-widest"
+                    className="text-[11px] font-medium text-black/45 uppercase tracking-widest"
                   >
                     {step} {step !== "Endless Possibilities" && "·"}
                   </span>
                 ))}
               </div>
 
-              {/* Dotted divider */}
+              {/* Hairline divider */}
               <div className="section-divider mb-6" />
 
-              <p style={{ color: "rgba(0,0,0,0.48)", lineHeight: 1.65, fontSize: "0.88rem" }} className="mb-6">
+              <p style={{ color: "rgba(0,0,0,0.45)", lineHeight: 1.62, fontSize: "0.88rem" }} className="mb-6">
                 Discover how conscious intelligence and advanced technology unlock growth,
                 creativity, and transformation across every dimension of life.
               </p>
@@ -54,9 +54,8 @@ export function Products() {
             </div>
           </ScrollReveal>
 
-          {/* Right — open product list */}
+          {/* Right — product grid */}
           <div className="flex flex-col gap-10">
-            {/* Cards for important ones */}
             <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-x-6 sm:grid-cols-2">
               {importantProducts.map((product, index) => (
                 <ScrollReveal key={product.name} delay={index * 45}>
@@ -66,7 +65,7 @@ export function Products() {
                     target={product.href.startsWith("http") ? "_blank" : undefined}
                     rel={product.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   >
-                    <div className="relative mb-3 aspect-[16/11] w-full overflow-hidden rounded-sm bg-black/[0.02] border border-black/[0.08] transition-shadow duration-500">
+                    <div className="relative mb-3 aspect-[16/11] w-full overflow-hidden bg-black/[0.02] transition-all duration-300" style={{ borderRadius: "2px", border: "1px solid rgba(10,10,10,0.12)" }}>
                       <Image
                         src={product.bg}
                         alt={product.name}
@@ -83,16 +82,16 @@ export function Products() {
                         style={{
                           fontFamily: "var(--font-waldenburg)",
                           fontSize: "clamp(0.95rem, 3vw, 1.15rem)",
-                          fontWeight: 500,
+                          fontWeight: 400,
                           letterSpacing: "-0.015em",
-                          color: "var(--heading-color)",
+                          color: "#0A0A0A",
                           lineHeight: 1.2
                         }}
                       >
                         {product.name}
                       </h3>
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] sm:tracking-[0.16em] text-black/40">
+                        <span style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "9px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.14em", color: "#8b8b8b" }}>
                           {product.tag}
                         </span>
                       </div>

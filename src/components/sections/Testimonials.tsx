@@ -92,28 +92,28 @@ export function Testimonials() {
     <section className="relative overflow-hidden py-10 md:py-14 bg-white">
       <div className="section-sep" />
 
-      {/* Section header — centred */}
+      {/* Section header */}
       <div className="section-container text-center mb-10">
-        <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Testimonials</p>
+        <p className="mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.16em", color: "#8b8b8b" }}>Testimonials</p>
         <h2
           className="text-black"
           style={{
             fontFamily: "var(--font-waldenburg)",
             fontSize: "clamp(1.65rem, 4vw, 2.6rem)",
-            fontWeight: 500,
+            fontWeight: 400,
             letterSpacing: "-0.03em",
-            lineHeight: 1.1,
+            lineHeight: 1.06,
           }}
         >
           What our clients{" "}
-          <span className="serif-italic">are saying</span>
+          <span style={{ color: "#8b8b8b" }}>are saying</span>
         </h2>
         <p
           className="mt-3 mx-auto"
           style={{
-            color: "rgba(0,0,0,0.46)",
+            color: "rgba(0,0,0,0.45)",
             fontSize: "0.9rem",
-            lineHeight: 1.65,
+            lineHeight: 1.62,
             maxWidth: "38ch",
           }}
         >
@@ -121,7 +121,7 @@ export function Testimonials() {
         </p>
       </div>
 
-      {/* Carousel wrapper with left/right fade masks */}
+      {/* Carousel with edge fade */}
       <div
         className="relative w-full overflow-hidden"
         style={{
@@ -131,7 +131,6 @@ export function Testimonials() {
             "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
         }}
       >
-        {/* Scrolling track — inline-flex so cards stay on one row */}
         <div
           ref={trackRef}
           className="flex gap-5 w-max"
@@ -140,27 +139,30 @@ export function Testimonials() {
           {cards.map((t, i) => (
             <div
               key={`${t.name}-${i}`}
-              className="flex flex-col justify-between rounded-2xl bg-white border border-black/[0.07] p-7 shrink-0"
+              className="flex flex-col justify-between bg-white shrink-0"
               style={{
                 width: "clamp(280px, 30vw, 380px)",
                 minHeight: "220px",
+                border: "1px solid rgba(10,10,10,0.12)",
+                borderRadius: "2px",
+                padding: "28px",
               }}
             >
               {/* Quote */}
               <p
-                className="text-black/70 leading-relaxed"
+                className="text-black/80"
                 style={{
                   fontFamily: "var(--font-body)",
                   fontSize: "0.875rem",
-                  lineHeight: 1.72,
+                  lineHeight: 1.62,
                 }}
               >
                 {t.quote}
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 mt-6 pt-5 border-t border-dotted border-black/[0.12]">
-                <div className="relative h-10 w-10 shrink-0 rounded-full overflow-hidden bg-black/[0.04] border border-black/[0.07]">
+              <div className="flex items-center gap-3 mt-6 pt-5" style={{ borderTop: "1px solid rgba(10,10,10,0.12)" }}>
+                <div className="relative h-10 w-10 shrink-0 overflow-hidden bg-black/[0.04]" style={{ borderRadius: "2px", border: "1px solid rgba(10,10,10,0.08)" }}>
                   <Image
                     src={t.avatar}
                     alt={t.name}
@@ -184,7 +186,7 @@ export function Testimonials() {
                   <p
                     style={{
                       fontSize: "0.73rem",
-                      color: "rgba(0,0,0,0.44)",
+                      color: "#8b8b8b",
                       marginTop: "1px",
                     }}
                   >

@@ -71,16 +71,16 @@ export default function TermsPage() {
               <h1
                 className="text-black text-balance"
                 style={{
-                  fontFamily: "var(--font-waldenburg)",
+                  fontFamily: "var(--font-heading)",
                   fontSize: "clamp(2.5rem, 5vw, 4rem)",
                   fontWeight: 400,
-                  letterSpacing: "-0.03em",
+                  letterSpacing: "-0.04em",
                   lineHeight: 1.05,
                 }}
               >
-                Terms of <span className="serif-italic">Service.</span>
+                Terms of Service.
               </h1>
-              <p className="mt-6 max-w-2xl text-pretty text-black/50" style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: 1.7 }}>
+              <p className="mt-6 max-w-2xl text-pretty text-black/80" style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: 1.7 }}>
                 Effective Date: January 1, 2025
               </p>
             </div>
@@ -97,8 +97,8 @@ export default function TermsPage() {
                   <h2 
                     className="text-2xl text-black mb-4" 
                     style={{ 
-                      fontFamily: "var(--font-waldenburg)",
-                      letterSpacing: "-0.02em",
+                      fontFamily: "var(--font-heading)",
+                      letterSpacing: "-0.04em",
                       fontWeight: 500
                     }}
                   >
@@ -108,7 +108,7 @@ export default function TermsPage() {
                     {sec.content.map((paragraph, pIdx) => (
                       <p 
                         key={pIdx} 
-                        className="text-black/60" 
+                        className="text-black/80" 
                         style={{ fontFamily: "var(--font-body)", lineHeight: 1.7, fontSize: "0.98rem" }}
                       >
                         {paragraph.includes("hello@navchetna.tech") ? (

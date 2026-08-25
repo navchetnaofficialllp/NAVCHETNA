@@ -14,7 +14,7 @@ export function TrustedBy() {
 
       <div className="section-container">
         <ScrollReveal>
-          <p className="section-eyebrow text-center mb-10">
+          <p className="text-center mb-10" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.16em", color: "#8b8b8b" }}>
             Trusted by teams building with intent
           </p>
         </ScrollReveal>
@@ -41,7 +41,7 @@ export function TrustedBy() {
                 {logos.map((logo) => (
                   <div
                     key={`${set}-${logo.alt}`}
-                    className={`relative ${logo.w} ${logo.h} opacity-35 hover:opacity-65 transition-opacity duration-300 grayscale flex-shrink-0`}
+                    className={`relative ${logo.w} ${logo.h} opacity-30 hover:opacity-60 transition-opacity duration-300 grayscale flex-shrink-0`}
                   >
                     <Image
                       src={logo.src}

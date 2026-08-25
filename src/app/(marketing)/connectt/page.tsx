@@ -58,22 +58,22 @@ export default function ConnecttPage() {
         <div className="section-container relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.03] px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-black/50 mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.03] px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-black/80 mb-6">
                 <span className="size-1.5 rounded-full bg-green-500 animate-pulse" />
                 Now Available
               </span>
               <h1
                 className="text-black text-balance"
                 style={{
-                  fontFamily: "var(--font-waldenburg)",
+                  fontFamily: "var(--font-heading)",
                   fontSize: "clamp(2.4rem, 5vw, 3.6rem)",
                   fontWeight: 500,
-                  letterSpacing: "-0.03em",
+                  letterSpacing: "-0.04em",
                   lineHeight: 1.05,
                 }}
               >
                 Meetings that{" "}
-                <span className="serif-italic">think with you.</span>
+                think with you.
               </h1>
               <p
                 className="mt-6 max-w-xl"
@@ -111,7 +111,7 @@ export default function ConnecttPage() {
       {/* Hero Image */}
       <section className="section-container py-8 md:py-12">
         <ScrollReveal>
-          <div className="relative w-full aspect-[16/9] overflow-hidden rounded-2xl border border-black/[0.07]">
+          <div className="relative w-full aspect-[16/9] overflow-hidden  border border-black/[0.07]">
             <Image
               src="/assets/connecttbg.png"
               alt="Connectt.live — AI Video Meeting Platform"
@@ -128,7 +128,7 @@ export default function ConnecttPage() {
       {/* Stats */}
       <section className="section-container py-12 md:py-16">
         <ScrollReveal>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-px border border-black/[0.07] rounded-2xl overflow-hidden">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-px border border-black/[0.07]  overflow-hidden">
             {stats.map((s, i) => (
               <div
                 key={i}
@@ -137,16 +137,16 @@ export default function ConnecttPage() {
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-waldenburg)",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "clamp(1.5rem, 3vw, 2rem)",
                     fontWeight: 500,
-                    letterSpacing: "-0.03em",
+                    letterSpacing: "-0.04em",
                     color: "#000",
                   }}
                 >
                   {s.value}
                 </span>
-                <span className="mt-1.5 text-[11px] font-medium text-black/40 uppercase tracking-wider">
+                <span className="mt-1.5 text-[11px] font-medium text-black/50 uppercase tracking-wider">
                   {s.label}
                 </span>
               </div>
@@ -162,7 +162,7 @@ export default function ConnecttPage() {
             Platform
           </p>
           <h2 className="section-heading mb-10">
-            Everything your team <span className="serif-italic">needs.</span>
+            Everything your team needs.
           </h2>
         </ScrollReveal>
         <div className="section-divider mb-12" />
@@ -173,7 +173,7 @@ export default function ConnecttPage() {
                 <h3
                   className="mb-2"
                   style={{
-                    fontFamily: "var(--font-waldenburg)",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "1.05rem",
                     fontWeight: 500,
                     letterSpacing: "-0.015em",
@@ -194,7 +194,7 @@ export default function ConnecttPage() {
       <section className="section-container py-14 md:py-20">
         <ScrollReveal>
           <div
-            className="relative isolate overflow-hidden rounded-2xl flex flex-col items-center text-center"
+            className="relative isolate overflow-hidden  flex flex-col items-center text-center"
             style={{
               background: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%)",
               border: "1px solid rgba(0,0,0,0.08)",
@@ -208,19 +208,19 @@ export default function ConnecttPage() {
             <h2
               className="mb-4 text-balance"
               style={{
-                fontFamily: "var(--font-waldenburg)",
+                fontFamily: "var(--font-heading)",
                 fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                 fontWeight: 400,
                 lineHeight: 1.1,
-                letterSpacing: "-0.03em",
+                letterSpacing: "-0.04em",
                 color: "#000",
               }}
             >
               Ready to upgrade your{" "}
               <span
                 style={{
-                  fontFamily: "'Instrument Serif', serif",
-                  fontStyle: "italic",
+                  fontFamily: "var(--font-heading)",
+                  fontStyle: "normal",
                   background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",

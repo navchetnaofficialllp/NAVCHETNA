@@ -141,7 +141,7 @@ export default function ProductsPage() {
       <section
         className="relative pt-28 sm:pt-32 md:pt-36 pb-10"
         style={{
-          background: "linear-gradient(180deg, rgba(72,105,133,0.04) 0%, rgba(125,72,53,0.03) 40%, #ffffff 100%)",
+          background: "#ffffff",
         }}
       >
         <div className="grid-overlay" />
@@ -151,15 +151,15 @@ export default function ProductsPage() {
               <h1
                 className="text-black text-balance"
                 style={{
-                  fontFamily: "var(--font-waldenburg)",
+                  fontFamily: "var(--font-heading)",
                   fontSize: "clamp(2rem, 4vw, 3.15rem)",
                   fontWeight: 500,
-                  letterSpacing: "-0.03em",
+                  letterSpacing: "-0.04em",
                   lineHeight: 1.08,
                 }}
               >
                 Conscious Intelligence{" "}
-                <span className="serif-italic">meets innovation.</span>
+                meets innovation.
               </h1>
               <p
                 className="mt-5 max-w-xl"
@@ -190,10 +190,10 @@ export default function ProductsPage() {
               {/* ── Segmented filter control ── */}
               <div className="flex">
                 <div
-                  className="relative flex rounded-full p-1"
+                  className="relative flex p-1"
                   style={{
                     background: "rgba(0,0,0,0.03)",
-                    boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.07)",
+                    border: "1px solid rgba(10,10,10,0.08)", borderRadius: "2px",
                   }}
                 >
                   <div className="flex gap-0.5">
@@ -203,15 +203,14 @@ export default function ProductsPage() {
                         <button
                           key={cat}
                           onClick={() => setActiveCategory(cat)}
-                          className="isolate relative flex items-center justify-center cursor-pointer shrink-0 outline-none rounded-full h-8 px-4 transition-all duration-200"
+                          className="isolate relative flex items-center justify-center cursor-pointer shrink-0 outline-none h-8 px-4 transition-all duration-200" style={{ borderRadius: "2px" }}
                           style={{ fontFamily: "'Inter', sans-serif" }}
                         >
                           {isActive && (
                             <div
-                              className="absolute inset-0 -z-10 rounded-full"
+                              className="absolute inset-0 -z-10"
                               style={{
-                                background: "#ffffff",
-                                boxShadow: "0 0 0 1px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.07)",
+                                background: "#ffffff", border: "1px solid rgba(0,0,0,0.10)", borderRadius: "2px",
                               }}
                             />
                           )}
@@ -261,7 +260,7 @@ export default function ProductsPage() {
                         <div className="flex items-center gap-2">
                           <h3
                             style={{
-                              fontFamily: "var(--font-waldenburg)",
+                              fontFamily: "var(--font-heading)",
                               fontSize: "clamp(1.05rem, 2.5vw, 1.25rem)",
                               fontWeight: 500,
                               letterSpacing: "-0.015em",
@@ -278,7 +277,7 @@ export default function ProductsPage() {
                           )}
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-widest sm:tracking-[0.16em] text-black/40">
+                          <span className="text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-widest sm:tracking-[0.16em] text-black/50">
                             {p.tag}
                           </span>
                         </div>
@@ -299,7 +298,7 @@ export default function ProductsPage() {
             <div className="mb-12">
               <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">In Development</p>
               <h2 className="section-heading">
-                Coming <span className="serif-italic">Soon.</span>
+                Coming Soon.
               </h2>
               <div className="section-divider mt-6" />
             </div>
@@ -419,10 +418,10 @@ export default function ProductsPage() {
                           <p
                             className="text-center select-none"
                             style={{
-                              fontFamily: "var(--font-waldenburg)",
+                              fontFamily: "var(--font-heading)",
                               fontSize: "clamp(1.25rem, 3.5vw, 2rem)",
                               fontWeight: 500,
-                              letterSpacing: "-0.03em",
+                              letterSpacing: "-0.04em",
                               lineHeight: 1.0,
                               color: "rgba(255,255,255,0.92)",
                             }}
@@ -455,10 +454,10 @@ export default function ProductsPage() {
                           <p
                             className="mb-2 select-none"
                             style={{
-                              fontFamily: "var(--font-waldenburg)",
+                              fontFamily: "var(--font-heading)",
                               fontSize: "clamp(0.95rem, 2.5vw, 1.2rem)",
                               fontWeight: 500,
-                              letterSpacing: "-0.02em",
+                              letterSpacing: "-0.04em",
                               color: "rgba(255,255,255,0.90)",
                               lineHeight: 1.2,
                             }}
@@ -507,7 +506,7 @@ export default function ProductsPage() {
                         <div>
                           <h3
                             style={{
-                              fontFamily: "var(--font-waldenburg)",
+                              fontFamily: "var(--font-heading)",
                               fontSize: "clamp(0.95rem, 2.2vw, 1.1rem)",
                               fontWeight: 500,
                               letterSpacing: "-0.015em",
@@ -565,7 +564,7 @@ export default function ProductsPage() {
               <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Core Pillars</p>
               <h2 className="section-heading max-w-sm">
                 Built for the{" "}
-                <span className="serif-italic">future.</span>
+                future.
               </h2>
             </div>
           </ScrollReveal>
@@ -575,17 +574,17 @@ export default function ProductsPage() {
           <div className="grid gap-10 md:grid-cols-3">
             {pillars.map((w, i) => (
               <ScrollReveal key={w.title} delay={i * 70}>
-                <div className="flex flex-col border-l border-dotted border-black/25 pl-6">
-                  <span className="text-[10px] font-semibold text-black/30 mb-4 tracking-widest">
+                <div className="flex flex-col pl-6" style={{ borderLeft: "1px solid rgba(10,10,10,0.12)" }}>
+                  <span className="text-[10px] font-semibold text-black/50 mb-4 tracking-widest">
                     0{i + 1}
                   </span>
                   <h3
                     className="mb-3"
                     style={{
-                      fontFamily: "var(--font-waldenburg)",
+                      fontFamily: "var(--font-heading)",
                       fontSize: "1.15rem",
                       fontWeight: 500,
-                      letterSpacing: "-0.01em",
+                      letterSpacing: "-0.04em",
                       color: "var(--heading-color)"
                     }}
                   >
@@ -606,44 +605,34 @@ export default function ProductsPage() {
         <div className="section-container">
           <ScrollReveal>
             <div
-              className="relative isolate overflow-hidden rounded-2xl flex flex-col items-center text-center"
+              className="relative flex flex-col items-center text-center"
               style={{
-                background: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%)",
-                backgroundImage: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)",
-                backgroundSize: "100% 100%, 32px 32px, 32px 32px",
-                border: "1px solid rgba(0,0,0,0.08)",
-                padding: "clamp(2.5rem, 8vw, 3.5rem) clamp(1.5rem, 5vw, 3rem)",
+                background: "#FAFAFA",
+                border: "1px solid rgba(10,10,10,0.12)",
+                borderRadius: "2px",
+                padding: "clamp(2.5rem, 8vw, 4rem) clamp(1.5rem, 5vw, 3rem)",
               }}
             >
-              {/* corner accents */}
-              <span className="absolute top-0 left-0 w-12 h-px bg-linear-to-r from-black/15 to-transparent" />
-              <span className="absolute top-0 left-0 h-12 w-px bg-linear-to-b from-black/15 to-transparent" />
-              <span className="absolute bottom-0 right-0 w-12 h-px bg-linear-to-l from-black/15 to-transparent" />
-              <span className="absolute bottom-0 right-0 h-12 w-px bg-linear-to-t from-black/15 to-transparent" />
-              <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-radial from-purple-200/20 to-transparent blur-3xl opacity-40" />
-              <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-radial from-orange-200/20 to-transparent blur-3xl opacity-40" />
               <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto">
                 <h2
                   className="mb-4 text-balance"
                   style={{
-                    fontFamily: "var(--font-waldenburg)",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                     fontWeight: 400,
                     lineHeight: 1.1,
-                    letterSpacing: "-0.03em",
+                    letterSpacing: "-0.04em",
                     color: "#000"
                   }}
                 >
-                  Ready to experience{" "}
-                  <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>conscious intelligence?</span>
+                  Ready to experience conscious intelligence?
                 </h2>
                 <p className="max-w-xl" style={{ color: "rgba(0,0,0,0.60)", lineHeight: 1.65, fontSize: "0.92rem", marginBottom: "1.75rem" }}>
                   Discover how our AI-powered products can transform your workflow and unlock new possibilities.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white hover:bg-black/80 transition-colors"
-                  style={{ height: "2.5rem" }}
+                  className="btn btn-primary"
                 >
                   Request Integration
                 </Link>

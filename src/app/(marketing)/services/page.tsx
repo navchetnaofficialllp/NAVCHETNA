@@ -164,18 +164,18 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
   };
 
   const inputCls =
-    "w-full rounded-lg px-3.5 py-2.5 text-sm text-black/80 placeholder-black/30 outline-none transition-colors" +
+    "w-full rounded-sm px-3.5 py-2.5 text-sm text-black/80 placeholder-black/30 outline-none transition-colors" +
     " bg-black/[0.03] border border-black/[0.09] focus:border-black/25 focus:bg-white";
   const labelCls = "block text-[11px] font-semibold text-black/45 mb-1.5 tracking-widest uppercase";
 
   return (
     <div
       className="fixed inset-0 z-[10001] flex items-center justify-center p-4"
-      style={{ background: "rgba(10,10,10,0.45)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)" }}
+      style={{ background: "rgba(10,10,10,0.50)" }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
       <div
-        className="relative w-full max-w-[600px] rounded-2xl overflow-y-auto max-h-[92vh]"
+        className="relative w-full max-w-[600px]  overflow-y-auto max-h-[92vh]"
         style={{
           background: "#FAFAFA",
           border: "1px solid rgba(0,0,0,0.08)",
@@ -185,7 +185,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center rounded-full text-black/30 hover:text-black/70 hover:bg-black/[0.05] transition-colors"
+          className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center text-black/50 hover:text-black/70 hover:bg-black/[0.05] transition-colors" style={{ borderRadius: "2px" }}
         >
           <X size={15} />
         </button>
@@ -193,16 +193,16 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
         <div className="p-8">
           {sent ? (
             <div className="flex flex-col items-center justify-center py-10 text-center">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-black/[0.05]">
-                <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 text-black/60" stroke="currentColor" strokeWidth="1.8">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center bg-black/[0.05]" style={{ borderRadius: "2px" }}>
+                <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 text-black/80" stroke="currentColor" strokeWidth="1.8">
                   <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <h3 className="text-black text-xl font-semibold mb-2" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>
+              <h3 className="text-black text-xl font-semibold mb-2" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
                 Inquiry Sent
               </h3>
               <p className="text-black/45 text-sm mb-6 leading-relaxed">We&apos;ll get back to you within 24 hours.</p>
-              <button onClick={onClose} className="rounded-full bg-black text-white text-[13px] font-semibold px-6 py-2.5 hover:bg-black/80 transition-colors">
+              <button onClick={onClose} className="bg-black text-white text-[13px] font-medium px-6 py-2.5 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
                 Close
               </button>
             </div>
@@ -213,7 +213,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
                 <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Get a Quote</p>
                 <h2
                   className="text-black mb-1.5 leading-snug"
-                  style={{ fontFamily: "var(--font-waldenburg)", fontSize: "1.35rem", fontWeight: 500, letterSpacing: "-0.025em" }}
+                  style={{ fontFamily: "var(--font-heading)", fontSize: "1.35rem", fontWeight: 500, letterSpacing: "-0.025em" }}
                 >
                   {service.title}
                 </h2>
@@ -274,14 +274,14 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
                 <button
                   type="button"
                   onClick={onClose}
-                  className="h-11 rounded-full border border-black/12 text-sm font-semibold text-black/60 hover:bg-black/[0.04] hover:text-black/80 transition-colors"
+                  className="h-11 border border-black/12 text-sm font-medium text-black/80 hover:bg-black/[0.04] hover:text-black/80 transition-colors" style={{ borderRadius: "2px" }}
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-11 rounded-full bg-black text-white text-sm font-semibold hover:bg-black/80 transition-colors disabled:opacity-50 disabled:cursor-wait"
+                  className="h-11 bg-black text-white text-sm font-medium hover:bg-[#3b5bd9] transition-colors disabled:opacity-50 disabled:cursor-wait" style={{ borderRadius: "2px" }}
                 >
                   {isSubmitting ? "Sending..." : "Send Inquiry"}
                 </button>
@@ -303,7 +303,7 @@ export default function ServicesPage() {
       {/* ── Header ── */}
       <section
         className="relative pt-28 pb-12 md:pt-36 md:pb-16"
-        style={{ background: "linear-gradient(180deg, rgba(125,72,53,0.04) 0%, rgba(72,105,133,0.03) 40%, #ffffff 100%)" }}
+        style={{ background: "#ffffff" }}
       >
         <div className="grid-overlay" />
         <div className="section-container relative z-10">
@@ -312,23 +312,23 @@ export default function ServicesPage() {
 
               <h1
                 className="text-black text-balance"
-                style={{ fontFamily: "var(--font-waldenburg)", fontSize: "clamp(2rem, 4vw, 3.15rem)", fontWeight: 500, letterSpacing: "-0.03em", lineHeight: 1.08 }}
+                style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2rem, 4vw, 3.15rem)", fontWeight: 500, letterSpacing: "-0.04em", lineHeight: 1.08 }}
               >
                 Practical services for{" "}
-                <span className="serif-italic">focused execution.</span>
+                focused execution.
               </h1>
               <p className="mt-5 max-w-2xl" style={{ color: "rgba(0,0,0,0.50)", fontSize: "0.95rem", lineHeight: 1.65 }}>
                 From planning to engineering, AI, infrastructure, and brand experience, we help teams build clear systems without adding unnecessary complexity.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/contact" className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-black px-5 text-[13px] font-semibold text-white transition-colors hover:bg-black/80">
+                <Link href="/contact" className="inline-flex h-10 items-center justify-center gap-2 bg-black px-5 text-[13px] font-medium text-white transition-colors hover:bg-[#3b5bd9]" style={{ borderRadius: "2px" }}>
                   Schedule a Call
                   <CaretRight weight="bold" className="size-3.5 text-white/52" />
                 </Link>
                 <button
                   type="button"
                   onClick={() => scrollRef.current?.scrollIntoView({ behavior: "smooth" })}
-                  className="inline-flex h-10 items-center justify-center gap-2 rounded-full border border-black/10 px-5 text-[13px] font-semibold text-black/70 transition-colors hover:bg-black/5"
+                  className="inline-flex h-10 items-center justify-center gap-2 border border-black/10 px-5 text-[13px] font-medium text-black/70 transition-colors hover:bg-black/5" style={{ borderRadius: "2px" }}
                 >
                   View Services
                   <ArrowDown weight="bold" className="size-3.5" />
@@ -350,7 +350,7 @@ export default function ServicesPage() {
               <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">What we do</p>
               <h2 className="section-heading max-w-xl">
                 End-to-end capabilities,{" "}
-                <span className="serif-italic">restrained delivery.</span>
+                restrained delivery.
               </h2>
             </div>
           </ScrollReveal>
@@ -362,7 +362,7 @@ export default function ServicesPage() {
                 <button
                   type="button"
                   onClick={() => setActiveService(service)}
-                  className="group flex flex-col w-full h-full rounded-xl sm:rounded-2xl overflow-hidden text-left cursor-pointer transition-opacity hover:opacity-90"
+                  className="group flex flex-col w-full h-full rounded-xl sm: overflow-hidden text-left cursor-pointer transition-opacity hover:opacity-90"
                   style={{ background: "#f2f2f2" }}
                 >
                   {/* Fixed-height SVG area */}
@@ -373,14 +373,14 @@ export default function ServicesPage() {
                   <div className="flex flex-col flex-1 px-4 sm:px-6 pb-5 sm:pb-7 pt-2 sm:pt-3">
                     <h3
                       className="mb-3 sm:mb-5"
-                      style={{ fontFamily: "var(--font-waldenburg)", fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", fontWeight: 500, letterSpacing: "-0.015em", lineHeight: 1.2, color: "var(--heading-color)" }}
+                      style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(0.75rem, 2.5vw, 0.95rem)", fontWeight: 500, letterSpacing: "-0.015em", lineHeight: 1.2, color: "var(--heading-color)" }}
                     >
                       {service.title}
                     </h3>
                     <p className="hidden sm:block" style={{ color: "rgba(0,0,0,0.44)", fontSize: "0.75rem", lineHeight: 1.48 }}>
                       {service.desc}
                     </p>
-                    <p className="block sm:hidden text-black/50" style={{ fontSize: "0.65rem", lineHeight: 1.4 }}>
+                    <p className="block sm:hidden text-black/80" style={{ fontSize: "0.65rem", lineHeight: 1.4 }}>
                       {service.subtitle || service.desc}
                     </p>
                   </div>
@@ -401,7 +401,7 @@ export default function ServicesPage() {
                 <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Also available</p>
                 <h2 className="section-heading max-w-lg mb-0">
                   Additional services and{" "}
-                  <span className="serif-italic">capabilities.</span>
+                  capabilities.
                 </h2>
               </div>
             </div>
@@ -410,13 +410,13 @@ export default function ServicesPage() {
           <div className="columns-1 md:columns-2 lg:columns-3 gap-x-12 gap-y-6">
             {moreServices.map((service, index) => (
               <ScrollReveal key={service.title} delay={index * 20}>
-                <div className="break-inside-avoid mb-6 flex items-start gap-3 border-l border-dotted border-black/[0.25] pl-4">
-                  <service.icon weight="duotone" className="size-4 text-black/40 mt-0.5 shrink-0" />
+                <div className="break-inside-avoid mb-6 flex items-start gap-3 pl-4" style={{ borderLeft: "1px solid rgba(10,10,10,0.12)" }}>
+                  <service.icon weight="duotone" className="size-4 text-black/50 mt-0.5 shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-[0.95rem] font-medium text-black/80" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.015em" }}>
+                    <p className="text-[0.95rem] font-medium text-black/80" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.015em" }}>
                       {service.title}
                     </p>
-                    <p className="text-[12.5px] text-black/50 mt-0.5 leading-relaxed">{service.desc}</p>
+                    <p className="text-[12.5px] text-black/80 mt-0.5 leading-relaxed">{service.desc}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -431,30 +431,24 @@ export default function ServicesPage() {
         <div className="section-container pt-16">
           <ScrollReveal>
             <div
-              className="relative isolate overflow-hidden rounded-2xl flex flex-col items-center text-center"
+              className="relative flex flex-col items-center text-center"
               style={{
-                background: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%)",
-                backgroundImage: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)",
-                backgroundSize: "100% 100%, 32px 32px, 32px 32px",
-                border: "1px solid rgba(0,0,0,0.08)",
-                padding: "clamp(2.5rem, 8vw, 3.5rem) clamp(1.5rem, 5vw, 3rem)",
+                background: "#FAFAFA",
+                border: "1px solid rgba(10,10,10,0.12)",
+                borderRadius: "2px",
+                padding: "clamp(2.5rem, 8vw, 4rem) clamp(1.5rem, 5vw, 3rem)",
               }}
             >
-              <span className="absolute top-0 left-0 w-12 h-px bg-gradient-to-r from-black/15 to-transparent" />
-              <span className="absolute top-0 left-0 h-12 w-px bg-gradient-to-b from-black/15 to-transparent" />
-              <span className="absolute bottom-0 right-0 w-12 h-px bg-gradient-to-l from-black/15 to-transparent" />
-              <span className="absolute bottom-0 right-0 h-12 w-px bg-gradient-to-t from-black/15 to-transparent" />
-              <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-radial from-purple-200/20 to-transparent blur-3xl opacity-40" />
-              <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-radial from-orange-200/20 to-transparent blur-3xl opacity-40" />
+
               <div className="relative z-10 max-w-2xl mx-auto">
-                <h2 className="text-balance mb-4" style={{ fontFamily: "var(--font-waldenburg)", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 400, letterSpacing: "-0.03em", lineHeight: 1.1, color: "#000" }}>
+                <h2 className="text-balance mb-4" style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)", fontWeight: 400, letterSpacing: "-0.04em", lineHeight: 1.1, color: "#000" }}>
                   Let&apos;s build something{" "}
-                  <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>useful and beautiful.</span>
+                  useful and beautiful.
                 </h2>
-                <p className="text-black/60 mb-7" style={{ lineHeight: 1.65, fontSize: "0.92rem", maxWidth: "480px", margin: "0 auto 1.75rem" }}>
+                <p className="text-black/80 mb-7" style={{ lineHeight: 1.65, fontSize: "0.92rem", maxWidth: "480px", margin: "0 auto 1.75rem" }}>
                   Book a structured consultation and see how careful product thinking can reshape your workflow.
                 </p>
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white hover:bg-black/80 transition-colors" style={{ height: "2.5rem" }}>
+                <Link href="/contact" className="btn btn-primary">
                   Schedule a Call
                 </Link>
               </div>

@@ -12,8 +12,8 @@ export default function DhravalProfilePage() {
 
         {/* Breadcrumb */}
         <ScrollReveal>
-          <div className="mb-10 flex items-center gap-2 text-[11px] font-semibold tracking-widest text-black/40 uppercase">
-            <Link href="/news" className="hover:text-black transition-colors">News</Link>
+          <div className="mb-10 flex items-center gap-2 text-[11px] font-semibold tracking-widest text-black/50 uppercase">
+            <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
             <span>/</span>
             <span className="hover:text-black transition-colors cursor-pointer">Company Updates</span>
             <span>/</span>
@@ -24,7 +24,7 @@ export default function DhravalProfilePage() {
         {/* Profile Header */}
         <ScrollReveal delay={50}>
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-10">
-            <div className="relative w-40 h-40 md:w-56 md:h-56 shrink-0 rounded-2xl overflow-hidden shadow-lg border border-black/[0.08]">
+            <div className="relative w-40 h-40 md:w-56 md:h-56 shrink-0  overflow-hidden shadow-lg border border-black/[0.08]">
               <Image
                 src="/assets/dhraval.jpg"
                 alt="Dhraval Narsinha"
@@ -37,32 +37,32 @@ export default function DhravalProfilePage() {
             <div className="flex flex-col flex-1 pt-1">
               <h1
                 className="text-3xl md:text-4xl mb-2 bg-clip-text text-transparent bg-gradient-to-r from-black via-[#7D4835] to-[#333]"
-                style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 500, letterSpacing: "-0.03em" }}
+                style={{ fontFamily: "var(--font-heading)", fontWeight: 500, letterSpacing: "-0.04em" }}
               >
                 Dhraval Narsinha
               </h1>
-              <p className="text-[15px] font-medium tracking-wide text-black/60 uppercase mb-5" style={{ fontFamily: "'Inter', sans-serif" }}>
-                Co-Founder & Frontend Developer <span className="text-black/30 mx-2">•</span> Navchetna Technologies
+              <p className="text-[15px] font-medium tracking-wide text-black/80 uppercase mb-5" style={{ fontFamily: "var(--font-body)" }}>
+                Co-Founder & Frontend Developer <span className="text-black/50 mx-2">•</span> Navchetna Technologies
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
-                  <Lightbulb className="w-3.5 h-3.5 text-black/50" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                  <Lightbulb className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Co-Founder
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
-                  <GraduationCap className="w-3.5 h-3.5 text-black/50" />
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                  <GraduationCap className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Frontend Dev
                 </span>
               </div>
 
-              <div className="flex flex-col gap-2 text-[13px] text-black/50" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <div className="flex flex-col gap-2 text-[13px] text-black/80" style={{ fontFamily: "var(--font-body)" }}>
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-black/40" />
+                  <Calendar className="w-4 h-4 text-black/50"  strokeWidth={1.5} />
                   Born January 1, 2006
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-black/40" />
+                  <MapPin className="w-4 h-4 text-black/50"  strokeWidth={1.5} />
                   Diu, India
                 </div>
               </div>
@@ -75,11 +75,11 @@ export default function DhravalProfilePage() {
           <div className="relative mb-12 pl-8 md:pl-12 py-2">
             <span
               className="absolute -top-4 left-0 text-7xl md:text-9xl text-black/[0.06] leading-none pointer-events-none select-none"
-              style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}
+              style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}
             >
               "
             </span>
-            <p className="relative z-10 text-base md:text-xl text-black/80 leading-relaxed" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.01em" }}>
+            <p className="relative z-10 text-base md:text-xl text-black/80 leading-relaxed" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
               From Diu to revolutionary AI EdTech — a journey of resilience, passion, and innovation. Co-Founder of Osmium AI, transforming education through technology despite every challenge.
             </p>
           </div>
@@ -89,11 +89,11 @@ export default function DhravalProfilePage() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-16 lg:gap-20">
 
           {/* Left Column: Biography */}
-          <div className="space-y-8 text-black/85" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13.5px", lineHeight: 1.7 }}>
+          <div className="space-y-8 text-black/85" style={{ fontFamily: "var(--font-body)", fontSize: "13.5px", lineHeight: 1.7 }}>
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Early Life & Challenges</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Early Life & Challenges</h2>
                 <p className="mb-4">
                   I am Dhraval Narsinha, born on January 1, 2006, in Diu, into a middle class family. Life was not always easy as my family faced financial struggles, but those challenges only strengthened my determination to grow and succeed.
                 </p>
@@ -105,7 +105,7 @@ export default function DhravalProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Overcoming Setbacks</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Overcoming Setbacks</h2>
                 <p className="mb-4">
                   It was a setback, and I had to leave Navodaya. I then enrolled at Government Higher Secondary School in Diu, where I completed my 11th and 12th standards and graduated with the Class of 2024.
                 </p>
@@ -117,7 +117,7 @@ export default function DhravalProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>The Birth of Osmium AI</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>The Birth of Osmium AI</h2>
                 <p className="mb-4">
                   It was at University that I met some of my closest friends — Ayushmaan, Swastik, Varun, and Suman. Together, we participated in a hackathon that became the birthplace of Osmium AI, an AI-driven EdTech platform.
                 </p>
@@ -129,7 +129,7 @@ export default function DhravalProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Building the Future</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Building the Future</h2>
                 <p className="mb-4">
                   We kept refining it, adding advanced AI features, and even creating our own large language model. Every step was filled with challenges. We faced setbacks, technical difficulties, and moments of doubt. Yet, we never gave up.
                 </p>
@@ -141,7 +141,7 @@ export default function DhravalProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Team & Collaboration</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Team & Collaboration</h2>
                 <p className="mb-4">
                   The strength of our team lies in our shared vision and complementary skills. Working alongside Ayushmaan, Swastik, Varun, and Suman has been an incredible journey of learning, innovation, and mutual growth.
                 </p>
@@ -153,7 +153,7 @@ export default function DhravalProfilePage() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>Philosophy & Commitment</h2>
+                <h2 className="text-xl text-black mb-10" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>Philosophy & Commitment</h2>
                 <p className="mb-4">
                   Even now, I remain deeply committed to learning and developing new technologies. My journey from a curious child building models to becoming a driving force behind an innovative EdTech platform is proof that passion and persistence can shape dreams into reality.
                 </p>
@@ -165,11 +165,11 @@ export default function DhravalProfilePage() {
               <div className="relative pl-8 md:pl-12 py-2">
                 <span
                   className="absolute -top-4 left-0 text-7xl md:text-9xl text-black/[0.06] leading-none pointer-events-none select-none"
-                  style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}
+                  style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}
                 >
                   "
                 </span>
-                <p className="relative z-10 text-base md:text-lg text-black/60 leading-relaxed italic" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.01em" }}>
+                <p className="relative z-10 text-base md:text-lg text-black/80 leading-relaxed italic" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
                   Passion and persistence can shape dreams into reality. Every challenge is an opportunity to grow stronger and build something meaningful.
                 </p>
               </div>
@@ -182,18 +182,18 @@ export default function DhravalProfilePage() {
 
             {/* Roles */}
             <ScrollReveal delay={150}>
-              <div className="p-6 rounded-xl bg-black/[0.02] border border-black/[0.06]">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/40 mb-6 flex items-center gap-2">
-                  <Briefcase className="w-3.5 h-3.5" /> Leadership Positions
+              <div className="p-6  bg-black/[0.02] border border-black/[0.06]">
+                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                  <Briefcase className="w-3.5 h-3.5"  strokeWidth={1.5} /> Leadership Positions
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex flex-col">
                     <span className="text-[12.5px] font-semibold text-black/80">Co-Founder & Frontend Developer</span>
-                    <span className="text-[11px] text-black/50 mt-0.5">NINELLMS SOLUTIONS LLP (Navchetna)</span>
+                    <span className="text-[11px] text-black/80 mt-0.5">NINELLMS SOLUTIONS LLP (Navchetna)</span>
                   </li>
                   <li className="flex flex-col">
                     <span className="text-[12.5px] font-semibold text-black/80">Co-Creator</span>
-                    <span className="text-[11px] text-black/50 mt-0.5">Osmium AI — AI EdTech Platform</span>
+                    <span className="text-[11px] text-black/80 mt-0.5">Osmium AI — AI EdTech Platform</span>
                   </li>
                 </ul>
               </div>
@@ -201,29 +201,29 @@ export default function DhravalProfilePage() {
 
             {/* Key Achievements */}
             <ScrollReveal delay={200}>
-              <div className="p-7 rounded-xl bg-white border border-black/[0.06] shadow-sm">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/40 mb-6 flex items-center gap-2">
-                  <Award className="w-3.5 h-3.5" /> Key Achievements
+              <div className="p-7  bg-white border border-black/[0.06] shadow-sm">
+                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                  <Award className="w-3.5 h-3.5"  strokeWidth={1.5} /> Key Achievements
                 </h3>
 
                 <div className="space-y-6">
                   <div>
                     <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Educational Journey</h4>
-                    <ul className="space-y-2.5 text-[12px] text-black/60 leading-relaxed">
+                    <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Tulip English Medium School, Diu (LKG–5th)</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Jawahar Navodaya Vidyalaya, Diu (10th)</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Government Higher Secondary School, Diu (11th–12th)</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>University, Ahmedabad (Current)</span>
                       </li>
                     </ul>
@@ -231,21 +231,21 @@ export default function DhravalProfilePage() {
 
                   <div>
                     <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Innovation & Impact</h4>
-                    <ul className="space-y-2.5 text-[12px] text-black/60 leading-relaxed">
+                    <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Co-Founder of Navchetna Technologies</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Co-creator of Osmium AI EdTech Platform</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Contributed to building Navchetna's custom LLM</span>
                       </li>
                       <li className="flex items-start gap-2.5">
-                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-black/20 shrink-0" />
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
                         <span>Hackathon winner and innovator</span>
                       </li>
                     </ul>
@@ -260,12 +260,12 @@ export default function DhravalProfilePage() {
 
         {/* Back Link */}
         <ScrollReveal>
-          <div className="mt-12 pt-6 border-t border-dotted border-black/20">
+          <div className="mt-12 pt-6 border-t  border-black/20">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm font-medium text-black/50 hover:text-black transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-black/80 hover:text-black transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4"  strokeWidth={1.5} />
               Back to Company Profile
             </Link>
           </div>

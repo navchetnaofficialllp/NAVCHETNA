@@ -55,7 +55,7 @@ const team = [
     avatar: "/assets/ayushmaan.jpg",
     linkedin: "https://www.linkedin.com/in/422h52219hsuya?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     tag: "Founder",
-    profileUrl: "/news/company-updates/ayushmaan-soni",
+    profileUrl: "/blog/company-updates/ayushmaan-soni",
     github: "https://github.com/Ayush91225",
   },
   {
@@ -65,7 +65,7 @@ const team = [
     avatar: "/assets/varun.jpg",
     linkedin: "https://www.linkedin.com/in/varun-yadav-navchetna?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     tag: "Co-Founder",
-    profileUrl: "/news/company-updates/varun-yadav",
+    profileUrl: "/blog/company-updates/varun-yadav",
     github: "https://github.com/varun-ya",
   },
   {
@@ -75,7 +75,7 @@ const team = [
     avatar: "/assets/swastik.jpg",
     linkedin: "https://www.linkedin.com/in/swastik-khatua-84798631b?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     tag: "Co-Founder",
-    profileUrl: "/news/company-updates/swastik-khatua",
+    profileUrl: "/blog/company-updates/swastik-khatua",
     github: "https://github.com/Swastik400",
   },
   {
@@ -85,7 +85,7 @@ const team = [
     avatar: "/assets/dhraval.jpg",
     linkedin: "https://www.linkedin.com/in/dhraval-narsinha-navchetna125?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     tag: "Co-Founder",
-    profileUrl: "/news/company-updates/dhraval-narsinha",
+    profileUrl: "/blog/company-updates/dhraval-narsinha",
     github: "https://github.com/dhaual125",
   },
   {
@@ -95,7 +95,7 @@ const team = [
     avatar: "/assets/suman.jpg",
     linkedin: "https://www.linkedin.com/in/suman-yadav-bb5516322?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     tag: "Co-Founder",
-    profileUrl: "/news/company-updates/suman-yadav",
+    profileUrl: "/blog/company-updates/suman-yadav",
     github: "https://github.com/Suman1214129",
   },
   {
@@ -174,7 +174,7 @@ function StatCard({
   return (
     <div
       ref={ref}
-      className="relative flex flex-col p-8 rounded-2xl overflow-hidden"
+      className="relative flex flex-col p-8  overflow-hidden"
       style={{
         background: "transparent",
         border: "1px solid rgba(0,0,0,0.09)",
@@ -187,10 +187,10 @@ function StatCard({
       />
 
       <div
-        className="inline-flex items-center justify-center size-11 rounded-2xl mb-6 flex-shrink-0"
+        className="inline-flex items-center justify-center size-11  mb-6 flex-shrink-0"
         style={{ background: "rgba(0,0,0,0.04)" }}
       >
-        <Icon className="size-5 text-black/40" />
+        <Icon className="size-5 text-black/50" />
       </div>
 
       <p
@@ -198,7 +198,7 @@ function StatCard({
         style={{
           fontSize: "clamp(2.4rem, 4.5vw, 3.5rem)",
           letterSpacing: "-0.05em",
-          fontFamily: "var(--font-waldenburg)",
+          fontFamily: "var(--font-heading)",
           fontWeight: 400,
           lineHeight: 1,
         }}
@@ -212,7 +212,7 @@ function StatCard({
           fontFamily: "'Inter', sans-serif",
           fontSize: "15px",
           fontWeight: 500,
-          letterSpacing: "-0.01em",
+          letterSpacing: "-0.04em",
           color: "rgba(0,0,0,0.75)",
         }}
       >
@@ -262,7 +262,7 @@ function TeamCard({ member }: { member: (typeof team)[number] }) {
         <h3
           className="text-black mb-1"
           style={{
-            fontFamily: "var(--font-waldenburg)",
+            fontFamily: "var(--font-heading)",
             fontWeight: 400,
             fontSize: "17px",
             letterSpacing: "-0.2px",
@@ -287,7 +287,7 @@ function TeamCard({ member }: { member: (typeof team)[number] }) {
         </p>
 
         <p
-          className="text-black/50 text-pretty mb-5"
+          className="text-black/80 text-pretty mb-5"
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: "13px",
@@ -338,7 +338,7 @@ function TeamCard({ member }: { member: (typeof team)[number] }) {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <span
-      className="inline-flex items-center gap-2 text-black/40 uppercase"
+      className="inline-flex items-center gap-2 text-black/50 uppercase"
       style={{
         fontFamily: "'Inter', sans-serif",
         fontWeight: 700,
@@ -389,8 +389,8 @@ export default function AboutPage() {
                 style={{
                   fontSize: "clamp(2rem, 4vw, 3.15rem)",
                   lineHeight: 1.08,
-                  letterSpacing: "-0.03em",
-                  fontFamily: "var(--font-waldenburg)",
+                  letterSpacing: "-0.04em",
+                  fontFamily: "var(--font-heading)",
                   fontWeight: 500,
                   color: "#000",
                 }}
@@ -449,7 +449,7 @@ export default function AboutPage() {
                   }}
                 >
                   Our Journey
-                  <ArrowDown className="size-4 text-black/40" />
+                  <ArrowDown className="size-4 text-black/50" />
                 </button>
               </div>
               <div className="mt-14 pt-8 w-full" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
@@ -464,7 +464,7 @@ export default function AboutPage() {
                     >
                       <span
                         style={{
-                          fontFamily: "var(--font-waldenburg)",
+                          fontFamily: "var(--font-heading)",
                           fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
                           fontWeight: 400,
                           letterSpacing: "-0.05em",
@@ -481,7 +481,7 @@ export default function AboutPage() {
                           fontSize: "13px",
                           fontWeight: 500,
                           color: "rgba(0,0,0,0.6)",
-                          letterSpacing: "-0.01em",
+                          letterSpacing: "-0.04em",
                         }}
                       >
                         {s.label}
@@ -548,7 +548,7 @@ export default function AboutPage() {
             {/* Card 1 */}
             <ScrollReveal>
               <div
-                className="relative flex flex-col overflow-hidden rounded-2xl bg-white h-full"
+                className="relative flex flex-col overflow-hidden  bg-white h-full"
                 style={{
                   border: "1px solid rgba(0,0,0,0.07)",
                 }}
@@ -556,15 +556,15 @@ export default function AboutPage() {
                 <div className="relative h-64 overflow-hidden flex-shrink-0">
                   <Image src="/assets/friends.jpg" alt="The founding team - Navchetna" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-top" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                  <span className="absolute bottom-4 left-5" style={{ fontFamily: "var(--font-waldenburg)", fontSize: "13px", fontWeight: 400, color: "rgba(255,255,255,0.5)", letterSpacing: "0.5px" }}>01</span>
+                  <span className="absolute bottom-4 left-5" style={{ fontFamily: "var(--font-heading)", fontSize: "13px", fontWeight: 400, color: "rgba(255,255,255,0.5)", letterSpacing: "0.5px" }}>01</span>
                 </div>
                 <div className="flex flex-col flex-1 p-7">
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "1.2px", textTransform: "uppercase", color: "rgba(0,0,0,0.3)", marginBottom: "14px", display: "block" }}>
                     The Beginning · Sep 6, 2024
                   </span>
-                  <h3 style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 400, fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)", lineHeight: 1.15, letterSpacing: "-0.025em", color: "#000", marginBottom: "14px" }}>
+                  <h3 style={{ fontFamily: "var(--font-heading)", fontWeight: 400, fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)", lineHeight: 1.15, letterSpacing: "-0.025em", color: "#000", marginBottom: "14px" }}>
                     Five friends,{" "}
-                    <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}>one spark</span>
+                    <span style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}>one spark</span>
                   </h3>
                   <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(0,0,0,0.5)", flex: 1 }}>
                     On 6th September 2024, five friends sat together and realized something: education could be so much better with the right tools and technology. That single conversation started everything.
@@ -579,7 +579,7 @@ export default function AboutPage() {
             {/* Card 2 — white */}
             <ScrollReveal delay={80}>
               <div
-                className="relative flex flex-col overflow-hidden rounded-2xl bg-white h-full"
+                className="relative flex flex-col overflow-hidden  bg-white h-full"
                 style={{
                   border: "1px solid rgba(0,0,0,0.07)",
                 }}
@@ -587,15 +587,15 @@ export default function AboutPage() {
                 <div className="relative h-64 overflow-hidden flex-shrink-0">
                   <Image src="/assets/20260419_015219.jpeg" alt="Navchetna is born - light painting" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover object-center" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-                  <span className="absolute bottom-4 left-5" style={{ fontFamily: "var(--font-waldenburg)", fontSize: "13px", fontWeight: 400, color: "rgba(255,255,255,0.5)", letterSpacing: "0.5px" }}>02</span>
+                  <span className="absolute bottom-4 left-5" style={{ fontFamily: "var(--font-heading)", fontSize: "13px", fontWeight: 400, color: "rgba(255,255,255,0.5)", letterSpacing: "0.5px" }}>02</span>
                 </div>
                 <div className="flex flex-col flex-1 p-7">
                   <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "1.2px", textTransform: "uppercase", color: "rgba(0,0,0,0.3)", marginBottom: "14px", display: "block" }}>
                     The Birth · Late 2024
                   </span>
-                  <h3 style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 400, fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)", lineHeight: 1.15, letterSpacing: "-0.025em", color: "#000", marginBottom: "14px" }}>
+                  <h3 style={{ fontFamily: "var(--font-heading)", fontWeight: 400, fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)", lineHeight: 1.15, letterSpacing: "-0.025em", color: "#000", marginBottom: "14px" }}>
                     Navchetna{" "}
-                    <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}>is born</span>
+                    <span style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}>is born</span>
                   </h3>
                   <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(0,0,0,0.5)", flex: 1 }}>
                     From late-night brainstorming sessions and countless cups of coffee, Navchetna was born. Proudly based in Jodhpur, Rajasthan and Ahmedabad, Gujarat.
@@ -610,14 +610,14 @@ export default function AboutPage() {
             {/* Card 3 — editorial dark */}
             <ScrollReveal delay={160}>
               <div
-                className="relative flex flex-col overflow-hidden rounded-2xl h-full"
+                className="relative flex flex-col overflow-hidden  h-full"
                 style={{ background: "#ffffff", border: "1px solid rgba(0,0,0,0.07)", minHeight: "420px" }}
               >
                 {/* Giant ghost number */}
                 <span
                   className="absolute -top-4 -right-3 select-none pointer-events-none"
                   style={{
-                    fontFamily: "var(--font-waldenburg)",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "clamp(7rem, 14vw, 11rem)",
                     fontWeight: 400,
                     color: "rgba(0,0,0,0.03)",
@@ -634,9 +634,9 @@ export default function AboutPage() {
                     <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "10px", fontWeight: 700, letterSpacing: "1.2px", textTransform: "uppercase", color: "rgba(0,0,0,0.3)", display: "block", marginBottom: "20px" }}>
                       The Growth · 2025 — Present
                     </span>
-                    <h3 style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 400, fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)", lineHeight: 1.15, letterSpacing: "-0.025em", color: "#000", marginBottom: "16px" }}>
+                    <h3 style={{ fontFamily: "var(--font-heading)", fontWeight: 400, fontSize: "clamp(1.4rem, 2.2vw, 1.75rem)", lineHeight: 1.15, letterSpacing: "-0.025em", color: "#000", marginBottom: "16px" }}>
                       From dreamers{" "}
-                      <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}>to builders</span>
+                      <span style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}>to builders</span>
                     </h3>
                     <p style={{ fontFamily: "'Inter', sans-serif", fontSize: "14.5px", lineHeight: "1.8", color: "rgba(0,0,0,0.5)" }}>
                       No fancy offices, no investors — just a shared vision and sheer determination. We&apos;ve grown from five friends into a team building products that genuinely matter.
@@ -652,7 +652,7 @@ export default function AboutPage() {
                         { year: "Now", note: "15+ team · 4 products live" },
                       ].map((m) => (
                         <div key={m.year} className="flex items-center gap-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "10px" }}>
-                          <span style={{ fontFamily: "var(--font-waldenburg)", fontSize: "13px", fontWeight: 400, color: "rgba(0,0,0,0.25)", letterSpacing: "-0.02em", minWidth: "36px" }}>{m.year}</span>
+                          <span style={{ fontFamily: "var(--font-heading)", fontSize: "13px", fontWeight: 400, color: "rgba(0,0,0,0.25)", letterSpacing: "-0.04em", minWidth: "36px" }}>{m.year}</span>
                           <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", color: "rgba(0,0,0,0.45)", fontWeight: 400 }}>{m.note}</span>
                         </div>
                       ))}
@@ -667,13 +667,13 @@ export default function AboutPage() {
           {/* CTA strip */}
           <ScrollReveal delay={200}>
             <div
-              className="mt-5 rounded-2xl px-8 md:px-12 py-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
+              className="mt-5  px-8 md:px-12 py-7 flex flex-col sm:flex-row sm:items-center justify-between gap-5"
               style={{ background: "rgba(0,0,0,0.03)", border: "1px solid rgba(0,0,0,0.07)" }}
             >
               <div>
-                <p style={{ fontFamily: "var(--font-waldenburg)", fontSize: "19px", fontWeight: 400, color: "#000", letterSpacing: "-0.02em" }}>
+                <p style={{ fontFamily: "var(--font-heading)", fontSize: "19px", fontWeight: 400, color: "#000", letterSpacing: "-0.04em" }}>
                   The story continues{" "}
-                  <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic" }}>and we&apos;re just getting started.</span>
+                  <span style={{ fontFamily: "var(--font-heading)", fontStyle: "normal" }}>and we&apos;re just getting started.</span>
                 </p>
                 <p className="mt-1.5" style={{ fontFamily: "'Inter', sans-serif", fontSize: "13px", color: "rgba(0,0,0,0.37)", lineHeight: "1.65" }}>
                   Every day we push closer to making learning accessible for all.
@@ -701,7 +701,7 @@ export default function AboutPage() {
             <div className="max-w-3xl mx-auto text-center mb-16">
               <SectionLabel>Our Culture</SectionLabel>
               <h2 className="section-heading mt-6 mb-6">
-                More Than Just <span className="serif-italic">Code.</span>
+                More Than Just Code.
               </h2>
               <p
                 className="mx-auto"
@@ -728,13 +728,13 @@ export default function AboutPage() {
                 <div className="absolute top-1/3 right-16 w-1.5 h-1.5 rounded-full bg-black/5" />
                 
                 <div className="relative z-10">
-                  <div className="size-12 rounded-2xl flex items-center justify-center mb-6" style={{ background: "linear-gradient(135deg, rgba(245,190,145,0.12) 0%, rgba(185,165,230,0.08) 100%)" }}>
-                    <Flame className="size-5 text-black/60" />
+                  <div className="size-12  flex items-center justify-center mb-6" style={{ background: "linear-gradient(135deg, rgba(245,190,145,0.12) 0%, rgba(185,165,230,0.08) 100%)" }}>
+                    <Flame className="size-5 text-black/80" />
                   </div>
-                  <h3 className="text-[1.35rem] text-black mb-5 leading-tight" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>
+                  <h3 className="text-[1.35rem] text-black mb-5 leading-tight" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
                     From Dreamers to Builders
                   </h3>
-                  <p className="text-black/50 text-[0.95rem] leading-[1.75]">
+                  <p className="text-black/80 text-[0.95rem] leading-[1.75]">
                     Back then, we were just a bunch of dreamers with laptops and big ideas.
                     No fancy offices, no investors, no roadmap — just a shared vision and a
                     lot of determination. We wanted to create solutions that actually help
@@ -753,13 +753,13 @@ export default function AboutPage() {
                 <div className="absolute bottom-1/2 left-16 w-1.5 h-1.5 rounded-full bg-black/5" />
                 
                 <div className="relative z-10">
-                  <div className="size-12 rounded-2xl flex items-center justify-center mb-6" style={{ background: "linear-gradient(135deg, rgba(185,165,230,0.12) 0%, rgba(245,190,145,0.08) 100%)" }}>
-                    <Heart className="size-5 text-black/60" />
+                  <div className="size-12  flex items-center justify-center mb-6" style={{ background: "linear-gradient(135deg, rgba(185,165,230,0.12) 0%, rgba(245,190,145,0.08) 100%)" }}>
+                    <Heart className="size-5 text-black/80"  strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-[1.35rem] text-black mb-5 leading-tight" style={{ fontFamily: "var(--font-waldenburg)", letterSpacing: "-0.02em" }}>
+                  <h3 className="text-[1.35rem] text-black mb-5 leading-tight" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
                     Today's Reality
                   </h3>
-                  <p className="text-black/50 text-[0.95rem] leading-[1.75]">
+                  <p className="text-black/80 text-[0.95rem] leading-[1.75]">
                     Today, we've grown from five friends to a core team of six and a
                     family of 15 passionate people. Our growth has always been powered by
                     curiosity, creativity, and a love for building things that matter. The scale changed, but the heart remains the same.
@@ -827,7 +827,7 @@ export default function AboutPage() {
           {/* Join CTA */}
           <ScrollReveal delay={200}>
             <div
-              className="mt-6 relative isolate overflow-hidden rounded-2xl flex flex-col items-center text-center"
+              className="mt-6 relative isolate overflow-hidden  flex flex-col items-center text-center"
               style={{
                 background: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%)",
                 backgroundImage: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)",
@@ -847,10 +847,10 @@ export default function AboutPage() {
               <h3
                 className="text-black mb-4 text-balance text-center mx-auto"
                 style={{
-                  fontFamily: "var(--font-waldenburg)",
+                  fontFamily: "var(--font-heading)",
                   fontWeight: 400,
                   fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
-                  letterSpacing: "-0.03em",
+                  letterSpacing: "-0.04em",
                   lineHeight: 1.1,
                   maxWidth: "520px",
                   color: "#000"
@@ -859,8 +859,8 @@ export default function AboutPage() {
                 Navchetna isn&apos;t just a company.{" "}
                 <span
                   style={{
-                    fontFamily: "'Instrument Serif', serif",
-                    fontStyle: "italic",
+                    fontFamily: "var(--font-heading)",
+                    fontStyle: "normal",
                     background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",

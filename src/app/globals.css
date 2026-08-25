@@ -24,7 +24,7 @@
 }
 
 /* ═══════════════════════════════════════════
-   DESIGN TOKENS — shadcn/ui + ElevenLabs fusion
+   DESIGN TOKENS — wild.as inspired
    ═══════════════════════════════════════════ */
 @theme inline {
   --color-cream: #FDFCFC;
@@ -42,24 +42,24 @@
   --color-brand: #7d4835;
   --color-brand-dark: #6d3e2d;
 
-  --font-heading: "Waldenburg", system-ui, sans-serif;
-  --font-body: var(--font-inter);
-  --font-instrument-sans: var(--font-instrument-sans);
-  --font-instrument-serif: var(--font-instrument-serif);
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-instrument-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-instrument-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* ═══════════════════════════════════════════
-   CSS VARIABLES (shadcn/ui system + ElevenLabs palette)
+   CSS VARIABLES — wild.as two-tone palette
    ═══════════════════════════════════════════ */
 :root {
   /* ── Core surfaces ── */
-  --background: 0 0% 100%;          /* #FFFFFF  */
-  --foreground: 0 0% 3.9%;           /* #0A0A0A  */
-  --card: 0 0% 100%;                 /* #FFFFFF  */
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
   --card-foreground: 0 0% 3.9%;
   --popover: 0 0% 100%;
   --popover-foreground: 0 0% 3.9%;
-  --primary: 0 0% 9%;                /* near-black buttons */
+  --primary: 0 0% 9%;
   --primary-foreground: 0 0% 98%;
   --secondary: 0 0% 96%;
   --secondary-foreground: 0 0% 9%;
@@ -72,78 +72,60 @@
   --border: 0 0% 89%;
   --input: 0 0% 89%;
   --ring: 0 0% 3.9%;
-  --radius: 0.625rem;                /* shadcn base radius */
+  --radius: 0.125rem;
 
-  /* ── ElevenLabs-inspired semantic vars ── */
+  /* ── wild.as two-tone semantic vars ── */
+  --ink: #0A0A0A;
+  --paper: #FFFFFF;
+  --muted-color: #8b8b8b;
+  --line: rgba(10,10,10,0.12);
+  --line-subtle: rgba(10,10,10,0.06);
+
   --page-bg: #ffffff;
   --page-text: #0A0A0A;
   --card-bg: #FFFFFF;
-  --card-border: rgba(0,0,0,0.07);
+  --card-border: var(--line);
 
   /* Section alternating tones */
-  --section-bg: #F4F3F1;
+  --section-bg: #F6F6F6;
   --section-bg-2: #F8F7F5;
 
   /* Nav */
-  --nav-bg: rgba(250,250,250,0.88);
-  --nav-border: rgba(0,0,0,0.07);
+  --nav-bg: rgba(255,255,255,0.96);
+  --nav-border: var(--line);
 
   /* Text hierarchy */
-  --heading-color: #0A0A0A;
-  --muted-text: rgba(0,0,0,0.50);
+  --heading-color: #1A1A1A;
+  --body-color: #333333;
+  --muted-text: var(--muted-color);
   --subtle-text: rgba(0,0,0,0.34);
 
-  /* Borders */
-  --border-subtle: rgba(0,0,0,0.08);
-  --border-default: rgba(0,0,0,0.12);
-  --border-strong: rgba(0,0,0,0.18);
+  /* Borders — single weight hairlines */
+  --border-subtle: var(--line-subtle);
+  --border-default: var(--line);
+  --border-strong: rgba(10,10,10,0.22);
 
-  /* Radius scale — ElevenLabs style */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 18px;
-  --radius-2xl: 24px;
+  /* Radius scale — sharp, almost none */
+  --radius-sm: 2px;
+  --radius-md: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
   --radius-full: 9999px;
 
   /* Legacy aliases */
-  --soft-radius: 10px;
-  --panel-radius: 14px;
-  --card-radius: 18px;
-
-  /* Gradients */
-  --soft-gradient: linear-gradient(145deg, #fbfaf8 0%, #f4f7fb 50%, #f7f0eb 100%);
-  --quiet-gradient: radial-gradient(circle at 15% 5%, rgba(139, 86, 65, 0.05) 0%, transparent 40%),
-                    radial-gradient(circle at 85% 20%, rgba(87, 122, 152, 0.06) 0%, transparent 45%),
-                    radial-gradient(circle at 50% 80%, rgba(139, 86, 65, 0.03) 0%, transparent 50%),
-                    #fafafa;
+  --soft-radius: 2px;
+  --panel-radius: 2px;
+  --card-radius: 2px;
 
   /* Fonts */
   --font-waldenburg: "Waldenburg", system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
 
-  /* Shadows — layered like shadcn */
-  --shadow-xs: 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.04);
-  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.07), 0 4px 6px -4px rgba(0,0,0,0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
-  --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.18);
-
-  /* Transitions */
-  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  /* Transitions — stepped like wild.as */
+  --ease-step: steps(6);
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* ═══════════════════════════════════════════
-   AESTHETIC COLOR UTILITIES (Hero Gradient Palette)
-   ═══════════════════════════════════════════ */
-.hero-gradient-text {
-  background: linear-gradient(135deg, #C68B59 0%, #545B8C 100%);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-.hero-gradient-bg {
-  background: linear-gradient(135deg, #C68B59 0%, #545B8C 100%);
 }
 
 /* ═══════════════════════════════════════════
@@ -153,24 +135,34 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--paper);
   color: var(--page-text);
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.62;
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+
+p, li, h1, h2, h3, h4, h5, h6 {
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 /* ═══════════════════════════════════════════
-   HEADING SYSTEM — Waldenburg editorial scale
+   HEADING SYSTEM — tight, clean, Waldenburg
    ═══════════════════════════════════════════ */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-waldenburg);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.025em;
   text-wrap: balance;
   display: block;
   color: var(--heading-color);
@@ -179,49 +171,49 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Type scale ── */
 .type-display {
-  font-family: var(--font-waldenburg);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 400;
   font-size: clamp(2.2rem, 8vw, 4.5rem);
-  line-height: 1.03;
+  line-height: 0.95;
   letter-spacing: -0.04em;
 }
 .type-6xl {
-  font-family: var(--font-waldenburg);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 400;
   font-size: clamp(1.6rem, 5vw, 2.5rem);
-  line-height: 1.1;
+  line-height: 1.06;
   letter-spacing: -0.03em;
 }
 .type-5xl {
-  font-family: var(--font-waldenburg);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 400;
   font-size: clamp(1.25rem, 4vw, 1.9rem);
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.025em;
 }
 .type-4xl {
-  font-family: var(--font-waldenburg);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 400;
   font-size: clamp(1.1rem, 3.5vw, 1.45rem);
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.02em;
 }
 .type-3xl {
-  font-family: var(--font-waldenburg);
+  font-family: var(--font-heading);
   font-weight: 500;
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   line-height: 1.25;
   letter-spacing: -0.015em;
 }
 .type-2xl {
-  font-family: var(--font-waldenburg);
+  font-family: var(--font-heading);
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.30;
   letter-spacing: -0.01em;
 }
 .type-xl {
-  font-family: var(--font-waldenburg);
+  font-family: var(--font-heading);
   font-weight: 500;
   font-size: 0.9375rem;
   line-height: 1.35;
@@ -237,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 1.60;
+  line-height: 1.62;
 }
 .type-sm {
   font-family: var(--font-body), system-ui, sans-serif;
@@ -259,51 +251,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ═══════════════════════════════════════════
-   SHADCN-STYLE UTILITY CLASSES
+   UTILITY CLASSES — wild.as inspired
    ═══════════════════════════════════════════ */
 
-/* Eyebrow label chip — ElevenLabs style */
+/* Mono label — wild's kicker / eyebrow style */
+.mono {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+}
+
+/* Chip — flat, square, monospace-adjacent */
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 0.22rem 0.65rem;
-  border-radius: var(--radius-full);
+  padding: 4px 10px;
+  border-radius: 2px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  background: rgba(0,0,0,0.03);
-  color: rgba(0,0,0,0.42);
-  border: 1px solid rgba(0,0,0,0.07);
+  letter-spacing: 0.1em;
+  background: rgba(0,0,0,0.04);
+  color: rgba(0,0,0,0.50);
+  border: 1px solid var(--line);
   font-family: var(--font-body), system-ui, sans-serif;
 }
 
-/* Dot accent before chip text */
-.chip::before {
-  content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.25);
-  flex-shrink: 0;
-}
+/* Colored chip variants — flat, no dot */
+.chip-blue   { background: rgba(37,99,235,0.06);  color: rgba(37,99,235,0.80);  border-color: rgba(37,99,235,0.14); }
+.chip-green  { background: rgba(22,163,74,0.06);  color: rgba(22,163,74,0.80);  border-color: rgba(22,163,74,0.14); }
+.chip-amber  { background: rgba(217,119,6,0.06);  color: rgba(180,96,0,0.85);   border-color: rgba(217,119,6,0.16); }
+.chip-purple { background: rgba(124,58,237,0.06); color: rgba(109,40,217,0.80); border-color: rgba(124,58,237,0.14); }
+.chip-red    { background: rgba(220,38,38,0.06);  color: rgba(185,28,28,0.80);  border-color: rgba(220,38,38,0.14); }
+.chip-teal   { background: rgba(13,148,136,0.06); color: rgba(15,118,110,0.80); border-color: rgba(13,148,136,0.14); }
 
-/* Colored chip variants by badge type */
-.chip-blue   { background: rgba(37,99,235,0.07);  color: rgba(37,99,235,0.75);  border-color: rgba(37,99,235,0.15); }
-.chip-blue::before   { background: rgba(37,99,235,0.5); }
-.chip-green  { background: rgba(22,163,74,0.07);  color: rgba(22,163,74,0.80);  border-color: rgba(22,163,74,0.15); }
-.chip-green::before  { background: rgba(22,163,74,0.5); }
-.chip-amber  { background: rgba(217,119,6,0.07);  color: rgba(180,96,0,0.85);   border-color: rgba(217,119,6,0.18); }
-.chip-amber::before  { background: rgba(180,96,0,0.5); }
-.chip-purple { background: rgba(124,58,237,0.07); color: rgba(109,40,217,0.80); border-color: rgba(124,58,237,0.15); }
-.chip-purple::before { background: rgba(109,40,217,0.5); }
-.chip-red    { background: rgba(220,38,38,0.07);  color: rgba(185,28,28,0.80);  border-color: rgba(220,38,38,0.15); }
-.chip-red::before    { background: rgba(185,28,28,0.5); }
-.chip-teal   { background: rgba(13,148,136,0.07); color: rgba(15,118,110,0.80); border-color: rgba(13,148,136,0.15); }
-.chip-teal::before   { background: rgba(15,118,110,0.5); }
-
-/* Section container — ultra-wide margins */
+/* Section container */
 .section-container {
   margin-inline: auto;
   width: 100%;
@@ -320,68 +305,56 @@ h1, h2, h3, h4, h5, h6 {
   .section-container { padding-inline: 2rem; }
 }
 
-/* shadcn-style card — flat, no shadow */
+/* Card — flat, hairline border, no shadow, no radius */
 .shadcn-card {
   background: var(--card-bg);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
 }
 
 .el-surface {
   background: rgba(255,255,255,0.70);
-  border-radius: var(--radius-lg);
+  border-radius: 2px;
 }
 
 .el-card {
   background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(0,0,0,0.07);
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  border-radius: 2px;
 }
 
 .el-card-hover {
-  transition: border-color 0.18s var(--ease-in-out);
+  transition: border-color 0.2s ease;
 }
 
 .el-card-hover:hover {
-  border-color: rgba(0,0,0,0.14);
+  border-color: var(--border-strong);
 }
 
 .el-muted-panel {
   background: rgba(0,0,0,0.025);
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--line-subtle);
+  border-radius: 2px;
 }
 
-.el-section-grid {
-  position: relative;
-}
+/* ── Grid overlay — REMOVED (wild.as has no grid patterns) ── */
+.el-section-grid { position: relative; }
+.el-section-grid::before { display: none; }
 
-.el-section-grid::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.16), transparent 82%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.16), transparent 82%);
-  opacity: 0.45;
-}
-
-/* shadcn-style button base */
+/* ═══════════════════════════════════════════
+   BUTTONS — flat, dark, sharp corners
+   ═══════════════════════════════════════════ */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   white-space: nowrap;
-  border-radius: var(--radius-full);
+  border-radius: 2px;
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.01em;
-  transition: all 0.18s var(--ease-in-out);
+  transition: background 0.2s ease, color 0.2s ease;
   cursor: pointer;
   border: none;
   text-decoration: none;
@@ -389,95 +362,72 @@ h1, h2, h3, h4, h5, h6 {
 .btn:active { transform: scale(0.97); }
 
 .btn-primary {
-  background-color: #000000;
-  background-image: 
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 8px 8px;
+  background: var(--ink);
   color: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-body), sans-serif;
+  letter-spacing: -0.01em;
+  padding: 0 24px;
+  height: 40px;
+  transition: background 0.2s ease;
   position: relative;
   overflow: hidden;
-  border-radius: 2px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 0.75rem;
-  font-family: 'Inter', sans-serif;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 0 1.25rem;
-  height: 2.25rem;
-}
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
-  transform: translateX(-100%);
-  transition: none;
-}
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  bottom: 0; right: 0; width: 4px; height: 4px;
-  background: #fff;
-  opacity: 0.5;
 }
 .btn-primary:hover {
-  background-color: #111111;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.1);
-  letter-spacing: 0.18em;
-}
-.btn-primary:hover::before {
-  transform: translateX(100%);
-  transition: transform 0.8s ease-in-out;
+  background: #3b5bd9;
 }
 
 .btn-secondary {
   background: transparent;
   color: rgba(0,0,0,0.75);
-  padding: 0 1.375rem;
-  height: 2.875rem; /* 46px */
-  font-size: 14px;
-  font-weight: 600;
-  border: 1px solid rgba(0,0,0,0.12);
+  padding: 0 20px;
+  height: 40px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid var(--line);
+  border-radius: 2px;
   letter-spacing: -0.01em;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 .btn-secondary:hover {
   background: rgba(0,0,0,0.04);
-  border-color: rgba(0,0,0,0.14);
-  color: #0A0A0A;
+  border-color: var(--border-strong);
+  color: var(--ink);
 }
+
 .btn-ghost {
   background: transparent;
   color: rgba(0,0,0,0.60);
   padding: 0.5rem 0.875rem;
+  border-radius: 2px;
 }
 .btn-ghost:hover {
   background: rgba(0,0,0,0.04);
-  color: #0A0A0A;
+  color: var(--ink);
 }
 
-/* Section heading pattern — used everywhere */
+/* Section heading pattern */
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-family: var(--font-mono);
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: rgba(0,0,0,0.38);
-  font-family: var(--font-body), system-ui, sans-serif;
+  letter-spacing: 0.16em;
+  color: var(--muted-color);
   margin-bottom: 1rem;
 }
 
 .section-heading {
-  font-family: var(--font-waldenburg);
-  font-weight: 500;
+  font-family: var(--font-heading);
+  font-weight: 400;
   font-size: clamp(1.4rem, 5vw, 2.2rem);
-  line-height: 1.1;
+  line-height: 1.06;
   letter-spacing: -0.025em;
   color: var(--heading-color);
   text-wrap: balance;
@@ -487,78 +437,49 @@ h1, h2, h3, h4, h5, h6 {
 .section-subheading {
   font-family: var(--font-body), system-ui, sans-serif;
   font-size: 0.9375rem;
-  line-height: 1.65;
-  color: rgba(0,0,0,0.50);
+  line-height: 1.62;
+  color: var(--body-color);
   max-width: 42ch;
   text-wrap: pretty;
 }
 
-/* Italic serif accent with subtle hero gradient */
+/* Serif italic — now just uses Waldenburg italic look, no gradient */
 .serif-italic {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
-  background: linear-gradient(135deg, #C68B59 0%, #545B8C 100%);
-  -webkit-background-clip: text;
-  color: transparent !important;
-  padding-right: 0.1em; /* Prevent clipping of italic text */
+  color: var(--muted-color) !important;
 }
 
-/* ── Structural Grid Overlay ── */
-.grid-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.12) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
-}
+/* ── Grid overlay — removed ── */
+.grid-overlay { display: none; }
 
 /* ═══════════════════════════════════════════
-   SECTION DIVIDER — dotted line
+   SECTION DIVIDER — clean hairline
    ═══════════════════════════════════════════ */
 .section-divider {
   width: 100%;
-  height: 2px;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.25) 0.85px, transparent 0.85px);
-  background-size: 16px 100%;
-  background-repeat: repeat-x;
-  background-position: center bottom;
+  height: 1px;
+  background: var(--line);
 }
 
-/* Section top separator — dotted */
+/* Section top separator — hairline */
 .section-sep {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 2px;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.15) 0.85px, transparent 0.85px);
-  background-size: 24px 100%;
-  background-repeat: repeat-x;
+  height: 1px;
+  background: var(--line);
 }
 
-/* ═══════════════════════════════════════════
-   DECORATIVE GRID DOTS — shadcn pattern
-   ═══════════════════════════════════════════ */
-.grid-dot-pattern {
-  background-image:
-    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
+/* ── Grid dot pattern — removed ── */
+.grid-dot-pattern { display: none; }
 
 /* ═══════════════════════════════════════════
-   SCROLL ANIMATIONS
+   SCROLL ANIMATIONS — stepped like wild.as
    ═══════════════════════════════════════════ */
 .scroll-fade {
   opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 0.6s var(--ease-spring),
-    transform 0.6s var(--ease-spring);
+  transform: translateY(18px);
+  transition: opacity 0.6s var(--ease-smooth), transform 0.8s var(--ease-smooth);
 }
 .scroll-fade.visible {
   opacity: 1;
@@ -575,11 +496,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Fade-up entrance ── */
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(12px); }
+  from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up {
-  animation: fade-up 0.45s var(--ease-spring) both;
+  animation: fade-up 0.5s steps(6) both;
 }
 
 /* ── Fade-in ── */
@@ -587,30 +508,30 @@ h1, h2, h3, h4, h5, h6 {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-.animate-fade-in { animation: fade-in 0.4s var(--ease-in-out) both; }
+.animate-fade-in { animation: fade-in 0.4s steps(4) both; }
 
 /* ── Scale in ── */
 @keyframes scale-in {
   from { opacity: 0; transform: scale(0.96); }
   to   { opacity: 1; transform: scale(1); }
 }
-.animate-scale-in { animation: scale-in 0.35s var(--ease-spring) both; }
+.animate-scale-in { animation: scale-in 0.35s steps(4) both; }
 
 /* ═══════════════════════════════════════════
    INTERACTIVE STATES
    ═══════════════════════════════════════════ */
 ::selection {
-  background-color: rgba(125, 72, 53, 0.14);
+  background-color: rgba(10, 10, 10, 0.08);
 }
 
-/* Focus ring — shadcn style */
+/* Focus ring */
 :focus-visible {
-  outline: 2px solid rgba(0,0,0,0.5);
+  outline: 2px solid var(--ink);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
-/* ── Hide footer on news page ── */
+/* ── Hide footer on blog pages ── */
 body:has([data-hide-footer]) #global-footer {
   display: none !important;
 }
@@ -625,14 +546,12 @@ html.modal-open header {
 }
 
 /* ═══════════════════════════════════════════
-   GLASSMORPHISM CARD VARIANT
+   GLASS CARD — removed (no glassmorphism)
    ═══════════════════════════════════════════ */
 .glass-card {
-  background: rgba(255,255,255,0.60);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.80);
-  border-radius: var(--radius-xl);
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--line);
+  border-radius: 2px;
 }
 
 /* ═══════════════════════════════════════════
@@ -644,36 +563,37 @@ html.modal-open header {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: var(--radius-md);
+  border-radius: 2px;
   background: rgba(0,0,0,0.04);
   flex-shrink: 0;
   color: rgba(0,0,0,0.55);
 }
 
 /* ═══════════════════════════════════════════
-   TAG / BADGE VARIANTS — shadcn Badge system
+   TAG / BADGE — flat, square
    ═══════════════════════════════════════════ */
 .badge {
   display: inline-flex;
   align-items: center;
-  border-radius: var(--radius-full);
-  padding: 0.18rem 0.55rem;
-  font-size: 0.75rem;
-  font-weight: 500;
+  border-radius: 2px;
+  padding: 3px 8px;
+  font-size: 10px;
+  font-weight: 600;
   line-height: 1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   border: 1px solid transparent;
   font-family: var(--font-body), system-ui, sans-serif;
 }
 .badge-default {
-  background: rgba(0,0,0,0.05);
-  color: rgba(0,0,0,0.65);
-  border-color: rgba(0,0,0,0.07);
+  background: rgba(0,0,0,0.04);
+  color: rgba(0,0,0,0.60);
+  border-color: var(--line);
 }
 .badge-outline {
   background: transparent;
   color: rgba(0,0,0,0.55);
-  border-color: rgba(0,0,0,0.10);
+  border-color: var(--line);
 }
 .badge-brand {
   background: rgba(125,72,53,0.06);
@@ -682,18 +602,24 @@ html.modal-open header {
 }
 
 /* ═══════════════════════════════════════════
-   PROCESS / STEP INDICATORS
+   PROCESS / STEP INDICATORS — dark square
    ═══════════════════════════════════════════ */
 .step-number {
-  font-family: var(--font-waldenburg);
-  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  font-size: 9px;
   font-weight: 500;
-  color: rgba(0,0,0,0.20);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 2px;
 }
 
 /* ═══════════════════════════════════════════
-   ACCORDION / FAQ — shadcn-inspired
+   ACCORDION / FAQ
    ═══════════════════════════════════════════ */
 .accordion-trigger {
   display: flex;
@@ -709,82 +635,55 @@ html.modal-open header {
 }
 
 /* ═══════════════════════════════════════════
-   TESTIMONIAL QUOTE MARK
+   TESTIMONIAL QUOTE MARK — simplified
    ═══════════════════════════════════════════ */
 .quote-mark {
-  font-family: 'Instrument Serif', serif;
-  font-size: 5rem;
+  font-family: var(--font-heading);
+  font-size: 4rem;
   line-height: 0.8;
-  color: rgba(0,0,0,0.06);
+  color: var(--line);
   user-select: none;
   pointer-events: none;
 }
 
 /* ═══════════════════════════════════════════
-   DOTTED LINE DIVIDERS (ElevenLabs Style)
+   DOTTED LINE DIVIDERS — replaced with hairlines
    ═══════════════════════════════════════════ */
 .dotted-line-x {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.25) 1px, transparent 1px);
-  background-size: 48px 1px;
-  background-position: bottom;
-  background-repeat: repeat-x;
-  height: 1.5px;
+  height: 1px;
   width: 100%;
+  background: var(--line);
 }
 .dotted-line-y {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.25) 1px, transparent 1px);
-  background-size: 1px 48px;
-  background-position: right;
-  background-repeat: repeat-y;
-  width: 1.5px;
+  width: 1px;
   height: 100%;
+  background: var(--line);
 }
 
 /* ═══════════════════════════════════════════
-   BLUEPRINT BUTTON — for dark CTA cards only
+   BLUEPRINT BUTTON — now same as btn-primary
    ═══════════════════════════════════════════ */
 .blueprint-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #0A0A0A;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-  background-size: 8px 8px;
+  background: var(--ink);
   color: #fff;
-  border-radius: 3px;
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0 1.25rem;
-  height: 2.5rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0 24px;
+  height: 40px;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
-  position: relative;
-  overflow: hidden;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-.blueprint-btn::before {
-  content: '';
-  position: absolute;
-  top: 0; left: -100%; width: 60%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-  transform: skewX(-15deg);
-  transition: none;
+  transition: background 0.2s ease;
+  letter-spacing: -0.01em;
 }
 .blueprint-btn:hover {
-  background-color: #111;
-  border-color: rgba(255,255,255,0.28);
-}
-.blueprint-btn:hover::before {
-  left: 150%;
-  transition: left 0.7s ease-in-out;
+  background: #3b5bd9;
 }
 
 /* Utilities */
@@ -835,7 +734,6 @@ img {
 
 /* ── Tablet (640–1024) ── */
 @media (max-width: 1024px) {
-  /* Products bento grid — go single column */
   .bento-products-grid {
     grid-template-columns: 1fr !important;
   }
@@ -843,41 +741,34 @@ img {
 
 /* ── Ensure cards don't overflow on small screens ── */
 @media (max-width: 640px) {
-  /* Team cards grid → 1 col */
   .team-grid-row {
     grid-template-columns: 1fr 1fr !important;
   }
 
-  /* Testimonials → 1 col */
   .testimonials-grid {
     grid-template-columns: 1fr !important;
   }
 
-  /* Service cards → 1 col */
   .services-grid {
     grid-template-columns: 1fr !important;
   }
 
-  /* Profile page sidebar → stack below content */
   .profile-sidebar {
     order: -1;
   }
 
-  /* Button text size */
   .btn-primary, .btn-secondary {
-    font-size: 0.7rem !important;
+    font-size: 12px !important;
   }
 }
 
-/* ── Fix table/grid bleed on mobile ── */
+/* ── Mobile chip sizing ── */
 @media (max-width: 768px) {
-  /* Prevent tag pills from wrapping ugly */
   .chip {
     font-size: 9px;
-    padding: 0.18rem 0.5rem;
+    padding: 3px 7px;
   }
 
-  /* Profile pull-quote sizing */
   .profile-pull-quote {
     font-size: 1rem !important;
     padding-left: 1.5rem !important;

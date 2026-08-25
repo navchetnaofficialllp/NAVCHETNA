@@ -38,10 +38,10 @@ export default function CareerPage() {
               <h1
                 className="text-black text-balance"
                 style={{
-                  fontFamily: "var(--font-waldenburg)",
+                  fontFamily: "var(--font-heading)",
                   fontSize: "clamp(2rem, 4vw, 3.15rem)",
                   fontWeight: 500,
-                  letterSpacing: "-0.03em",
+                  letterSpacing: "-0.04em",
                   lineHeight: 1.08,
                 }}
               >
@@ -50,14 +50,14 @@ export default function CareerPage() {
                   focused team.
                 </span>
               </h1>
-              <p className="mt-6 max-w-2xl text-pretty text-black/50" style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: 1.7 }}>
+              <p className="mt-6 max-w-2xl text-pretty text-black/80" style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: 1.7 }}>
                 Join Navchetna Technologies and help shape products, platforms,
                 and learning systems that create visible impact across India.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-4 text-[13px] font-medium text-black/52">
                 <span className="inline-flex items-center gap-2">
-                  <MapPin className="size-4 text-black/34" />
+                  <MapPin className="size-4 text-black/34"  strokeWidth={1.5} />
                   Jodhpur & Ahmedabad
                 </span>
                 <span className="inline-flex items-center gap-2">
@@ -88,7 +88,7 @@ export default function CareerPage() {
                   Working Here
                 </p>
                 <h2 className="section-heading max-w-sm text-black">
-                  How we <span className="serif-italic">Work.</span>
+                  How we Work.
                 </h2>
               </div>
               <p
@@ -114,7 +114,7 @@ export default function CareerPage() {
                   <h3 className="mb-3 text-[1.15rem] text-black font-medium leading-tight tracking-tight">
                     {perk.title}
                   </h3>
-                  <p className="text-[0.92rem] leading-[1.65] text-black/50" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <p className="text-[0.92rem] leading-[1.65] text-black/80" style={{ fontFamily: "'Inter', sans-serif" }}>
                     {perk.desc}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function CareerPage() {
                   Open Positions
                 </p>
                 <h2 className="section-heading max-w-sm text-black">
-                  Current <span className="serif-italic">Openings.</span>
+                  Current Openings.
                 </h2>
               </div>
 
@@ -170,7 +170,7 @@ export default function CareerPage() {
       <section className="pb-16 md:pb-20">
         <div className="section-container">
           <div
-            className="relative isolate overflow-hidden rounded-2xl flex flex-col items-center text-center"
+            className="relative isolate overflow-hidden  flex flex-col items-center text-center"
             style={{
               background: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%)",
               backgroundImage: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)",
@@ -190,19 +190,19 @@ export default function CareerPage() {
                 <h2
                   className="mb-4 text-balance"
                   style={{
-                    fontFamily: "var(--font-waldenburg)",
+                    fontFamily: "var(--font-heading)",
                     fontSize: "clamp(1.75rem, 3.5vw, 2.5rem)",
                     fontWeight: 400,
                     lineHeight: 1.1,
-                    letterSpacing: "-0.03em",
+                    letterSpacing: "-0.04em",
                     color: "#000"
                   }}
                 >
                   Don&apos;t see a role? Send us your{" "}
-                  <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: "italic", background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>work anyway.</span>
+                  work anyway.
                 </h2>
                 <p
-                  className="mb-7 text-black/60"
+                  className="mb-7 text-black/80"
                   style={{ lineHeight: 1.65, fontSize: "0.92rem", maxWidth: "480px", margin: "0 auto 1.75rem" }}
                 >
                   We are always open to meeting thoughtful builders who care about product, design, engineering, and impact.

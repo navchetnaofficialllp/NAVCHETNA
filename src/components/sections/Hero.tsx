@@ -29,19 +29,11 @@ export function Hero() {
         sizes="(max-width: 768px) 0vw, 100vw"
       />
 
-      {/* Layered overlays for legibility */}
+      {/* Single dark overlay — no multi-layer gradients */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.42) 0%, rgba(0,0,0,0.12) 38%, rgba(0,0,0,0.22) 65%, rgba(0,0,0,0.72) 100%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 110% 80% at 50% 50%, transparent 20%, rgba(0,0,0,0.48) 100%)",
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.55) 100%)",
         }}
       />
 
@@ -50,25 +42,17 @@ export function Hero() {
         <h1
           style={{
             fontSize: "clamp(2rem, 10vw, 3.75rem)",
-            lineHeight: "1.08",
-            letterSpacing: "-0.05em",
+            lineHeight: "0.95",
+            letterSpacing: "-0.04em",
             fontFamily: "var(--font-waldenburg)",
-            fontWeight: 500,
+            fontWeight: 400,
             color: "#ffffff",
-            textShadow: "0 2px 40px rgba(0,0,0,0.45)",
             textAlign: "center",
           }}
         >
           Technology with Awareness,
           <br />
-          <span
-            style={{
-              fontFamily: "'Instrument Serif', serif",
-              fontStyle: "italic",
-              fontWeight: 400,
-              color: "rgba(255,255,255,0.85)",
-            }}
-          >
+          <span style={{ color: "rgba(255,255,255,0.60)" }}>
             Built for everywhere.
           </span>
         </h1>
@@ -77,15 +61,15 @@ export function Hero() {
           className="mt-8 max-w-md text-pretty"
           style={{
             fontSize: "clamp(0.9rem, 1.1vw, 1rem)",
-            lineHeight: "1.70",
-            color: "rgba(255,255,255,0.65)",
+            lineHeight: "1.62",
+            color: "rgba(255,255,255,0.55)",
             fontFamily: "var(--font-body)",
             fontWeight: 400,
             letterSpacing: "0",
           }}
         >
           From education to enterprise — we empower growth through{" "}
-          <span style={{ color: "rgba(255,255,255,0.88)", fontWeight: 500 }}>
+          <span style={{ color: "rgba(255,255,255,0.85)", fontWeight: 500 }}>
             technology, creativity,
           </span>{" "}
           and conscious innovation.
@@ -94,34 +78,34 @@ export function Hero() {
         <div className="mt-9 flex flex-wrap justify-center gap-3">
           <Link
             href="/contact"
-            className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-full transition-all duration-300 active:scale-95 hover:bg-white/90"
+            className="group inline-flex items-center justify-center gap-2.5 whitespace-nowrap transition-all duration-200 active:scale-95 hover:bg-white/90"
             style={{
-              height: "46px",
-              padding: "0 22px",
-              fontSize: "13.5px",
-              fontWeight: 600,
+              height: "42px",
+              padding: "0 24px",
+              fontSize: "13px",
+              fontWeight: 500,
               background: "#ffffff",
-              color: "#000000",
+              color: "#0A0A0A",
               letterSpacing: "-0.01em",
+              borderRadius: "2px",
             }}
           >
-            Get started
+            Schedule meeting
             <ArrowRight weight="bold" className="size-3.5 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
             href="/products"
-            className="inline-flex items-center justify-center whitespace-nowrap rounded-full transition-all duration-300 active:scale-95 hover:bg-white/15"
+            className="inline-flex items-center justify-center whitespace-nowrap transition-all duration-200 active:scale-95 hover:bg-white/15"
             style={{
-              height: "46px",
-              padding: "0 22px",
-              fontSize: "13.5px",
+              height: "42px",
+              padding: "0 24px",
+              fontSize: "13px",
               fontWeight: 500,
-              background: "rgba(255,255,255,0.08)",
-              color: "rgba(255,255,255,0.88)",
-              border: "1px solid rgba(255,255,255,0.22)",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(8px)",
+              background: "rgba(255,255,255,0.06)",
+              color: "rgba(255,255,255,0.80)",
+              border: "1px solid rgba(255,255,255,0.18)",
               letterSpacing: "-0.01em",
+              borderRadius: "2px",
             }}
           >
             Explore products

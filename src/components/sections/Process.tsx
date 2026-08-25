@@ -50,46 +50,46 @@ export function Process() {
         {/* Header */}
         <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Process</p>
-            <h2 className="section-heading">Executing vision with <span className="serif-italic">steady precision.</span></h2>
+            <p className="mb-4" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", fontWeight: 500, textTransform: "uppercase", letterSpacing: "0.16em", color: "#8b8b8b" }}>Process</p>
+            <h2 className="section-heading">Executing vision with <span style={{ color: "#8b8b8b" }}>steady precision.</span></h2>
           </div>
           <p
             className="max-w-md"
-            style={{ color: "rgba(0,0,0,0.48)", lineHeight: 1.68, fontSize: "0.94rem" }}
+            style={{ color: "rgba(0,0,0,0.48)", lineHeight: 1.62, fontSize: "0.94rem" }}
           >
             Every project deserves a thoughtful start, a strong build, and a confident launch.
           </p>
         </div>
 
-        {/* Dotted divider */}
+        {/* Hairline divider */}
         <div className="section-divider mb-10" />
 
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-          {/* Phase List — stark text list instead of pills */}
-          <div className="flex flex-col gap-6 border-l border-dotted border-black/[0.25] pl-6">
+          {/* Phase List */}
+          <div className="flex flex-col gap-6" style={{ borderLeft: "1px solid rgba(10,10,10,0.12)", paddingLeft: "1.5rem" }}>
             {phases.map((phase, index) => (
               <button
                 key={phase.id}
                 onClick={() => setActive(index)}
                 className="text-left group relative"
               >
-                {/* Active indicator dot */}
+                {/* Active indicator — small square, not dot */}
                 <div 
-                  className={`absolute -left-[27px] top-2 h-1.5 w-1.5 rounded-full transition-colors duration-300 ${
-                    active === index 
-                      ? index === 0 ? "bg-copper" : index === 1 ? "bg-slate-blue" : "bg-sage"
-                      : "bg-transparent"
-                  }`}
+                  className="absolute -left-[25px] top-2 transition-all duration-200"
                   style={{ 
-                    backgroundColor: active === index ? undefined : "transparent"
+                    width: "6px",
+                    height: "6px",
+                    borderRadius: "1px",
+                    background: active === index ? "#0A0A0A" : "transparent",
                   }}
                 />
                 
                 <h3
-                  className="text-xl transition-colors duration-300"
+                  className="text-xl transition-colors duration-200"
                   style={{ 
                     fontFamily: "var(--font-waldenburg)", 
-                    color: active === index ? "var(--heading-color)" : "rgba(0,0,0,0.3)" 
+                    fontWeight: 400,
+                    color: active === index ? "#0A0A0A" : "rgba(0,0,0,0.25)" 
                   }}
                 >
                   0{index + 1}. {phase.title}
@@ -103,15 +103,15 @@ export function Process() {
                     marginTop: active === index ? "0.5rem" : "0"
                   }}
                 >
-                  <p className="text-sm text-black/50 pr-4">{phase.desc}</p>
+                  <p className="text-sm text-black/45 pr-4">{phase.desc}</p>
                 </div>
               </button>
             ))}
           </div>
 
-          {/* Content details — open layout without cards */}
+          {/* Content details */}
           <div className="flex flex-col gap-8">
-            <div className="relative aspect-[21/9] w-full overflow-hidden rounded-sm bg-black/[0.02]">
+            <div className="relative aspect-[21/9] w-full overflow-hidden bg-black/[0.02]" style={{ borderRadius: "2px" }}>
               <Image
                 src={["/assets/Frame 110.png", "/assets/Frame 112.png", "/assets/Frame 113.png"][active]}
                 alt={current.title}
@@ -122,13 +122,13 @@ export function Process() {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2">
-              {current.items.map((item, itemIndex) => (
+              {current.items.map((item) => (
                 <div key={item.title} className="flex flex-col gap-3">
                   <div className="flex items-center gap-3">
-                    {/* Gradient Icon Wrapper */}
-                    <div className="flex w-8 h-8 shrink-0 items-center justify-center rounded-full"
-                         style={{ background: "linear-gradient(135deg, rgba(198,139,89,0.15) 0%, rgba(84,91,140,0.15) 100%)" }}>
-                      <item.icon weight="duotone" className="w-4 h-4" style={{ color: "#C68B59" }} />
+                    {/* Flat icon box */}
+                    <div className="flex w-8 h-8 shrink-0 items-center justify-center"
+                         style={{ background: "rgba(0,0,0,0.04)", borderRadius: "2px" }}>
+                      <item.icon weight="regular" className="w-4 h-4" style={{ color: "#0A0A0A" }} />
                     </div>
                     <p
                       style={{
@@ -136,14 +136,14 @@ export function Process() {
                         fontSize: "0.95rem",
                         fontWeight: 500,
                         letterSpacing: "-0.015em",
-                        color: "var(--heading-color)",
+                        color: "#0A0A0A",
                       }}
                     >
                       {item.title}
                     </p>
                   </div>
                   <div className="pt-1" />
-                  <p style={{ color: "rgba(0,0,0,0.5)", lineHeight: 1.6, fontSize: "0.85rem" }}>
+                  <p style={{ color: "rgba(0,0,0,0.45)", lineHeight: 1.62, fontSize: "0.85rem" }}>
                     {item.desc}
                   </p>
                 </div>

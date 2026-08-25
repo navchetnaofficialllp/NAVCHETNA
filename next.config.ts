@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/news/:path*",
+        destination: "/blog/:path*",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     qualities: [60, 75, 85, 88, 90, 92],
     formats: ["image/avif", "image/webp"],
