@@ -98,15 +98,14 @@ export function Testimonials() {
         <h2
           className="text-black"
           style={{
-            fontFamily: "var(--font-waldenburg)",
+            fontFamily: "var(--font-heading)",
             fontSize: "clamp(1.65rem, 4vw, 2.6rem)",
             fontWeight: 400,
             letterSpacing: "-0.03em",
             lineHeight: 1.06,
           }}
         >
-          What our clients{" "}
-          <span style={{ color: "#8b8b8b" }}>are saying</span>
+          What our clients are saying
         </h2>
         <p
           className="mt-3 mx-auto"
