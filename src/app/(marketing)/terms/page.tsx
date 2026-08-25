@@ -60,7 +60,7 @@ const sections = [
 export default function TermsPage() {
   return (
     <main className="bg-white min-h-screen">
-      <section className="relative border-b border-black/[0.12] pt-28 pb-12 md:pt-36 md:pb-16" className="bg-white">
+      <section className="relative border-b border-black/[0.12] pt-28 pb-12 md:pt-36 md:pb-16 bg-white">
         
         <div className="section-container relative z-10 mx-auto">
           <ScrollReveal>

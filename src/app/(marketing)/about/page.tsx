@@ -363,7 +363,7 @@ export default function AboutPage() {
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           HERO — Immersive full-height
           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="relative flex items-center justify-center overflow-hidden border-b border-black/[0.12] pt-32 pb-14 md:pt-40 md:pb-24" className="bg-white">
+      <section className="relative flex items-center justify-center overflow-hidden border-b border-black/[0.12] pt-32 pb-14 md:pt-40 md:pb-24 bg-white">
         
 
         <div className="section-container px-6 sm:px-12 md:px-24 relative z-10 w-full">

@@ -35,6 +35,8 @@ const productArticles: Record<string, {
   codeExample?: { intro: string; code: string };
   migration?: { intro: string; steps: string[] };
   quote?: string;
+  readTime?: string;
+  tags?: string[];
   related?: { slug: string; title: string; badge: string; desc: string }[];
 }> = {
   "osmium": {
@@ -666,18 +668,24 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
         )}
 
         {/* Footer meta */}
-        <div className="border-t border-black/[0.07] mt-18 pt-8 flex flex-wrap items-center gap-3">
-          <span className="text-[12.5px] text-black/35 flex-1" style={{ fontFamily: "var(--font-body)" }}>
-                  {article.readTime}
-          </span>
-          <div className="flex flex-wrap gap-1.5">
-            {article.tags.map((tag) => (
-              <span key={tag} className="border border-black/[0.07] px-2.5 py-1 text-[11px] font-normal text-black/50" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>
-                #{tag}
+        {(article.readTime || (article.tags && article.tags.length > 0)) && (
+          <div className="border-t border-black/[0.07] mt-18 pt-8 flex flex-wrap items-center gap-3">
+            {article.readTime && (
+              <span className="text-[12.5px] text-black/35 flex-1" style={{ fontFamily: "var(--font-body)" }}>
+                {article.readTime}
               </span>
-            ))}
+            )}
+            {article.tags && article.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1.5">
+                {article.tags.map((tag) => (
+                  <span key={tag} className="border border-black/[0.07] px-2.5 py-1 text-[11px] font-normal text-black/50" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
-        </div>
+        )}
 
         {/* Related Articles */}
         {article.related && article.related.length > 0 && (
