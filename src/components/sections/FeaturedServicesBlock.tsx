@@ -70,7 +70,7 @@ export function FeaturedServicesBlock({ featuredServices }: { featuredServices: 
 
               {/* Dynamic summary indicator */}
               <div className="mt-8 flex items-center justify-between px-1" style={{ color: "#8b8b8b" }}>
-                <span className="type-sm font-medium">{featuredServices[activeIndex].badge}</span>
+                <span className="type-sm font-normal">{featuredServices[activeIndex].badge}</span>
                 <span className="type-sm" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.08em" }}>0{activeIndex + 1} / 0{featuredServices.length}</span>
               </div>
             </div>
@@ -112,7 +112,7 @@ function ServiceTextBlock({
       className={`relative flex flex-col justify-center min-h-[70vh] p-10 py-24 md:p-16 lg:p-20 transition-opacity duration-300 ${isInView ? "opacity-100" : "opacity-30 hover:opacity-60"}`}
       style={{ borderBottom: !isLast ? "1px solid rgba(10,10,10,0.12)" : "none" }}
     >
-      <span className="type-2xs font-medium uppercase tracking-wider w-fit mb-6" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em", color: "#8b8b8b" }}>
+      <span className="type-2xs font-normal uppercase tracking-wider w-fit mb-6" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em", color: "#8b8b8b" }}>
         {s.badge}
       </span>
       <h3 className="type-4xl md:type-5xl text-black mb-6 tracking-tight leading-[1.06]" style={{ fontWeight: 400 }}>{s.title}</h3>
@@ -124,7 +124,7 @@ function ServiceTextBlock({
         {s.bullets.map((b) => (
           <div key={b} className="flex items-center gap-3">
             <div className="flex-none" style={{ width: "5px", height: "5px", borderRadius: "1px", background: "rgba(0,0,0,0.18)" }} />
-            <span className="type-sm text-black/80 font-medium">{b}</span>
+            <span className="type-sm text-black/80 font-normal">{b}</span>
           </div>
         ))}
       </div>

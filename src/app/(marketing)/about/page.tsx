@@ -363,8 +363,8 @@ export default function AboutPage() {
       {/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
           HERO — Immersive full-height
           ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */}
-      <section className="relative flex items-center justify-center overflow-hidden border-b border-black/[0.12] pt-32 pb-14 md:pt-40 md:pb-24" style={{ background: "var(--quiet-gradient)" }}>
-        <div className="grid-overlay" />
+      <section className="relative flex items-center justify-center overflow-hidden border-b border-black/[0.12] pt-32 pb-14 md:pt-40 md:pb-24" className="bg-white">
+        
 
         <div className="section-container px-6 sm:px-12 md:px-24 relative z-10 w-full">
           <ScrollReveal>
@@ -396,9 +396,7 @@ export default function AboutPage() {
                 }}
               >
                 Building the Future with{" "}
-                <span className="serif-italic">
-                  Conscious Intelligence
-                </span>
+                Conscious Intelligence
               </h1>
 
               {/* Sub copy */}
@@ -522,9 +520,7 @@ export default function AboutPage() {
               <div className="mt-5 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                 <h2 className="section-heading max-w-sm">
                   Every great journey starts with a{" "}
-                  <span className="serif-italic">
-                    simple idea
-                  </span>
+                  simple idea
                 </h2>
                 <p
                   className="mb-6 text-pretty"
@@ -787,9 +783,7 @@ export default function AboutPage() {
                 <SectionLabel>Our Team</SectionLabel>
                 <h2 className="section-heading max-w-sm mt-5 mb-0 text-balance">
                   The people{" "}
-                  <span className="serif-italic">
-                    behind Navchetna
-                  </span>
+                  behind Navchetna
                 </h2>
               </div>
               <p
@@ -857,17 +851,7 @@ export default function AboutPage() {
                 }}
               >
                 Navchetna isn&apos;t just a company.{" "}
-                <span
-                  style={{
-                    fontFamily: "var(--font-heading)",
-                    fontStyle: "normal",
-                    background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                  }}
-                >
-                  It&apos;s a story.
-                </span>
+                It&apos;s a story.
               </h3>
               <p
                 className="text-black/55 max-w-lg mx-auto mb-7"
@@ -883,7 +867,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/career"
-                className="inline-flex items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white hover:bg-black/80 transition-colors"
+                className="btn btn-primary:bg-black/80 transition-colors"
                 style={{ height: "2.5rem" }}
               >
                 View Open Positions

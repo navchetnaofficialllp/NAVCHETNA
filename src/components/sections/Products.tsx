@@ -33,7 +33,7 @@ export function Products() {
                 {["Intelligence Redefined", "Fluid Collaboration", "Endless Possibilities"].map((step) => (
                   <span
                     key={step}
-                    className="text-[11px] font-medium text-black/45 uppercase tracking-widest"
+                    className="text-[11px] font-normal text-black/45 uppercase tracking-widest"
                   >
                     {step} {step !== "Endless Possibilities" && "·"}
                   </span>

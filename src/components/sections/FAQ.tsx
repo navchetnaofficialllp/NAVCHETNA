@@ -60,7 +60,7 @@ export function FAQ() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/70 transition-opacity hover:opacity-60"
+                  className="inline-flex items-center gap-1.5 text-[13px] font-normal text-black/70 transition-opacity hover:opacity-60"
                 >
                   Reach out to us
                   <ArrowUpRight weight="bold" className="size-3.5"  strokeWidth={1.5} />

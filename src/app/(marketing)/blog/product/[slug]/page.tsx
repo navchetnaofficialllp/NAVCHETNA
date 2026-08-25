@@ -35,7 +35,19 @@ const productArticles: Record<string, {
   codeExample?: { intro: string; code: string };
   migration?: { intro: string; steps: string[] };
   quote?: string;
-  readTime: string; tags: string[];
+  related?: { slug: string; title: string; badge: string; desc: string }[];
+}> = {
+  "osmium": {
+    title: "Osmium Launch: Redefining How We Learn",
+    badge: "Flagship Launch", date: "Jan 15, 2025",
+    image: "/assets/OSMIUM LAUNCH.png",
+    hero: "We've always believed that technology shouldn't just present information—it should guide you through it. Today, we're incredibly proud to launch Osmium. It's an AI-native learning platform that actually mentors you, predicts where you might struggle, and adapts to your pace. We built this because we wanted a learning experience that feels focused, personal, and profoundly human.",
+    tryLink: "https://www.osmium.co.in/", tryLabel: "Try Osmium",
+    callout: { label: "Historic Achievement", text: "Outperformed leading global LLMs in benchmarked educational content generation (August 15, 2025). Deployed with 276 students at Rai University, Ahmedabad." },
+    sections: [
+      { heading: "Structured Personal Learning", body: "Each course is designed to feel approachable and progressive — structured clarity, not complexity.", bullets: ["Clear breakdown of lessons and duration", "Gentle introduction to set context", "Smart states to track your progress", "Progressive difficulty that adapts to your pace"] },
+      { heading: "Designed for Focus, Not Distraction", body: "Every lesson blends formats seamlessly into one flow. It feels less like consuming content, more like moving forward.", bullets: ["Video for understanding", "Clean reading for depth", "Interactive formats: podcast, question bank, quizzes, and flashcards", "Distraction-free reading environment"] },
+      { heading: "Smart AI Mock Tests for Exam Preparation", body: "Practice is where Osmium AI becomes truly adaptive. Tests aren't static — they're generated based on patterns, previous performance, and learning behavior.", bullets: ["AI-generated exams aligned with real exam patterns", "Clean, distraction-free attempt interface", "Smart navigation across subjects and questions", "Section-wise insights and accuracy tracking", "Deep question-level analysis with explanations"] },
       { heading: "AI Mentoring & Personalization", body: "Everything in Osmium AI quietly learns from you. From courses to tests to suggestions — the system adapts in the background.", bullets: ["Personalized recommendations based on weak areas", "Context-aware suggestions for improvement", "AI mentor that guides, not interrupts", "Career guidance based on your strengths", "Mental wellness monitoring to keep burnout in check"] },
     ],
     achievements: [
@@ -392,7 +404,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
             </p>
             {article.tryLink && (
               <Link href={article.tryLink} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-9 bg-black text-white text-[13px] font-medium px-6 py-3 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
+                className="inline-flex items-center gap-2 mt-9 bg-black text-white text-[13px] font-normal px-6 py-3 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
                 {article.tryLabel || "Try Now"} <ArrowUpRight className="size-3.5"  strokeWidth={1.5} />
               </Link>
             )}
@@ -426,7 +438,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <div className="flex">
                 <div className="w-[3px] shrink-0 rounded-l-xl" style={{ background: "rgb(139,92,246)" }} />
                 <div className="px-7 py-7">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] mb-3.5" style={{ color: "rgb(139,92,246)" }}>{article.callout.label}</p>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] mb-3.5" style={{ color: "rgb(139,92,246)" }}>{article.callout.label}</p>
                   <p className="text-[0.9rem] text-black/80 leading-[1.75]" style={{ fontFamily: "var(--font-body)" }}>{article.callout.text}</p>
                 </div>
               </div>
@@ -447,7 +459,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
                     <thead>
                       <tr style={{ background: "rgba(0,0,0,0.03)" }}>
                         {article.benchmarkTable.headers.map((h, i) => (
-                          <th key={i} className="px-5 py-4 text-[0.72rem] font-bold uppercase tracking-[0.1em] text-black/80 whitespace-nowrap border-b border-black/[0.06]">
+                          <th key={i} className="px-5 py-4 text-[0.72rem] font-medium uppercase tracking-[0.1em] text-black/80 whitespace-nowrap border-b border-black/[0.06]">
                             {h}
                           </th>
                         ))}
@@ -456,13 +468,13 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
                     <tbody>
                       {article.benchmarkTable.rows.map((row) => (
                         <tr key={row.model} className="border-b border-black/[0.05] last:border-0" style={row.highlight ? { background: "linear-gradient(90deg, rgba(139,92,246,0.06) 0%, rgba(139,92,246,0.02) 100%)" } : {}}>
-                          <td className={`px-5 py-3.5 text-[0.82rem] whitespace-nowrap ${row.highlight ? "font-bold text-black" : "font-medium text-black/75"}`}>
+                          <td className={`px-5 py-3.5 text-[0.82rem] whitespace-nowrap ${row.highlight ? "font-medium text-black" : "font-normal text-black/75"}`}>
                             {row.model}
                           </td>
                           {row.scores.map((score, i) => {
                             const isTopInCol = article.benchmarkTable!.rows.every(r => score >= r.scores[i]);
                             return (
-                              <td key={i} className={`px-5 py-3.5 text-[0.82rem] tabular-nums ${row.highlight ? "font-bold text-black" : isTopInCol ? "font-semibold text-black/85" : "text-black/80"}`}>
+                              <td key={i} className={`px-5 py-3.5 text-[0.82rem] tabular-nums ${row.highlight ? "font-medium text-black" : isTopInCol ? "font-medium text-black/85" : "text-black/80"}`}>
                                 {score}
                               </td>
                             );
@@ -490,9 +502,9 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {article.achievements.map((a) => (
                   <div key={a.title} className="border border-black/[0.08]  p-6 hover:border-black/[0.14] transition-colors" style={{ background: "linear-gradient(145deg, #ffffff 0%, rgba(0,0,0,0.008) 100%)" }}>
-                    <h3 className="text-[0.95rem] text-black font-semibold mb-3" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>{a.title}</h3>
+                    <h3 className="text-[0.95rem] text-black font-medium mb-3" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>{a.title}</h3>
                     <p className="text-[0.82rem] text-black/58 leading-[1.7] mb-4" style={{ fontFamily: "var(--font-body)" }}>{a.desc}</p>
-                    <span className={`inline-block text-[0.72rem] font-medium px-2.5 py-1 ${a.tagColor}`} style={{ borderRadius: "2px", fontFamily: "var(--font-body)", background: "rgba(0,0,0,0.035)" }}>{a.tag}</span>
+                    <span className={`inline-block text-[0.72rem] font-normal px-2.5 py-1 ${a.tagColor}`} style={{ borderRadius: "2px", fontFamily: "var(--font-body)", background: "rgba(0,0,0,0.035)" }}>{a.tag}</span>
                   </div>
                 ))}
               </div>
@@ -534,11 +546,11 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
                 Performance Benchmarks
               </h2>
               <div className=" p-7 sm:p-9 mb-6" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.045) 0%, rgba(59,130,246,0.01) 100%)", border: "1px solid rgba(59,130,246,0.12)" }}>
-                <h3 className="text-[0.95rem] text-black font-semibold mb-8" style={{ fontFamily: "var(--font-heading)" }}>{article.benchmarks.title}</h3>
+                <h3 className="text-[0.95rem] text-black font-medium mb-8" style={{ fontFamily: "var(--font-heading)" }}>{article.benchmarks.title}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {article.benchmarks.columns.map((col) => (
                     <div key={col.heading}>
-                      <h4 className="text-[0.8rem] font-bold text-black/80 mb-4 uppercase tracking-[0.08em]" style={{ fontFamily: "var(--font-body)" }}>{col.heading}</h4>
+                      <h4 className="text-[0.8rem] font-medium text-black/80 mb-4 uppercase tracking-[0.08em]" style={{ fontFamily: "var(--font-body)" }}>{col.heading}</h4>
                       <ul className="space-y-3">
                         {col.items.map((item, i) => (
                           <li key={i} className="flex items-start gap-3 text-[0.82rem] text-black/65 leading-[1.65]" style={{ fontFamily: "var(--font-body)" }}>
@@ -562,7 +574,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <div className="flex">
                 <div className="w-[3px] shrink-0 rounded-l-xl" style={{ background: "rgb(59,130,246)" }} />
                 <div className="px-7 py-6">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2.5" style={{ color: "rgb(37,99,235)" }}>{article.benchmarkCallout.label}</p>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] mb-2.5" style={{ color: "rgb(37,99,235)" }}>{article.benchmarkCallout.label}</p>
                   <p className="text-[0.87rem] text-black/72 leading-[1.75]" style={{ fontFamily: "var(--font-body)" }}>{article.benchmarkCallout.text}</p>
                 </div>
               </div>
@@ -581,7 +593,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {article.enterprise.columns.map((col) => (
                   <div key={col.heading} className=" p-6" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.04) 0%, rgba(59,130,246,0.01) 100%)", border: "1px solid rgba(59,130,246,0.1)" }}>
-                    <h3 className="text-[0.9rem] font-semibold text-black mb-5" style={{ fontFamily: "var(--font-heading)" }}>{col.heading}</h3>
+                    <h3 className="text-[0.9rem] font-medium text-black mb-5" style={{ fontFamily: "var(--font-heading)" }}>{col.heading}</h3>
                     <ul className="space-y-3">
                       {col.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-3 text-[0.82rem] text-black/65 leading-[1.65]" style={{ fontFamily: "var(--font-body)" }}>
@@ -633,7 +645,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <div className="space-y-3">
                 {article.migration.steps.map((step, i) => (
                   <div key={i} className="flex items-start gap-4 px-5 py-4  border border-black/[0.06]" style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.018) 0%, rgba(0,0,0,0.005) 100%)" }}>
-                    <span className="shrink-0 size-6 flex items-center justify-center bg-black/[0.06] text-[0.72rem] font-bold text-black/80 mt-[1px]" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>{i + 1}</span>
+                    <span className="shrink-0 size-6 flex items-center justify-center bg-black/[0.06] text-[0.72rem] font-medium text-black/80 mt-[1px]" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>{i + 1}</span>
                     <span className="text-[0.875rem] text-black/72 leading-[1.7] pt-[2px]" style={{ fontFamily: "var(--font-body)" }}>{step}</span>
                   </div>
                 ))}
@@ -660,7 +672,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
           </span>
           <div className="flex flex-wrap gap-1.5">
             {article.tags.map((tag) => (
-              <span key={tag} className="border border-black/[0.07] px-2.5 py-1 text-[11px] font-medium text-black/50" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>
+              <span key={tag} className="border border-black/[0.07] px-2.5 py-1 text-[11px] font-normal text-black/50" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>
                 #{tag}
               </span>
             ))}
@@ -671,13 +683,13 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
         {article.related && article.related.length > 0 && (
           <ScrollReveal>
             <div className="mt-16 pt-10 border-t border-black/[0.07]">
-              <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-black/50 mb-7">Related Articles</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-black/50 mb-7">Related Articles</p>
               <div className="flex flex-col gap-3">
                 {article.related.map((r) => (
                   <Link key={r.slug} href={`/blog/product/${r.slug}`}
                     className="group flex items-center justify-between p-5  border border-black/[0.07] hover:border-black/[0.14] hover:bg-black/[0.015] transition-all">
                     <div>
-                      <span className="text-[10px] uppercase tracking-wider font-semibold text-black/50 mb-2 block">{r.badge}</span>
+                      <span className="text-[10px] uppercase tracking-wider font-medium text-black/50 mb-2 block">{r.badge}</span>
                       <p className="text-[1rem] text-black" style={{ fontFamily: "var(--font-heading)" }}>{r.title}</p>
                       <p className="text-[13px] text-black/45 mt-1.5 leading-relaxed">{r.desc}</p>
                     </div>
@@ -691,7 +703,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
 
         {/* Back link */}
         <div className="mt-14">
-          <Link href="/blog/product" className="inline-flex items-center gap-2 text-[13px] font-medium text-black/50 hover:text-black transition-colors" style={{ fontFamily: "var(--font-body)" }}>
+          <Link href="/blog/product" className="inline-flex items-center gap-2 text-[13px] font-normal text-black/50 hover:text-black transition-colors" style={{ fontFamily: "var(--font-body)" }}>
             <ArrowLeft className="size-3.5"  strokeWidth={1.5} /> Back to Product Launches
           </Link>
         </div>

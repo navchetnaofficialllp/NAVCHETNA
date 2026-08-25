@@ -166,7 +166,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
   const inputCls =
     "w-full rounded-sm px-3.5 py-2.5 text-sm text-black/80 placeholder-black/30 outline-none transition-colors" +
     " bg-black/[0.03] border border-black/[0.09] focus:border-black/25 focus:bg-white";
-  const labelCls = "block text-[11px] font-semibold text-black/45 mb-1.5 tracking-widest uppercase";
+  const labelCls = "block text-[11px] font-medium text-black/45 mb-1.5 tracking-widest uppercase";
 
   return (
     <div
@@ -198,11 +198,11 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
                   <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </div>
-              <h3 className="text-black text-xl font-semibold mb-2" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
+              <h3 className="text-black text-xl font-medium mb-2" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>
                 Inquiry Sent
               </h3>
               <p className="text-black/45 text-sm mb-6 leading-relaxed">We&apos;ll get back to you within 24 hours.</p>
-              <button onClick={onClose} className="bg-black text-white text-[13px] font-medium px-6 py-2.5 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
+              <button onClick={onClose} className="bg-black text-white text-[13px] font-normal px-6 py-2.5 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
                 Close
               </button>
             </div>
@@ -210,7 +210,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
             <form onSubmit={handleSubmit}>
               {/* Header */}
               <div className="mb-7 pr-8">
-                <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Get a Quote</p>
+                <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">Get a Quote</p>
                 <h2
                   className="text-black mb-1.5 leading-snug"
                   style={{ fontFamily: "var(--font-heading)", fontSize: "1.35rem", fontWeight: 500, letterSpacing: "-0.025em" }}
@@ -274,14 +274,14 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
                 <button
                   type="button"
                   onClick={onClose}
-                  className="h-11 border border-black/12 text-sm font-medium text-black/80 hover:bg-black/[0.04] hover:text-black/80 transition-colors" style={{ borderRadius: "2px" }}
+                  className="h-11 border border-black/12 text-sm font-normal text-black/80 hover:bg-black/[0.04] hover:text-black/80 transition-colors" style={{ borderRadius: "2px" }}
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-11 bg-black text-white text-sm font-medium hover:bg-[#3b5bd9] transition-colors disabled:opacity-50 disabled:cursor-wait" style={{ borderRadius: "2px" }}
+                  className="h-11 bg-black text-white text-sm font-normal hover:bg-[#3b5bd9] transition-colors disabled:opacity-50 disabled:cursor-wait" style={{ borderRadius: "2px" }}
                 >
                   {isSubmitting ? "Sending..." : "Send Inquiry"}
                 </button>
@@ -305,7 +305,7 @@ export default function ServicesPage() {
         className="relative pt-28 pb-12 md:pt-36 md:pb-16"
         style={{ background: "#ffffff" }}
       >
-        <div className="grid-overlay" />
+        
         <div className="section-container relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -321,14 +321,14 @@ export default function ServicesPage() {
                 From planning to engineering, AI, infrastructure, and brand experience, we help teams build clear systems without adding unnecessary complexity.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/contact" className="inline-flex h-10 items-center justify-center gap-2 bg-black px-5 text-[13px] font-medium text-white transition-colors hover:bg-[#3b5bd9]" style={{ borderRadius: "2px" }}>
+                <Link href="/contact" className="btn btn-primary:bg-[#3b5bd9]" style={{ borderRadius: "2px" }}>
                   Schedule a Call
                   <CaretRight weight="bold" className="size-3.5 text-white/52" />
                 </Link>
                 <button
                   type="button"
                   onClick={() => scrollRef.current?.scrollIntoView({ behavior: "smooth" })}
-                  className="inline-flex h-10 items-center justify-center gap-2 border border-black/10 px-5 text-[13px] font-medium text-black/70 transition-colors hover:bg-black/5" style={{ borderRadius: "2px" }}
+                  className="inline-flex h-10 items-center justify-center gap-2 border border-black/10 px-5 text-[13px] font-normal text-black/70 transition-colors hover:bg-black/5" style={{ borderRadius: "2px" }}
                 >
                   View Services
                   <ArrowDown weight="bold" className="size-3.5" />
@@ -347,7 +347,7 @@ export default function ServicesPage() {
         <div className="section-container">
           <ScrollReveal>
             <div className="mb-12">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">What we do</p>
+              <p className="mb-4 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">What we do</p>
               <h2 className="section-heading max-w-xl">
                 End-to-end capabilities,{" "}
                 restrained delivery.
@@ -398,7 +398,7 @@ export default function ServicesPage() {
           <ScrollReveal>
             <div className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
               <div>
-                <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Also available</p>
+                <p className="mb-4 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">Also available</p>
                 <h2 className="section-heading max-w-lg mb-0">
                   Additional services and{" "}
                   capabilities.
@@ -413,7 +413,7 @@ export default function ServicesPage() {
                 <div className="break-inside-avoid mb-6 flex items-start gap-3 pl-4" style={{ borderLeft: "1px solid rgba(10,10,10,0.12)" }}>
                   <service.icon weight="duotone" className="size-4 text-black/50 mt-0.5 shrink-0" />
                   <div className="min-w-0">
-                    <p className="text-[0.95rem] font-medium text-black/80" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.015em" }}>
+                    <p className="text-[0.95rem] font-normal text-black/80" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.015em" }}>
                       {service.title}
                     </p>
                     <p className="text-[12.5px] text-black/80 mt-0.5 leading-relaxed">{service.desc}</p>

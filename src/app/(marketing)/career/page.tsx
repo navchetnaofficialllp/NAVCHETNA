@@ -29,8 +29,7 @@ const categories = ["Engineering", "Design", "Business", "Marketing", "Operation
 export default function CareerPage() {
   return (
     <main className="bg-white">
-      <section className="relative border-b border-black/[0.12] pt-28 pb-12 md:pt-36 md:pb-16" style={{ background: "var(--quiet-gradient)" }}>
-        <div className="grid-overlay" />
+      <section className="relative border-b border-black/[0.12] pt-28 pb-12 md:pt-36 md:pb-16 bg-white">
         <div className="section-container relative z-10 mx-auto">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -40,22 +39,19 @@ export default function CareerPage() {
                 style={{
                   fontFamily: "var(--font-heading)",
                   fontSize: "clamp(2rem, 4vw, 3.15rem)",
-                  fontWeight: 500,
+                  fontWeight: 400,
                   letterSpacing: "-0.04em",
                   lineHeight: 1.08,
                 }}
               >
-                Build useful technology with a{" "}
-                <span className="serif-italic">
-                  focused team.
-                </span>
+                Build useful technology with a focused team.
               </h1>
               <p className="mt-6 max-w-2xl text-pretty text-black/80" style={{ fontFamily: "var(--font-body)", fontSize: "16px", lineHeight: 1.7 }}>
                 Join Navchetna Technologies and help shape products, platforms,
                 and learning systems that create visible impact across India.
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-4 text-[13px] font-medium text-black/52">
+              <div className="mt-6 flex flex-wrap gap-4 text-[13px] font-normal text-black/52">
                 <span className="inline-flex items-center gap-2">
                   <MapPin className="size-4 text-black/34"  strokeWidth={1.5} />
                   Jodhpur & Ahmedabad
@@ -67,10 +63,10 @@ export default function CareerPage() {
               </div>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <a href="#positions" className="inline-flex h-10 items-center justify-center rounded-full bg-black px-4 text-[13px] font-semibold text-white">
+                <a href="#positions" className="btn btn-primary">
                   View positions
                 </a>
-                <Link href="/about" className="inline-flex h-10 items-center justify-center rounded-full border border-black/[0.10] px-4 text-[13px] font-semibold text-black/72">
+                <Link href="/about" className="btn btn-secondary">
                   Our story
                 </Link>
               </div>
@@ -84,7 +80,7 @@ export default function CareerPage() {
           <ScrollReveal>
             <div className="mb-7 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">
+                <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">
                   Working Here
                 </p>
                 <h2 className="section-heading max-w-sm text-black">
@@ -111,7 +107,7 @@ export default function CareerPage() {
                   <div className="inline-flex size-10 items-center justify-center rounded-xl border border-black/[0.08] mb-6">
                     <perk.icon className="size-[18px] text-black/70 stroke-[1.5]" />
                   </div>
-                  <h3 className="mb-3 text-[1.15rem] text-black font-medium leading-tight tracking-tight">
+                  <h3 className="mb-3 text-[1.15rem] text-black font-normal leading-tight tracking-tight">
                     {perk.title}
                   </h3>
                   <p className="text-[0.92rem] leading-[1.65] text-black/80" style={{ fontFamily: "'Inter', sans-serif" }}>
@@ -129,7 +125,7 @@ export default function CareerPage() {
           <ScrollReveal>
             <div className="mb-7 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
               <div>
-                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">
+                <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">
                   Open Positions
                 </p>
                 <h2 className="section-heading max-w-sm text-black">
@@ -147,7 +143,7 @@ export default function CareerPage() {
                   <Users className="size-[18px] text-black/70 stroke-[1.5]" />
                 </span>
                 <div>
-                  <h3 className="text-lg font-semibold text-black">No open positions currently</h3>
+                  <h3 className="text-lg font-medium text-black">No open positions currently</h3>
                   <p className="mt-2 max-w-2xl text-sm leading-7 text-black/48">
                     We are not actively hiring right now, but we are always open
                     to meeting thoughtful builders who care about product,
@@ -157,9 +153,9 @@ export default function CareerPage() {
               </div>
               <Link
                 href="/contact"
-                className="mt-6 inline-flex h-11 shrink-0 items-center justify-center gap-2 rounded-full bg-black px-5 text-sm font-semibold text-white md:mt-0"
+                className="mt-6 md:mt-0 btn btn-primary flex shrink-0 items-center justify-center gap-2"
               >
-                <Mail className="size-4" />
+                <Mail className="size-4" strokeWidth={1.5} />
                 Send Resume
               </Link>
             </div>
@@ -170,21 +166,13 @@ export default function CareerPage() {
       <section className="pb-16 md:pb-20">
         <div className="section-container">
           <div
-            className="relative isolate overflow-hidden  flex flex-col items-center text-center"
+            className="relative isolate overflow-hidden flex flex-col items-center text-center bg-[#fafafa]"
             style={{
-              background: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%)",
-              backgroundImage: "linear-gradient(135deg, #fdfbf7 0%, #f8f6ff 50%, #fef9f5 100%), linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px)",
-              backgroundSize: "100% 100%, 32px 32px, 32px 32px",
               border: "1px solid rgba(0,0,0,0.08)",
+              borderRadius: "2px",
               padding: "clamp(2.5rem, 8vw, 3.5rem) clamp(1.5rem, 5vw, 3rem)",
             }}
           >
-            <span className="absolute top-0 left-0 w-12 h-px bg-gradient-to-r from-black/15 to-transparent" />
-            <span className="absolute top-0 left-0 h-12 w-px bg-gradient-to-b from-black/15 to-transparent" />
-            <span className="absolute bottom-0 right-0 w-12 h-px bg-gradient-to-l from-black/15 to-transparent" />
-            <span className="absolute bottom-0 right-0 h-12 w-px bg-gradient-to-t from-black/15 to-transparent" />
-            <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-radial from-purple-200/20 to-transparent blur-3xl opacity-40" />
-            <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-gradient-radial from-orange-200/20 to-transparent blur-3xl opacity-40" />
             <ScrollReveal>
               <div className="relative z-10 max-w-2xl mx-auto">
                 <h2
@@ -207,7 +195,7 @@ export default function CareerPage() {
                 >
                   We are always open to meeting thoughtful builders who care about product, design, engineering, and impact.
                 </p>
-                <Link href="/contact" className="inline-flex items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white hover:bg-black/80 transition-colors" style={{ height: "2.5rem" }}>
+                <Link href="/contact" className="btn btn-primary">
                   Get in touch
                 </Link>
               </div>

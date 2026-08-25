@@ -48,17 +48,12 @@ export default function ConnecttPage() {
     <>
       {/* Hero */}
       <section
-        className="relative pt-28 sm:pt-32 md:pt-40 pb-16 overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(72,105,133,0.05) 0%, rgba(125,72,53,0.03) 40%, #ffffff 100%)",
-        }}
+        className="relative pt-28 sm:pt-32 md:pt-40 pb-16 overflow-hidden bg-white"
       >
-        <div className="grid-overlay" />
         <div className="section-container relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.03] px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-black/80 mb-6">
+              <span className="inline-flex items-center gap-2 rounded-full border border-black/[0.08] bg-black/[0.03] px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-black/80 mb-6">
                 <span className="size-1.5 rounded-full bg-green-500 animate-pulse" />
                 Now Available
               </span>
@@ -67,13 +62,12 @@ export default function ConnecttPage() {
                 style={{
                   fontFamily: "var(--font-heading)",
                   fontSize: "clamp(2.4rem, 5vw, 3.6rem)",
-                  fontWeight: 500,
+                  fontWeight: 400,
                   letterSpacing: "-0.04em",
                   lineHeight: 1.05,
                 }}
               >
-                Meetings that{" "}
-                think with you.
+                Meetings that think with you.
               </h1>
               <p
                 className="mt-6 max-w-xl"
@@ -87,15 +81,13 @@ export default function ConnecttPage() {
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white hover:bg-black/80 transition-colors"
-                  style={{ height: "2.75rem" }}
+                  className="btn btn-primary"
                 >
                   Request Early Access
                 </Link>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full border border-black/[0.12] px-6 text-sm font-semibold text-black/70 hover:text-black hover:border-black/25 transition-colors"
-                  style={{ height: "2.75rem" }}
+                  className="btn btn-secondary"
                 >
                   Get a Demo
                 </Link>
@@ -146,7 +138,7 @@ export default function ConnecttPage() {
                 >
                   {s.value}
                 </span>
-                <span className="mt-1.5 text-[11px] font-medium text-black/50 uppercase tracking-wider">
+                <span className="mt-1.5 text-[11px] font-normal text-black/50 uppercase tracking-wider">
                   {s.label}
                 </span>
               </div>
@@ -158,7 +150,7 @@ export default function ConnecttPage() {
       {/* Features */}
       <section className="section-container py-10 md:py-16">
         <ScrollReveal>
-          <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">
+          <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">
             Platform
           </p>
           <h2 className="section-heading mb-10">
@@ -216,18 +208,7 @@ export default function ConnecttPage() {
                 color: "#000",
               }}
             >
-              Ready to upgrade your{" "}
-              <span
-                style={{
-                  fontFamily: "var(--font-heading)",
-                  fontStyle: "normal",
-                  background: "linear-gradient(135deg, #d4845a 0%, #8b6bc7 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                team meetings?
-              </span>
+              Ready to upgrade your team meetings?
             </h2>
             <p
               className="max-w-xl"
@@ -238,8 +219,7 @@ export default function ConnecttPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white hover:bg-black/80 transition-colors"
-              style={{ height: "2.5rem" }}
+              className="btn btn-primary"
             >
               Get Early Access
             </Link>

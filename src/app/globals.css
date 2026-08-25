@@ -42,8 +42,8 @@
   --color-brand: #7d4835;
   --color-brand-dark: #6d3e2d;
 
-  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Sneak", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Sneak", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-instrument-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-instrument-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -141,7 +141,7 @@
 body {
   background-color: var(--paper);
   color: var(--page-text);
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: "Sneak", var(--font-body), system-ui, sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.62;
@@ -200,21 +200,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 .type-3xl {
   font-family: var(--font-heading);
-  font-weight: 500;
+  font-weight: 400;
   font-size: clamp(1.05rem, 1.4vw, 1.2rem);
   line-height: 1.25;
   letter-spacing: -0.015em;
 }
 .type-2xl {
   font-family: var(--font-heading);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.30;
   letter-spacing: -0.01em;
 }
 .type-xl {
   font-family: var(--font-heading);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.35;
   letter-spacing: -0.005em;
@@ -350,11 +350,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 0.5rem;
   white-space: nowrap;
-  border-radius: 2px;
+  border-radius: var(--radius-full);
   font-size: 0.8125rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: -0.01em;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all 0.25s var(--ease-smooth);
   cursor: pointer;
   border: none;
   text-decoration: none;
@@ -365,14 +365,14 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--ink);
   color: #FFFFFF;
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 2px;
+  border-radius: var(--radius-full);
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: var(--font-body), sans-serif;
   letter-spacing: -0.01em;
   padding: 0 24px;
   height: 40px;
-  transition: background 0.2s ease;
+  transition: all 0.25s var(--ease-smooth);
   position: relative;
   overflow: hidden;
 }
@@ -386,11 +386,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
   height: 40px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: var(--radius-full);
   letter-spacing: -0.01em;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  transition: all 0.25s var(--ease-smooth);
 }
 .btn-secondary:hover {
   background: rgba(0,0,0,0.04);
@@ -416,7 +416,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 6px;
   font-family: var(--font-mono);
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--muted-color);
@@ -454,20 +454,24 @@ h1, h2, h3, h4, h5, h6 {
 .grid-overlay { display: none; }
 
 /* ═══════════════════════════════════════════
-   SECTION DIVIDER — clean hairline
+   SECTION DIVIDER — dotted line
    ═══════════════════════════════════════════ */
 .section-divider {
   width: 100%;
-  height: 1px;
-  background: var(--line);
+  height: 1.5px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.22) 1px, transparent 1px);
+  background-size: 24px 1.5px;
+  background-repeat: repeat-x;
 }
 
-/* Section top separator — hairline */
+/* Section top separator — dotted line */
 .section-sep {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 1px;
-  background: var(--line);
+  height: 1.5px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.22) 1px, transparent 1px);
+  background-size: 24px 1.5px;
+  background-repeat: repeat-x;
 }
 
 /* ── Grid dot pattern — removed ── */
@@ -635,6 +639,57 @@ html.modal-open header {
 }
 
 /* ═══════════════════════════════════════════
+   CHIP / BADGE SYSTEM
+   ═══════════════════════════════════════════ */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s var(--ease-smooth);
+}
+.chip-purple {
+  background: rgba(168, 85, 247, 0.08);
+  color: rgba(147, 51, 234, 0.9);
+  border-color: rgba(168, 85, 247, 0.25);
+}
+.chip-green {
+  background: rgba(34, 197, 94, 0.08);
+  color: rgba(22, 163, 74, 0.9);
+  border-color: rgba(34, 197, 94, 0.25);
+}
+.chip-blue {
+  background: rgba(59, 130, 246, 0.08);
+  color: rgba(37, 99, 235, 0.9);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+.chip-red {
+  background: rgba(239, 68, 68, 0.08);
+  color: rgba(220, 38, 38, 0.9);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+.chip-teal {
+  background: rgba(20, 184, 166, 0.08);
+  color: rgba(13, 148, 136, 0.9);
+  border-color: rgba(20, 184, 166, 0.25);
+}
+.chip-amber {
+  background: rgba(245, 158, 11, 0.08);
+  color: rgba(217, 119, 6, 0.9);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+/* ═══════════════════════════════════════════
    TESTIMONIAL QUOTE MARK — simplified
    ═══════════════════════════════════════════ */
 .quote-mark {
@@ -647,17 +702,21 @@ html.modal-open header {
 }
 
 /* ═══════════════════════════════════════════
-   DOTTED LINE DIVIDERS — replaced with hairlines
+   DOTTED LINE DIVIDERS (Original Style)
    ═══════════════════════════════════════════ */
 .dotted-line-x {
-  height: 1px;
+  height: 1.5px;
   width: 100%;
-  background: var(--line);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.22) 1px, transparent 1px);
+  background-size: 24px 1.5px;
+  background-repeat: repeat-x;
 }
 .dotted-line-y {
-  width: 1px;
+  width: 1.5px;
   height: 100%;
-  background: var(--line);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.22) 1px, transparent 1px);
+  background-size: 1.5px 24px;
+  background-repeat: repeat-y;
 }
 
 /* ═══════════════════════════════════════════

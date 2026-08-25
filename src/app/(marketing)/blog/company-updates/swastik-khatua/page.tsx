@@ -12,7 +12,7 @@ export default function SwastikProfilePage() {
 
         {/* Breadcrumb */}
         <ScrollReveal>
-          <div className="mb-10 flex items-center gap-2 text-[11px] font-semibold tracking-widest text-black/50 uppercase">
+          <div className="mb-10 flex items-center gap-2 text-[11px] font-medium tracking-widest text-black/50 uppercase">
             <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
             <span>/</span>
             <span className="hover:text-black transition-colors cursor-pointer">Company Updates</span>
@@ -41,16 +41,16 @@ export default function SwastikProfilePage() {
               >
                 Swastik Khatua
               </h1>
-              <p className="text-[15px] font-medium tracking-wide text-black/80 uppercase mb-5" style={{ fontFamily: "var(--font-body)" }}>
+              <p className="text-[15px] font-normal tracking-wide text-black/80 uppercase mb-5" style={{ fontFamily: "var(--font-body)" }}>
                 Co-Founder & Frontend Engineer <span className="text-black/50 mx-2">•</span> Navchetna Technologies
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-medium tracking-wider text-black/70">
                   <Lightbulb className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Tech Visionary
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-medium tracking-wider text-black/70">
                   <Code className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Frontend Engineer
                 </span>
@@ -168,16 +168,16 @@ export default function SwastikProfilePage() {
             {/* Roles */}
             <ScrollReveal delay={150}>
               <div className="p-6  bg-black/[0.02] border border-black/[0.06]">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                <h3 className="text-[11px] font-medium uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
                   <Briefcase className="w-3.5 h-3.5"  strokeWidth={1.5} /> Leadership Positions
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex flex-col">
-                    <span className="text-[12.5px] font-semibold text-black/80">Co-Founder & Frontend Engineer</span>
+                    <span className="text-[12.5px] font-medium text-black/80">Co-Founder & Frontend Engineer</span>
                     <span className="text-[11px] text-black/80 mt-0.5">NINELLMS SOLUTIONS LLP (Navchetna)</span>
                   </li>
                   <li className="flex flex-col">
-                    <span className="text-[12.5px] font-semibold text-black/80">Co-Founder</span>
+                    <span className="text-[12.5px] font-medium text-black/80">Co-Founder</span>
                     <span className="text-[11px] text-black/80 mt-0.5">Osmium AI — AI EdTech Platform</span>
                   </li>
                 </ul>
@@ -187,13 +187,13 @@ export default function SwastikProfilePage() {
             {/* Key Achievements */}
             <ScrollReveal delay={200}>
               <div className="p-7  bg-white border border-black/[0.06] shadow-sm">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                <h3 className="text-[11px] font-medium uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
                   <Award className="w-3.5 h-3.5"  strokeWidth={1.5} /> Key Achievements
                 </h3>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Hackathons & Competitions</h4>
+                    <h4 className="text-[11px] font-medium text-black/70 mb-3 border-b border-black/5 pb-2">Hackathons & Competitions</h4>
                     <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
@@ -211,7 +211,7 @@ export default function SwastikProfilePage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">AI Innovations</h4>
+                    <h4 className="text-[11px] font-medium text-black/70 mb-3 border-b border-black/5 pb-2">AI Innovations</h4>
                     <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-sm bg-black/20 shrink-0" />
@@ -229,10 +229,10 @@ export default function SwastikProfilePage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Tech Stack</h4>
+                    <h4 className="text-[11px] font-medium text-black/70 mb-3 border-b border-black/5 pb-2">Tech Stack</h4>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {["React.js", "Next.js", "Angular", "TypeScript", "Tailwind CSS", "JavaScript"].map((tech) => (
-                        <span key={tech} className="px-2 py-1  bg-black/[0.03] border border-black/[0.07] text-[11px] font-medium text-black/80">
+                        <span key={tech} className="px-2 py-1  bg-black/[0.03] border border-black/[0.07] text-[11px] font-normal text-black/80">
                           {tech}
                         </span>
                       ))}
@@ -251,7 +251,7 @@ export default function SwastikProfilePage() {
           <div className="mt-12 pt-6 border-t  border-black/20">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 text-sm font-medium text-black/80 hover:text-black transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-normal text-black/80 hover:text-black transition-colors"
             >
               <ArrowLeft className="w-4 h-4"  strokeWidth={1.5} />
               Back to Company Profile

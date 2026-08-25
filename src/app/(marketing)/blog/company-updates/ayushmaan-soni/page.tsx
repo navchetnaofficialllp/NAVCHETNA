@@ -11,7 +11,7 @@ export default function AyushmaanProfilePage() {
       <div className="max-w-4xl mx-auto px-6 sm:px-12">
         {/* Breadcrumb */}
         <ScrollReveal>
-          <div className="mb-10 flex items-center gap-2 text-[11px] font-semibold tracking-widest text-black/50 uppercase">
+          <div className="mb-10 flex items-center gap-2 text-[11px] font-medium tracking-widest text-black/50 uppercase">
             <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
             <span>/</span>
             <span className="hover:text-black transition-colors cursor-pointer">Company Updates</span>
@@ -40,16 +40,16 @@ export default function AyushmaanProfilePage() {
               >
                 Ayushmaan Soni
               </h1>
-              <p className="text-[15px] font-medium tracking-wide text-black/80 uppercase mb-5" style={{ fontFamily: "var(--font-body)" }}>
+              <p className="text-[15px] font-normal tracking-wide text-black/80 uppercase mb-5" style={{ fontFamily: "var(--font-body)" }}>
                 CEO | CTO | Founder <span className="text-black/50 mx-2">•</span> Navchetna Technologies
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mb-6">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-medium tracking-wider text-black/70">
                   <Lightbulb className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Mathematical Researcher
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-semibold tracking-wider text-black/70">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-sm border border-black/10 bg-black/[0.02] text-[11px] font-medium tracking-wider text-black/70">
                   <Briefcase className="w-3.5 h-3.5 text-black/80"  strokeWidth={1.5} />
                   Tech Entrepreneur
                 </span>
@@ -191,24 +191,24 @@ export default function AyushmaanProfilePage() {
             {/* Leadership */}
             <ScrollReveal delay={150}>
               <div className="p-6  bg-black/[0.02] border border-black/[0.06]">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                <h3 className="text-[11px] font-medium uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
                   <Briefcase className="w-3.5 h-3.5"  strokeWidth={1.5} /> Leadership Positions
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex flex-col">
-                    <span className="text-[12.5px] font-semibold text-black/80">CEO, Founder & CTO</span>
+                    <span className="text-[12.5px] font-medium text-black/80">CEO, Founder & CTO</span>
                     <span className="text-[11px] text-black/80 mt-0.5">NINELLMS SOLUTIONS LLP</span>
                   </li>
                   <li className="flex flex-col">
-                    <span className="text-[12.5px] font-semibold text-black/80">CEO & Founder</span>
+                    <span className="text-[12.5px] font-medium text-black/80">CEO & Founder</span>
                     <span className="text-[11px] text-black/80 mt-0.5">NINEONE15SQ TECHNOLOGIES PVT LTD</span>
                   </li>
                   <li className="flex flex-col">
-                    <span className="text-[12.5px] font-semibold text-black/80">Director</span>
+                    <span className="text-[12.5px] font-medium text-black/80">Director</span>
                     <span className="text-[11px] text-black/80 mt-0.5">COSMONEXTECH SOLUTIONS PVT LTD</span>
                   </li>
                   <li className="flex flex-col">
-                    <span className="text-[12.5px] font-semibold text-black/80">CTO</span>
+                    <span className="text-[12.5px] font-medium text-black/80">CTO</span>
                     <span className="text-[11px] text-black/80 mt-0.5">TANTRIX SOLUTIONS OPC PVT LTD</span>
                   </li>
                 </ul>
@@ -218,13 +218,13 @@ export default function AyushmaanProfilePage() {
             {/* Quick Stats */}
             <ScrollReveal delay={200}>
               <div className="p-7  bg-white border border-black/[0.06] shadow-sm">
-                <h3 className="text-[11px] font-bold uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
+                <h3 className="text-[11px] font-medium uppercase tracking-widest text-black/50 mb-6 flex items-center gap-2">
                   <Award className="w-3.5 h-3.5"  strokeWidth={1.5} /> Key Achievements
                 </h3>
                 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Academic & Research</h4>
+                    <h4 className="text-[11px] font-medium text-black/70 mb-3 border-b border-black/5 pb-2">Academic & Research</h4>
                     <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
                         <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
@@ -246,7 +246,7 @@ export default function AyushmaanProfilePage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[11px] font-semibold text-black/70 mb-3 border-b border-black/5 pb-2">Business & Innovation</h4>
+                    <h4 className="text-[11px] font-medium text-black/70 mb-3 border-b border-black/5 pb-2">Business & Innovation</h4>
                     <ul className="space-y-2.5 text-[12px] text-black/80 leading-relaxed">
                       <li className="flex items-start gap-2.5">
                         <span className="mt-1.5 w-1.25 h-1.25 rounded-sm bg-black/20 shrink-0" />
@@ -278,7 +278,7 @@ export default function AyushmaanProfilePage() {
           <div className="mt-12 pt-6 border-t  border-black/20">
             <Link 
               href="/about" 
-              className="inline-flex items-center gap-2 text-sm font-medium text-black/80 hover:text-black transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-normal text-black/80 hover:text-black transition-colors"
             >
               <ArrowLeft className="w-4 h-4"  strokeWidth={1.5} />
               Back to Company Profile

@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white pt-28 pb-16 md:pt-36 md:pb-24">
       <section className="relative overflow-hidden">
-        <div className="grid-overlay" />
+        
         <div className="section-container relative z-10">
           <ScrollReveal>
             <div className="mx-auto mb-10 max-w-2xl text-center md:mb-14">
@@ -33,7 +33,7 @@ export default function ContactPage() {
                   <CalendarDays className="size-4"  strokeWidth={1.5} />
                 </span>
                 <div>
-                  <p className="text-[13px] font-semibold text-black/75">30-minute introduction</p>
+                  <p className="text-[13px] font-medium text-black/75">30-minute introduction</p>
                   <p className="text-[12px] text-black/45">Select a convenient date and time below.</p>
                 </div>
               </div>

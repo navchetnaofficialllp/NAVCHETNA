@@ -105,7 +105,7 @@ export function Navbar() {
           <div className="flex items-center justify-end gap-2">
             <Link
               href="/contact"
-              className="inline-flex h-[36px] items-center justify-center px-5 text-[13px] font-medium transition-all duration-200 active:scale-95"
+              className="inline-flex h-[36px] items-center justify-center px-5 text-[13px] font-normal transition-all duration-200 active:scale-95"
               style={{
                 background: white ? "rgba(255,255,255,0.10)" : "#0A0A0A",
                 color: "#ffffff",
@@ -172,7 +172,7 @@ export function Navbar() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block px-4 py-3 text-[14px] font-medium text-black/80 transition-colors hover:bg-black/[0.04] hover:text-black"
+                    className="block px-4 py-3 text-[14px] font-normal text-black/80 transition-colors hover:bg-black/[0.04] hover:text-black"
                     style={{ borderRadius: "2px" }}
                   >
                     {link.label}
@@ -181,7 +181,7 @@ export function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setOpen(false)}
-                  className="mt-4 flex h-11 items-center justify-center bg-black text-[14px] font-medium text-white"
+                  className="mt-4 flex h-11 items-center justify-center bg-black text-[14px] font-normal text-white"
                   style={{ borderRadius: "2px" }}
                 >
                   Schedule meeting

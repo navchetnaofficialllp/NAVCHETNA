@@ -43,7 +43,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 py-16 sm:grid-cols-5 md:py-20" style={{ borderTop: "1px solid rgba(10,10,10,0.12)" }}>
           {/* Brand */}
           <div className="col-span-2 sm:col-span-2">
-            <span className="text-black font-medium tracking-tight" style={{ fontFamily: "var(--font-waldenburg)", fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)" }}>Navchetna Technologies</span>
+            <span className="text-black font-normal tracking-tight" style={{ fontFamily: "var(--font-waldenburg)", fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)" }}>Navchetna Technologies</span>
             <p className="mt-5 type-sm text-black/45 leading-relaxed max-w-[280px]">
               Based in India, For India,<br />
               By Students of India
@@ -53,14 +53,14 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <p className="type-2xs font-medium uppercase tracking-wider text-black/35 mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em" }}>Products</p>
+            <p className="type-2xs font-normal uppercase tracking-wider text-black/35 mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em" }}>Products</p>
             <ul className="space-y-3.5">
               {productLinks.map((l) => (
                 <li key={l.label}>
                   {l.external ? (
-                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="type-sm text-black/80 transition-colors hover:text-black font-medium">{l.label}</a>
+                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="type-sm text-black/80 transition-colors hover:text-black font-normal">{l.label}</a>
                   ) : (
-                    <Link href={l.href} className="type-sm text-black/80 transition-colors hover:text-black font-medium">{l.label}</Link>
+                    <Link href={l.href} className="type-sm text-black/80 transition-colors hover:text-black font-normal">{l.label}</Link>
                   )}
                 </li>
               ))}
@@ -69,11 +69,11 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <p className="type-2xs font-medium uppercase tracking-wider text-black/35 mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em" }}>Services</p>
+            <p className="type-2xs font-normal uppercase tracking-wider text-black/35 mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em" }}>Services</p>
             <ul className="space-y-3.5">
               {serviceLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="type-sm text-black/80 transition-colors hover:text-black font-medium">{l.label}</Link>
+                  <Link href={l.href} className="type-sm text-black/80 transition-colors hover:text-black font-normal">{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -81,11 +81,11 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <p className="type-2xs font-medium uppercase tracking-wider text-black/35 mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em" }}>Company</p>
+            <p className="type-2xs font-normal uppercase tracking-wider text-black/35 mb-5" style={{ fontFamily: "var(--font-mono, monospace)", fontSize: "10px", letterSpacing: "0.14em" }}>Company</p>
             <ul className="space-y-3.5">
               {companyLinks.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="type-sm text-black/80 transition-colors hover:text-black font-medium">{l.label}</Link>
+                  <Link href={l.href} className="type-sm text-black/80 transition-colors hover:text-black font-normal">{l.label}</Link>
                 </li>
               ))}
             </ul>
@@ -99,7 +99,7 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-8 type-xs text-black/35 font-medium" style={{ borderTop: "1px solid rgba(10,10,10,0.12)" }}>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 py-8 type-xs text-black/35 font-normal" style={{ borderTop: "1px solid rgba(10,10,10,0.12)" }}>
           <span>© 2026 NINELLMS SOLUTIONS LLP. All rights reserved.</span>
           <div className="flex flex-wrap items-center gap-6">
             {socialLinks.map((l) => (

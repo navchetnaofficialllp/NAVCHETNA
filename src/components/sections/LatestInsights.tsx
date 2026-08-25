@@ -36,7 +36,7 @@ export function LatestInsights() {
         <ScrollReveal>
           <div className="mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
             <div>
-              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/50">Journal</p>
+              <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.16em] text-black/50">Journal</p>
               <h2
                 style={{
                   fontFamily: "var(--font-heading)",
@@ -52,7 +52,7 @@ export function LatestInsights() {
             </div>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 text-[13px] font-medium text-black/80 hover:text-black transition-colors"
+              className="inline-flex items-center gap-1.5 text-[13px] font-normal text-black/80 hover:text-black transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
               View all updates <ArrowUpRight className="size-3.5" strokeWidth={1.5} />
@@ -83,7 +83,7 @@ export function LatestInsights() {
                 <div className="p-6">
                   <div className="mb-3 flex items-center justify-between">
                     <span
-                      className="text-[10px] font-semibold uppercase tracking-wider text-black/50"
+                      className="text-[10px] font-medium uppercase tracking-wider text-black/50"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
                       {item.tag}

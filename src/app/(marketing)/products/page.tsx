@@ -144,7 +144,7 @@ export default function ProductsPage() {
           background: "#ffffff",
         }}
       >
-        <div className="grid-overlay" />
+        
         <div className="section-container relative z-10">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -183,7 +183,7 @@ export default function ProductsPage() {
           <div className="section-container">
             <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <div>
-                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Our Products</p>
+                <p className="mb-2 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">Our Products</p>
                 <h2 className="section-heading">Launched Products</h2>
               </div>
 
@@ -193,7 +193,7 @@ export default function ProductsPage() {
                   className="relative flex p-1"
                   style={{
                     background: "rgba(0,0,0,0.03)",
-                    border: "1px solid rgba(10,10,10,0.08)", borderRadius: "2px",
+                    border: "1px solid rgba(10,10,10,0.08)", borderRadius: "var(--radius-full)",
                   }}
                 >
                   <div className="flex gap-0.5">
@@ -203,19 +203,18 @@ export default function ProductsPage() {
                         <button
                           key={cat}
                           onClick={() => setActiveCategory(cat)}
-                          className="isolate relative flex items-center justify-center cursor-pointer shrink-0 outline-none h-8 px-4 transition-all duration-200" style={{ borderRadius: "2px" }}
-                          style={{ fontFamily: "'Inter', sans-serif" }}
+                          className="isolate relative flex items-center justify-center cursor-pointer shrink-0 outline-none h-8 px-4 transition-all duration-200" style={{ borderRadius: "var(--radius-full)" }}
                         >
                           {isActive && (
                             <div
                               className="absolute inset-0 -z-10"
                               style={{
-                                background: "#ffffff", border: "1px solid rgba(0,0,0,0.10)", borderRadius: "2px",
+                                background: "#ffffff", border: "1px solid rgba(0,0,0,0.10)", borderRadius: "var(--radius-full)",
                               }}
                             />
                           )}
                           <span
-                            className="relative text-[12.5px] font-medium tracking-tight transition-colors duration-200"
+                            className="relative text-[12.5px] font-normal tracking-tight transition-colors duration-200"
                             style={{ color: isActive ? "#000000" : "rgba(0,0,0,0.40)" }}
                           >
                             {cat}
@@ -271,13 +270,13 @@ export default function ProductsPage() {
                             {p.name}
                           </h3>
                           {p.isFlagship && (
-                            <span className="rounded-full bg-[rgba(125,72,53,0.06)] px-2 py-0.5 text-[9px] font-semibold uppercase tracking-wider text-(--color-brand)">
+                            <span className="rounded-full bg-[rgba(125,72,53,0.06)] px-2 py-0.5 text-[9px] font-medium uppercase tracking-wider text-(--color-brand)">
                               Flagship
                             </span>
                           )}
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-[9.5px] sm:text-[11px] font-semibold uppercase tracking-widest sm:tracking-[0.16em] text-black/50">
+                          <span className="inline-flex rounded-full border border-black/[0.08] bg-black/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-black/50">
                             {p.tag}
                           </span>
                         </div>
@@ -296,7 +295,7 @@ export default function ProductsPage() {
         <section className="relative overflow-hidden py-8 md:py-14">
           <div className="section-container">
             <div className="mb-12">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">In Development</p>
+              <p className="mb-4 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">In Development</p>
               <h2 className="section-heading">
                 Coming Soon.
               </h2>
@@ -561,7 +560,7 @@ export default function ProductsPage() {
         <div className="section-container">
           <ScrollReveal>
             <div className="mb-12">
-              <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/36">Core Pillars</p>
+              <p className="mb-4 text-[10px] font-medium uppercase tracking-[0.16em] text-black/36">Core Pillars</p>
               <h2 className="section-heading max-w-sm">
                 Built for the{" "}
                 future.
@@ -575,7 +574,7 @@ export default function ProductsPage() {
             {pillars.map((w, i) => (
               <ScrollReveal key={w.title} delay={i * 70}>
                 <div className="flex flex-col pl-6" style={{ borderLeft: "1px solid rgba(10,10,10,0.12)" }}>
-                  <span className="text-[10px] font-semibold text-black/50 mb-4 tracking-widest">
+                  <span className="text-[10px] font-medium text-black/50 mb-4 tracking-widest">
                     0{i + 1}
                   </span>
                   <h3

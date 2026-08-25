@@ -53,7 +53,7 @@ export function Platforms() {
                 <div className="inline-flex size-10 items-center justify-center mb-6" style={{ border: "1px solid rgba(10,10,10,0.12)", borderRadius: "2px" }}>
                   <pillar.icon className="size-[18px] text-black/80 stroke-[1.5]" />
                 </div>
-                <h3 className="mb-3 text-[1.15rem] text-black font-medium leading-tight tracking-tight" style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 400 }}>
+                <h3 className="mb-3 text-[1.15rem] text-black font-normal leading-tight tracking-tight" style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 400 }}>
                   {pillar.title}
                 </h3>
                 <p className="text-[0.92rem] leading-[1.62] text-black/45" style={{ fontFamily: "'Inter', sans-serif" }}>

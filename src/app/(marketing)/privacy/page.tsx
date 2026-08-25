@@ -53,12 +53,12 @@ const sections = [
 export default function PrivacyPage() {
   return (
     <main className="bg-white min-h-screen">
-      <section className="relative border-b border-black/[0.12] pt-28 pb-12 md:pt-36 md:pb-16" style={{ background: "var(--quiet-gradient)" }}>
-        <div className="grid-overlay" />
+      <section className="relative border-b border-black/[0.12] pt-28 pb-12 md:pt-36 md:pb-16" className="bg-white">
+        
         <div className="section-container relative z-10 mx-auto">
           <ScrollReveal>
             <div className="max-w-3xl">
-              <span className="mb-4 inline-flex rounded-full border border-black/[0.08] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-black/42">
+              <span className="mb-4 inline-flex rounded-full border border-black/[0.08] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-black/42">
                 Legal
               </span>
               <h1
