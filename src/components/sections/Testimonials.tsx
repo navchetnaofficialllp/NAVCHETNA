@@ -161,7 +161,7 @@ export function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-3 mt-6 pt-5" style={{ borderTop: "1px solid rgba(10,10,10,0.12)" }}>
-                <div className="relative h-10 w-10 shrink-0 overflow-hidden bg-black/[0.04]" style={{ borderRadius: "2px", border: "1px solid rgba(10,10,10,0.08)" }}>
+                <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full bg-black/[0.04] border border-black/[0.08]">
                   <Image
                     src={t.avatar}
                     alt={t.name}

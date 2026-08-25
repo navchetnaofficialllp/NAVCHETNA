@@ -7,15 +7,8 @@ import { notFound } from "next/navigation";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Calendar, ArrowLeft, ArrowUpRight } from "lucide-react";
 
-/* Map badge label → chip color class */
+/* Map badge label → chip */
 function badgeChip(badge: string) {
-  const b = badge.toLowerCase();
-  if (b.includes("flagship"))       return "chip chip-purple";
-  if (b.includes("launch"))         return "chip chip-green";
-  if (b.includes("feature"))        return "chip chip-blue";
-  if (b.includes("security"))       return "chip chip-red";
-  if (b.includes("infrastructure")) return "chip chip-teal";
-  if (b.includes("coming"))         return "chip chip-amber";
   return "chip";
 }
 
@@ -406,8 +399,8 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
             </p>
             {article.tryLink && (
               <Link href={article.tryLink} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-9 bg-black text-white text-[13px] font-normal px-6 py-3 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
-                {article.tryLabel || "Try Now"} <ArrowUpRight className="size-3.5"  strokeWidth={1.5} />
+                className="btn btn-primary mt-9">
+                {article.tryLabel || "Try Now"} <ArrowUpRight className="size-3.5" strokeWidth={1.5} />
               </Link>
             )}
           </div>
@@ -433,14 +426,14 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
           </ScrollReveal>
         )}
 
-        {/* Callout — accent left border */}
+        {/* Callout — clean minimal */}
         {article.callout && (
           <ScrollReveal>
-            <div className="mb-16  overflow-hidden" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.055) 0%, rgba(139,92,246,0.015) 100%)", border: "1px solid rgba(139,92,246,0.12)" }}>
+            <div className="mb-16 overflow-hidden bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
               <div className="flex">
-                <div className="w-[3px] shrink-0 rounded-l-xl" style={{ background: "rgb(139,92,246)" }} />
-                <div className="px-7 py-7">
-                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] mb-3.5" style={{ color: "rgb(139,92,246)" }}>{article.callout.label}</p>
+                <div className="w-[3px] shrink-0 bg-black/70" />
+                <div className="px-7 py-6">
+                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] mb-2.5 text-black/60">{article.callout.label}</p>
                   <p className="text-[0.9rem] text-black/80 leading-[1.75]" style={{ fontFamily: "var(--font-body)" }}>{article.callout.text}</p>
                 </div>
               </div>
@@ -469,7 +462,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
                     </thead>
                     <tbody>
                       {article.benchmarkTable.rows.map((row) => (
-                        <tr key={row.model} className="border-b border-black/[0.05] last:border-0" style={row.highlight ? { background: "linear-gradient(90deg, rgba(139,92,246,0.06) 0%, rgba(139,92,246,0.02) 100%)" } : {}}>
+                        <tr key={row.model} className="border-b border-black/[0.05] last:border-0" style={row.highlight ? { background: "rgba(0,0,0,0.025)" } : {}}>
                           <td className={`px-5 py-3.5 text-[0.82rem] whitespace-nowrap ${row.highlight ? "font-medium text-black" : "font-normal text-black/75"}`}>
                             {row.model}
                           </td>
@@ -503,10 +496,10 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {article.achievements.map((a) => (
-                  <div key={a.title} className="border border-black/[0.08]  p-6 hover:border-black/[0.14] transition-colors" style={{ background: "linear-gradient(145deg, #ffffff 0%, rgba(0,0,0,0.008) 100%)" }}>
+                  <div key={a.title} className="border border-black/[0.08] p-6 hover:border-black/[0.14] transition-colors bg-white" style={{ borderRadius: "2px" }}>
                     <h3 className="text-[0.95rem] text-black font-medium mb-3" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>{a.title}</h3>
                     <p className="text-[0.82rem] text-black/58 leading-[1.7] mb-4" style={{ fontFamily: "var(--font-body)" }}>{a.desc}</p>
-                    <span className={`inline-block text-[0.72rem] font-normal px-2.5 py-1 ${a.tagColor}`} style={{ borderRadius: "2px", fontFamily: "var(--font-body)", background: "rgba(0,0,0,0.035)" }}>{a.tag}</span>
+                    <span className="inline-block text-[0.72rem] font-medium px-2.5 py-1 text-black/60 rounded-full border border-black/[0.08] bg-black/[0.03]" style={{ fontFamily: "var(--font-body)" }}>{a.tag}</span>
                   </div>
                 ))}
               </div>
@@ -547,7 +540,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <h2 className="text-black mb-5" style={{ fontFamily: "var(--font-heading)", fontSize: "1.35rem", letterSpacing: "-0.025em", lineHeight: 1.2 }}>
                 Performance Benchmarks
               </h2>
-              <div className=" p-7 sm:p-9 mb-6" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.045) 0%, rgba(59,130,246,0.01) 100%)", border: "1px solid rgba(59,130,246,0.12)" }}>
+              <div className="p-7 sm:p-9 mb-6 bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
                 <h3 className="text-[0.95rem] text-black font-medium mb-8" style={{ fontFamily: "var(--font-heading)" }}>{article.benchmarks.title}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {article.benchmarks.columns.map((col) => (
@@ -556,7 +549,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
                       <ul className="space-y-3">
                         {col.items.map((item, i) => (
                           <li key={i} className="flex items-start gap-3 text-[0.82rem] text-black/65 leading-[1.65]" style={{ fontFamily: "var(--font-body)" }}>
-                            <span className="mt-[0.45rem] size-1 rounded-sm bg-blue-400/60 shrink-0" />
+                            <span className="mt-[0.45rem] size-1 rounded-sm bg-black/40 shrink-0" />
                             {item}
                           </li>
                         ))}
@@ -572,11 +565,11 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
         {/* Benchmark Callout */}
         {article.benchmarkCallout && (
           <ScrollReveal>
-            <div className="mb-16  overflow-hidden" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.055) 0%, rgba(59,130,246,0.015) 100%)", border: "1px solid rgba(59,130,246,0.14)" }}>
+            <div className="mb-16 overflow-hidden bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
               <div className="flex">
-                <div className="w-[3px] shrink-0 rounded-l-xl" style={{ background: "rgb(59,130,246)" }} />
+                <div className="w-[3px] shrink-0 bg-black/70" />
                 <div className="px-7 py-6">
-                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] mb-2.5" style={{ color: "rgb(37,99,235)" }}>{article.benchmarkCallout.label}</p>
+                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] mb-2.5 text-black/60">{article.benchmarkCallout.label}</p>
                   <p className="text-[0.87rem] text-black/72 leading-[1.75]" style={{ fontFamily: "var(--font-body)" }}>{article.benchmarkCallout.text}</p>
                 </div>
               </div>
@@ -594,12 +587,12 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <p className="text-[0.9rem] text-black/68 leading-[1.75] mb-8" style={{ fontFamily: "var(--font-body)" }}>{article.enterprise.intro}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {article.enterprise.columns.map((col) => (
-                  <div key={col.heading} className=" p-6" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.04) 0%, rgba(59,130,246,0.01) 100%)", border: "1px solid rgba(59,130,246,0.1)" }}>
+                  <div key={col.heading} className="p-6 bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
                     <h3 className="text-[0.9rem] font-medium text-black mb-5" style={{ fontFamily: "var(--font-heading)" }}>{col.heading}</h3>
                     <ul className="space-y-3">
                       {col.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-3 text-[0.82rem] text-black/65 leading-[1.65]" style={{ fontFamily: "var(--font-body)" }}>
-                          <span className="mt-[0.45rem] size-1 rounded-sm bg-blue-400/60 shrink-0" />
+                          <span className="mt-[0.45rem] size-1 rounded-sm bg-black/40 shrink-0" />
                           {item}
                         </li>
                       ))}

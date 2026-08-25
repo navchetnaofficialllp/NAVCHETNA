@@ -238,7 +238,7 @@ export default function BlogPage() {
                       alignItems: "center",
                       height: "32px",
                       padding: "0 14px",
-                      borderRadius: "6px",
+                      borderRadius: "9999px",
                       fontSize: "12.5px",
                       fontWeight: active ? 600 : 400,
                       fontFamily: "var(--font-body)",
@@ -275,7 +275,7 @@ export default function BlogPage() {
                       className="relative overflow-hidden bg-warm-50"
                       style={{
                         aspectRatio: "10/7",
-                        borderRadius: "6px",
+                        borderRadius: "2px",
                         border: "1px solid rgba(0,0,0,0.07)",
                       }}
                     >

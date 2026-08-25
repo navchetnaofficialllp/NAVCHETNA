@@ -30,8 +30,7 @@ export function CTA() {
                   color: "#0A0A0A"
                 }}
               >
-                Ready to elevate{" "}
-                <span style={{ color: "#8b8b8b" }}>your operations?</span>
+                Ready to elevate your operations?
               </h2>
               <p
                 className="mb-7 text-black/80"

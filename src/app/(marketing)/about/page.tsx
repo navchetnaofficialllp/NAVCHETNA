@@ -419,35 +419,18 @@ export default function AboutPage() {
               <div className="flex flex-wrap justify-center items-center gap-3">
                 <Link
                   href="/contact"
-                  className="group inline-flex items-center justify-center gap-2 rounded-full transition-all duration-200 hover:gap-3"
-                  style={{
-                    background: "#000",
-                    color: "#fff",
-                    padding: "11px 22px",
-                    fontFamily: "'Inter', sans-serif",
-                    fontWeight: 500,
-                    fontSize: "14px",
-                  }}
+                  className="btn btn-primary"
                 >
                   Contact Us
-                  <ArrowRight className="size-4 text-white/60 transition-transform group-hover:translate-x-0.5" />
+                  <ArrowRight className="size-4 text-white/60 ml-1" strokeWidth={1.5} />
                 </Link>
 
                 <button
                   onClick={() => { document.getElementById("journey")?.scrollIntoView({ behavior: "smooth" }); }}
-                  className="inline-flex items-center gap-2 cursor-pointer rounded-full transition-all duration-200 hover:bg-black/5"
-                  style={{
-                    background: "transparent",
-                    color: "#000",
-                    padding: "11px 22px",
-                    border: "1px solid rgba(0,0,0,0.1)",
-                    fontFamily: "'Inter', sans-serif",
-                    fontWeight: 500,
-                    fontSize: "14px",
-                  }}
+                  className="btn btn-secondary cursor-pointer"
                 >
                   Our Journey
-                  <ArrowDown className="size-4 text-black/50" />
+                  <ArrowDown className="size-4 text-black/50 ml-1" strokeWidth={1.5} />
                 </button>
               </div>
               <div className="mt-14 pt-8 w-full" style={{ borderTop: "1px solid rgba(0,0,0,0.08)" }}>
@@ -867,7 +850,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/career"
-                className="btn btn-primary:bg-black/80 transition-colors"
+                className="btn btn-primary"
                 style={{ height: "2.5rem" }}
               >
                 View Open Positions

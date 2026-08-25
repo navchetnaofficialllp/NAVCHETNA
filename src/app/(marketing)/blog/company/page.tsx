@@ -87,13 +87,6 @@ const articles = [
 ];
 
 function badgeChip(badge: string) {
-  const b = badge.toLowerCase();
-  if (b === "featured") return "chip chip-purple";
-  if (b === "research") return "chip chip-blue";
-  if (b === "engineering") return "chip chip-teal";
-  if (b.includes("product") || b.includes("launch")) return "chip chip-green";
-  if (b === "partnership") return "chip chip-amber";
-  if (b === "milestone" || b === "company" || b === "foundation") return "chip";
   return "chip";
 }
 
@@ -190,7 +183,7 @@ export default function CompanyBlogPage() {
                   <div
                     style={{
                       border: "1px solid rgba(0,0,0,0.07)",
-                      borderRadius: "10px",
+                      borderRadius: "2px",
                       padding: "18px 20px",
                       marginTop: "4px",
                     }}

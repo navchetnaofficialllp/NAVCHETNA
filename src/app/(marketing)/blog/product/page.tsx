@@ -5,13 +5,6 @@ import { Calendar, ArrowUpRight, ArrowLeft } from "lucide-react";
 
 /* Map badge label → chip color class */
 function badgeChip(badge: string) {
-  const b = badge.toLowerCase();
-  if (b.includes("flagship"))       return "chip chip-purple";
-  if (b.includes("launch"))         return "chip chip-green";
-  if (b.includes("feature"))        return "chip chip-blue";
-  if (b.includes("security"))       return "chip chip-red";
-  if (b.includes("infrastructure")) return "chip chip-teal";
-  if (b.includes("coming"))         return "chip chip-amber";
   return "chip";
 }
 
@@ -195,7 +188,7 @@ export default function ProductBlogPage() {
                     className="relative w-full overflow-hidden"
                     style={{
                       aspectRatio: "16/9",
-                      borderRadius: "6px",
+                      borderRadius: "2px",
                       border: "1px solid rgba(0,0,0,0.07)",
                       background: "rgba(0,0,0,0.02)",
                     }}
@@ -225,7 +218,7 @@ export default function ProductBlogPage() {
                         background: "rgba(245,158,11,0.08)",
                         color: "rgba(180,100,0,0.85)",
                         border: "1px solid rgba(245,158,11,0.25)",
-                        borderRadius: "3px",
+                        borderRadius: "9999px",
                         padding: "3px 8px",
                       }}
                     >
@@ -276,7 +269,7 @@ export default function ProductBlogPage() {
                   <div
                     style={{
                       border: "1px solid rgba(0,0,0,0.07)",
-                      borderRadius: "8px",
+                      borderRadius: "2px",
                       padding: "16px 18px",
                       marginBottom: "16px",
                     }}
@@ -308,7 +301,7 @@ export default function ProductBlogPage() {
                         key={m.label}
                         style={{
                           border: "1px solid rgba(0,0,0,0.07)",
-                          borderRadius: "7px",
+                          borderRadius: "2px",
                           padding: "12px 10px",
                           textAlign: "center",
                         }}
