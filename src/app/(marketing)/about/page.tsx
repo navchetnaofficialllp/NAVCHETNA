@@ -99,6 +99,14 @@ const team = [
     github: "https://github.com/Suman1214129",
   },
   {
+    name: "Kuldeep Thakar",
+    role: "Partnership Officer",
+    desc: "Driving strategic collaborations, institutional alliances, and ecosystem partnerships across key markets.",
+    avatar: "/assets/kuldeep1.jpeg",
+    linkedin: "#",
+    tag: "Partnership Officer",
+  },
+  {
     name: "Tanmay",
     role: "Intern",
     desc: "Dedicated team member contributing to innovative solutions and technical excellence.",
@@ -370,18 +378,7 @@ export default function AboutPage() {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
 
-              {/* Tag */}
-              <div
-                className="inline-flex items-center gap-2 px-3 py-1.5 mb-7 rounded-full"
-                style={{ background: "rgba(0,0,0,0.04)", border: "1px solid rgba(0,0,0,0.09)" }}
-              >
-                <span className="size-1.5 rounded-full" style={{ background: "rgba(0,0,0,0.3)" }} />
-                <span
-                  style={{ letterSpacing: "0.3px", fontFamily: "'Inter', sans-serif", color: "rgba(0,0,0,0.45)", fontSize: "11px", fontWeight: 600 }}
-                >
-                  Our Story - Est. September 2024
-                </span>
-              </div>
+              
 
               {/* Headline */}
               <h1
