@@ -379,35 +379,6 @@ export default function ProductsPage() {
 
                         {/* ── 6. IDLE: center lock-up ── */}
                         <div className="absolute inset-0 flex flex-col items-center justify-center gap-2.5 px-6 z-20 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:opacity-0 group-hover:-translate-y-3 group-hover:scale-95">
-                          {/* Badge */}
-                          <div
-                            className="inline-flex items-center gap-1.5 rounded-full mb-1"
-                            style={{
-                              padding: "4px 10px",
-                              background: `rgba(20,18,14,0.75)`,
-                              border: `1px solid rgba(${accentRgb},0.28)`,
-                              backdropFilter: "blur(12px)",
-                              boxShadow: `0 0 0 1px rgba(0,0,0,0.3), 0 1px 4px rgba(0,0,0,0.25)`,
-                            }}
-                          >
-                            <span
-                              className="w-[5px] h-[5px] rounded-full animate-pulse flex-shrink-0"
-                              style={{ background: accentHex, boxShadow: `0 0 5px 2px rgba(${accentRgb},0.80)` }}
-                            />
-                            <span
-                              style={{
-                                fontFamily: "var(--font-body), system-ui, sans-serif",
-                                fontSize: "8px",
-                                fontWeight: 700,
-                                letterSpacing: "0.16em",
-                                textTransform: "uppercase",
-                                color: `rgba(${accentRgb},0.85)`,
-                              }}
-                            >
-                              Coming Soon
-                            </span>
-                          </div>
-
                           {/* Product name — bold typographic statement */}
                           <p
                             className="text-center select-none"
