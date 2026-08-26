@@ -255,7 +255,7 @@ export default function ProductsPage() {
                     </div>
 
                     <div className="flex flex-col pb-4 pt-2">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2 gap-1 sm:gap-0">
+                      <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <h3
                             style={{
@@ -274,11 +274,6 @@ export default function ProductsPage() {
                               Flagship
                             </span>
                           )}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="inline-flex rounded-full border border-black/[0.08] bg-black/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-black/50">
-                            {p.tag}
-                          </span>
                         </div>
                       </div>
                     </div>
@@ -427,21 +422,6 @@ export default function ProductsPage() {
                           >
                             {p.name}
                           </p>
-
-                          {/* Tag — spaced uppercase */}
-                          <p
-                            className="text-center select-none"
-                            style={{
-                              fontFamily: "var(--font-body), system-ui, sans-serif",
-                              fontSize: "8.5px",
-                              fontWeight: 600,
-                              letterSpacing: "0.20em",
-                              textTransform: "uppercase",
-                              color: `rgba(${accentRgb},0.55)`,
-                            }}
-                          >
-                            {p.tag}
-                          </p>
                         </div>
 
                         {/* ── 7. HOVER: description panel ── */}
@@ -501,7 +481,7 @@ export default function ProductsPage() {
                       </div>
 
                       {/* ── Card meta below image ── */}
-                      <div className="flex items-start justify-between pt-3 pb-4 gap-3">
+                      <div className="flex items-center justify-between pt-3 pb-4 gap-3">
                         <div>
                           <h3
                             style={{
@@ -515,18 +495,6 @@ export default function ProductsPage() {
                           >
                             {p.name}
                           </h3>
-                          <p
-                            className="mt-0.5"
-                            style={{
-                              fontFamily: "var(--font-body), system-ui, sans-serif",
-                              fontSize: "10px",
-                              fontWeight: 500,
-                              color: "rgba(0,0,0,0.38)",
-                              letterSpacing: "0.01em",
-                            }}
-                          >
-                            {p.tag}
-                          </p>
                         </div>
                         <span
                           className="shrink-0 rounded-full mt-0.5"
