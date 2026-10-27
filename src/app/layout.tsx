@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   description:
     "From education to enterprise, we empower growth through technology, creativity, and conscious innovation.",
   icons: {
-    icon: "https://navchenta.in/logo.svg",
-    apple: "https://navchenta.in/logo.svg",
+    icon: "/assets/navhcetna%20logo.png",
+    apple: "/assets/navhcetna%20logo.png",
   },
 };
 
