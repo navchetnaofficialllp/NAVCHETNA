@@ -358,6 +358,40 @@ console.log(result.questions);`,
     tags: ["Storage", "Infrastructure", "DevOps"],
     related: [{ slug: "vajra", title: "Vajra GPU Cloud", badge: "Infrastructure", desc: "Sovereign serverless GPU cloud" }],
   },
+  "rux": {
+    title: "RUX: Everything a Developer Needs, All in One Place",
+    badge: "Developer Platform", date: "2025",
+    image: "/assets/rux.jpeg",
+    hero: "RUX brings the tools developers use to learn, build, and ship software together in one platform, from integrated development environments and APIs to deployment and hands-on practice.",
+    sections: [
+      {
+        heading: "A Complete Development Workspace",
+        body: "RUX combines core development tools in one place, helping developers move from an idea to a working project without stitching together a fragmented toolchain.",
+        bullets: [
+          "Integrated development environment (IDE)",
+          "Agentic development environment (ADE)",
+          "Deployment Kit for taking projects live",
+          "Paid and open-source APIs and SDKs",
+        ],
+      },
+      {
+        heading: "Learn, Practice, and Build",
+        body: "Learning resources sit alongside practical development tools so developers can build skills and apply them in the same workspace.",
+        bullets: [
+          "Learning Lab and Practice Lab",
+          "Technical learning content and videos",
+          "Tools for experimenting with APIs and SDKs",
+          "A connected workflow from learning to deployment",
+        ],
+      },
+    ],
+    readTime: "6 min read",
+    tags: ["Developer Tools", "Platform", "Learning"],
+    related: [
+      { slug: "kriya", title: "Kriya AI Builder", badge: "Coming Soon", desc: "Build from plain-English descriptions" },
+      { slug: "osmiumllm", title: "OsmiumLLM", badge: "Flagship", desc: "Education-focused language model" },
+    ],
+  },
 };
 
 export default function ProductArticlePage({ params }: { params: Promise<{ slug: string }> }) {
