@@ -557,11 +557,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0;
 }
 
-/* ── Hide footer on blog pages ── */
-body:has([data-hide-footer]) #global-footer {
-  display: none !important;
-}
-
 /* ── Modal open — hide navbar, lock scroll ── */
 html.modal-open {
   overflow: hidden;
