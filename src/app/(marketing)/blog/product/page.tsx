@@ -81,50 +81,6 @@ const articles = [
     readTime: "10 min read",
     tags: ["OCR", "AI", "Data"],
   },
-  {
-    id: "vajra", badge: "Infrastructure", date: "Mar 1, 2025", status: "Launched",
-    image: "/assets/osmium (1).png",
-    title: "Vajra: The AWS Lambda for AI",
-    desc: "A sovereign serverless GPU cloud designed to solve the industry's utilization crisis. Sub-500ms cold starts for 70B+ LLMs with a Frozen Core and Hot Adapter architecture, supporting 50 to 100 concurrent tenants on a single A100 GPU.",
-    metrics: [
-      { label: "Cold Start", value: "<500ms" }, { label: "Cost Reduction", value: "100x" },
-      { label: "Concurrency", value: "50-100" }, { label: "GPU Target", value: "A100" },
-    ],
-    readTime: "12 min read",
-    tags: ["GPU", "Cloud", "Infrastructure"],
-  },
-  {
-    id: "kriya", badge: "Coming Soon", date: "Q3 2025", status: "Coming Soon",
-    image: "/assets/kriya1.png",
-    title: "Kriya: The Future of AI-Integrated ERP & Project Management",
-    desc: "A platform where you describe what you want in plain English, and it actually builds it: code, websites, APIs, marketing campaigns. It automates the entire process from idea to deployment with careful guardrails and human oversight.",
-    readTime: "12 min read",
-    tags: ["AI", "Builder", "Automation"],
-  },
-  {
-    id: "crm", badge: "Coming Soon", date: "Q4 2025", status: "Coming Soon",
-    image: "/assets/osmium-mockup.png",
-    title: "Vyom: Intelligent Customer Relationship Management",
-    desc: "Advanced Customer Relationship Management tailored for seamless interactions and data-driven insights, combining AI-powered analytics with intuitive workflows.",
-    readTime: "8 min read",
-    tags: ["CRM", "Enterprise", "AI"],
-  },
-  {
-    id: "agentic-sde", badge: "Coming Soon", date: "Q4 2025", status: "Coming Soon",
-    image: "/assets/vedsegment-new.png",
-    title: "Vega: Autonomous Software Engineering",
-    desc: "Next-generation software engineering platform driven by agentic AI capabilities. Collaborates with development teams to write, review, test, and deploy code autonomously.",
-    readTime: "10 min read",
-    tags: ["AI", "SDE", "Engineering"],
-  },
-  {
-    id: "unified-storage", badge: "Coming Soon", date: "2026", status: "Coming Soon",
-    image: "/assets/nsl.png",
-    title: "Yugm: Synced Storage with Version Control",
-    desc: "A unified synced storage platform with inbuilt version control for seamless asset management across teams, projects, and infrastructure.",
-    readTime: "8 min read",
-    tags: ["Storage", "Infrastructure", "DevOps"],
-  },
 ];
 
 type Article = typeof articles[number];

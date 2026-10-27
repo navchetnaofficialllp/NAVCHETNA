@@ -55,16 +55,6 @@ const articles = [
     tags: ["Milestone", "Company", "Legal"],
   },
   {
-    id: "partnership",
-    badge: "Partnership",
-    date: "Jul 16, 2025",
-    title: "Navchetna Collaborates with AWS",
-    body: "We are excited to announce our collaboration with Amazon Web Services to accelerate the growth of Osmium AI and our future products. This partnership provides access to world-class cloud infrastructure and advanced AI tools, enabling us to scale rapidly and deliver secure, reliable solutions to learners across the nation.",
-    callout: { label: "Strategic Growth", text: "Through AWS, Navchetna will leverage Amazon S3, CloudFront, Cognito, and Bedrock to build the next generation of AI-powered educational technology." },
-    readTime: "5 min read",
-    tags: ["AWS", "Partnership", "Cloud"],
-  },
-  {
     id: "milestone",
     badge: "Milestone",
     date: "Sep 15, 2024",

@@ -42,7 +42,7 @@ const values = [
 
 const stats = [
   { value: "9.6k", label: "Organic Users", Icon: Users, sub: "" },
-  { value: "4", label: "Core Products", Icon: Layers, sub: "Live in market" },
+  { value: "8+", label: "Core Products", Icon: Layers, sub: "Live in market" },
   { value: "2024", label: "Founded", Icon: Calendar, sub: "September 6th" },
   { value: "5", label: "Co-Founders", Icon: Heart, sub: "One shared dream" },
 ];
@@ -610,7 +610,7 @@ export default function AboutPage() {
                       {[
                         { year: "2024", note: "Navchetna founded in Jodhpur" },
                         { year: "2025", note: "AWS Official Collaboration" },
-                        { year: "Now", note: "15+ team · 4 products live" },
+                        { year: "Now", note: "15+ team · 8+ products live" },
                       ].map((m) => (
                         <div key={m.year} className="flex items-center gap-4" style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "10px" }}>
                           <span style={{ fontFamily: "var(--font-heading)", fontSize: "13px", fontWeight: 400, color: "rgba(0,0,0,0.25)", letterSpacing: "-0.04em", minWidth: "36px" }}>{m.year}</span>

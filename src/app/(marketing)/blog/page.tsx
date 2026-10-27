@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-type FilterCategory = "All" | "Company Story" | "Product Insight" | "Milestone" | "Engineering";
+type FilterCategory = "All" | "Product Insight" | "Milestone";
 
 const posts = [
   // ── Product Insights ── (images from /blog/product/[slug] banner)
@@ -73,119 +73,18 @@ const posts = [
     href: "/blog/product/lmlens",
     category: "Product Insight" as FilterCategory,
   },
-  {
-    title: "Vajra: The AWS Lambda for AI",
-    date: "Mar 1, 2025",
-    image: "/assets/osmium (1).png",
-    alt: "Vajra GPU cloud infrastructure",
-    href: "/blog/product/vajra",
-    category: "Product Insight" as FilterCategory,
-  },
-  {
-    title: "Kriya: The Future of AI-Integrated ERP & Project Management",
-    date: "Q3 2025",
-    image: "/assets/kriya1.png",
-    alt: "Kriya ERP and project management",
-    href: "/blog/product/kriya",
-    category: "Product Insight" as FilterCategory,
-  },
-  {
-    title: "Vyom: Intelligent Customer Relationship Management",
-    date: "Q4 2025",
-    image: "/assets/osmium-mockup.png",
-    alt: "Vyom CRM platform",
-    href: "/blog/product/crm",
-    category: "Product Insight" as FilterCategory,
-  },
-  {
-    title: "Vega: Autonomous Software Engineering",
-    date: "Q4 2025",
-    image: "/assets/vedsegment-new.png",
-    alt: "Vega agentic software engineering",
-    href: "/blog/product/agentic-sde",
-    category: "Product Insight" as FilterCategory,
-  },
-  {
-    title: "Yugm: Unified Synced Storage with Version Control",
-    date: "2026",
-    image: "/assets/nsl.png",
-    alt: "Yugm unified storage",
-    href: "/blog/product/unified-storage",
-    category: "Product Insight" as FilterCategory,
-  },
-
-  // ── Company Stories ──
-  {
-    title: "How five friends built a technology company from one conversation",
-    date: "Sep 6, 2024",
-    image: "/assets/friends.jpg",
-    alt: "The founding team behind Navchetna",
-    href: "/blog/company#foundation",
-    category: "Company Story" as FilterCategory,
-  },
-
-  // ── Milestones ──
+  // ── Startup India recognition ──
   {
     title: "Navchetna is officially recognized by Startup India",
     date: "Dec 22, 2025",
-    image: "/DPIIT-header.png",
+    image: "/startup%20india.png",
     alt: "DPIIT Startup India recognition",
     href: "/blog/company#recognition",
     category: "Milestone" as FilterCategory,
   },
-  {
-    title: "Navchetna Officially Registered as NINELLMS Solutions LLP",
-    date: "Aug 6, 2025",
-    image: "/assets/friends.jpg",
-    alt: "Official company registration",
-    href: "/blog/company#registered",
-    category: "Milestone" as FilterCategory,
-  },
-  {
-    title: "Navchetna Collaborates with AWS",
-    date: "Jul 16, 2025",
-    image: "/DPIIT-header.png",
-    alt: "AWS Collaboration",
-    href: "/blog/company#partnership",
-    category: "Milestone" as FilterCategory,
-  },
-  {
-    title: "First Prototype of Osmium AI Completed",
-    date: "Sep 15, 2024",
-    image: "/assets/osmium-mockup.png",
-    alt: "Osmium AI first prototype",
-    href: "/blog/company#milestone",
-    category: "Milestone" as FilterCategory,
-  },
-
-  // ── Engineering ──
-  {
-    title: "Osmium AI Outperforms All Global LLMs in Educational Benchmarks",
-    date: "Aug 15, 2025",
-    image: "/assets/osmium (1).png",
-    alt: "Osmium AI benchmark results",
-    href: "/blog/company#research",
-    category: "Engineering" as FilterCategory,
-  },
-  {
-    title: "Fully Independent: Zero Dependencies, 100% In-House",
-    date: "Jan 10, 2025",
-    image: "/assets/aegis1.png",
-    alt: "Full independence engineering",
-    href: "/blog/company#independence",
-    category: "Engineering" as FilterCategory,
-  },
-  {
-    title: "Aegis Auth: 10+ Layers of Security, Live Now",
-    date: "Jan 15, 2025",
-    image: "/assets/aegis.png",
-    alt: "Aegis Auth launch",
-    href: "/blog/company#product",
-    category: "Engineering" as FilterCategory,
-  },
 ];
 
-const FILTERS: FilterCategory[] = ["All", "Company Story", "Product Insight", "Milestone", "Engineering"];
+const FILTERS: FilterCategory[] = ["All", "Product Insight", "Milestone"];
 
 export default function BlogPage() {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("All");
