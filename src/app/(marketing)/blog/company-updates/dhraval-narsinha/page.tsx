@@ -26,7 +26,7 @@ export default function DhravalProfilePage() {
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-10">
             <div className="relative w-40 h-40 md:w-56 md:h-56 shrink-0  overflow-hidden shadow-lg border border-black/[0.08]">
               <Image
-                src="/assets/dhraval.jpg"
+                src="/assets/dhraval .jpeg"
                 alt="Dhraval Narsinha"
                 fill
                 sizes="(max-width: 768px) 160px, 224px"

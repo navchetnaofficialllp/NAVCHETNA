@@ -106,17 +106,17 @@
   --border-strong: rgba(10,10,10,0.22);
 
   /* Radius scale — sharp, almost none */
-  --radius-sm: 2px;
-  --radius-md: 2px;
-  --radius-lg: 2px;
-  --radius-xl: 2px;
-  --radius-2xl: 2px;
+  --radius-sm: 8px;
+  --radius-md: 8px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-2xl: 8px;
   --radius-full: 9999px;
 
   /* Legacy aliases */
-  --soft-radius: 2px;
-  --panel-radius: 2px;
-  --card-radius: 2px;
+  --soft-radius: 8px;
+  --panel-radius: 8px;
+  --card-radius: 8px;
 
   /* Fonts */
   --font-waldenburg: "Waldenburg", system-ui, sans-serif;

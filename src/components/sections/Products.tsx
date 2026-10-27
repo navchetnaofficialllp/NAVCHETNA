@@ -9,6 +9,7 @@ const importantProducts = [
   { name: "Natraj", tag: "AR Anatomy", bg: "/assets/nataraj.png", href: "/blog/product/natraj" },
   { name: "Aegis Auth", tag: "Identity Management", bg: "/assets/aegis1.png", href: "/blog/product/aegis" },
   { name: "Kriya", tag: "Organizational AI", bg: "/assets/kriya1.png", href: "/blog/product/kriya" },
+  { name: "RUX", tag: "Developer Platform", bg: "/assets/rux.jpeg", href: "/blog/product/rux" },
 ];
 
 export function Products() {

@@ -3,7 +3,6 @@ import { TrustedBy } from "@/components/sections/TrustedBy";
 import { Platforms } from "@/components/sections/Platforms";
 import { Products } from "@/components/sections/Products";
 import { Process } from "@/components/sections/Process";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { LatestInsights } from "@/components/sections/LatestInsights";
 import { CTA } from "@/components/sections/CTA";
@@ -25,9 +24,6 @@ export default function Home() {
 
       {/* Work process: Plan → Development → Release */}
       <Process />
-
-      {/* Testimonials: auto-rotating with progress rings */}
-      <Testimonials />
 
       {/* FAQ */}
       <FAQ />

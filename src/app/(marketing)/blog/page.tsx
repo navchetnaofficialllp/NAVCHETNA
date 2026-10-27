@@ -10,6 +10,14 @@ type FilterCategory = "All" | "Company Story" | "Product Insight" | "Milestone" 
 const posts = [
   // ── Product Insights ── (images from /blog/product/[slug] banner)
   {
+    title: "RUX: Everything a Developer Needs, All in One Place",
+    date: "2025",
+    image: "/assets/rux.jpeg",
+    alt: "RUX developer platform",
+    href: "/blog/product/rux",
+    category: "Product Insight" as FilterCategory,
+  },
+  {
     title: "OsmiumLLM: A Global Benchmark in Education-Focused AI",
     date: "Aug 15, 2025",
     image: "/assets/osmium (1).png",

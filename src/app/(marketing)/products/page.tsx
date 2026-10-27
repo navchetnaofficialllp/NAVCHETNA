@@ -70,7 +70,17 @@ const launchedProducts = [
     desc: "World's smartest educational LLM with 96B parameters. Outperforms GPT-5, Claude 4, and Gemini 2.5 Pro across all educational benchmarks.",
     href: "/news/product/osmiumllm",
     isFlagship: true,
-  }
+  },
+  {
+    id: "rux",
+    name: "RUX",
+    tag: "Developer Platform",
+    category: "AI & Tools",
+    image: "/assets/rux.jpeg",
+    desc: "Everything a developer needs in one place — IDE, ADE, Deployment Kit, Learning Lab, Practice Lab, Learning Content, Videos, paid and open-source APIs, SDKs, and more.",
+    href: "/blog/product/rux",
+    isFlagship: true,
+  },
 ];
 
 const comingSoonProducts = [
