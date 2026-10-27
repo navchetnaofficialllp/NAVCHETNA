@@ -27,9 +27,9 @@ export default function ContactPage() {
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
-            <div className="overflow-hidden border border-black/[0.08] bg-white" style={{ borderRadius: "2px" }}>
+            <div className="overflow-hidden border border-black/[0.08] bg-white" style={{ borderRadius: "4px" }}>
               <div className="flex items-center gap-3 px-5 py-4 sm:px-7" style={{ borderBottom: "1px solid rgba(10,10,10,0.12)" }}>
-                <span className="inline-flex size-9 items-center justify-center bg-black/[0.04] text-black/80" style={{ borderRadius: "2px" }}>
+                <span className="inline-flex size-9 items-center justify-center bg-black/[0.04] text-black/80" style={{ borderRadius: "4px" }}>
                   <CalendarDays className="size-4"  strokeWidth={1.5} />
                 </span>
                 <div>

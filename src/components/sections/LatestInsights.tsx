@@ -68,7 +68,7 @@ export function LatestInsights() {
                 className="group block border bg-[#fafafa] transition-all hover:bg-white"
                 style={{
                   borderColor: "rgba(10,10,10,0.12)",
-                  borderRadius: "2px",
+                  borderRadius: "4px",
                 }}
               >
                 <div className="relative aspect-[16/10] w-full overflow-hidden border-b" style={{ borderColor: "rgba(10,10,10,0.12)" }}>

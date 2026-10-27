@@ -111,7 +111,7 @@ export function Process() {
 
           {/* Content details */}
           <div className="flex flex-col gap-8">
-            <div className="relative aspect-[21/9] w-full overflow-hidden bg-black/[0.02]" style={{ borderRadius: "2px" }}>
+            <div className="relative aspect-[21/9] w-full overflow-hidden bg-black/[0.02]" style={{ borderRadius: "4px" }}>
               <Image
                 src={["/assets/Frame 110.png", "/assets/Frame 112.png", "/assets/Frame 113.png"][active]}
                 alt={current.title}
@@ -127,7 +127,7 @@ export function Process() {
                   <div className="flex items-center gap-3">
                     {/* Flat icon box */}
                     <div className="flex w-8 h-8 shrink-0 items-center justify-center"
-                         style={{ background: "rgba(0,0,0,0.04)", borderRadius: "2px" }}>
+                         style={{ background: "rgba(0,0,0,0.04)", borderRadius: "4px" }}>
                       <item.icon weight="regular" className="w-4 h-4" style={{ color: "#0A0A0A" }} />
                     </div>
                     <p

@@ -283,7 +283,7 @@ export default function BlogPage() {
                       className="relative overflow-hidden bg-warm-50"
                       style={{
                         aspectRatio: "10/7",
-                        borderRadius: "2px",
+                        borderRadius: "4px",
                         border: "1px solid rgba(0,0,0,0.07)",
                       }}
                     >

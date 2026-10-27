@@ -143,7 +143,7 @@ export function Testimonials() {
                 width: "clamp(280px, 30vw, 380px)",
                 minHeight: "220px",
                 border: "1px solid rgba(10,10,10,0.12)",
-                borderRadius: "2px",
+                borderRadius: "4px",
                 padding: "28px",
               }}
             >

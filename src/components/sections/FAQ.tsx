@@ -94,7 +94,7 @@ export function FAQ() {
                       style={{
                         background: openIdx === index ? "#0A0A0A" : "rgba(0,0,0,0.04)",
                         color: openIdx === index ? "#FFFFFF" : "rgba(0,0,0,0.32)",
-                        borderRadius: "2px",
+                        borderRadius: "4px",
                       }}
                     >
                       {openIdx === index ? (

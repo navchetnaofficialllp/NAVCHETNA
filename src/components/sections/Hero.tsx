@@ -87,7 +87,7 @@ export function Hero() {
               background: "#ffffff",
               color: "#0A0A0A",
               letterSpacing: "-0.01em",
-              borderRadius: "2px",
+              borderRadius: "4px",
             }}
           >
             Schedule meeting
@@ -105,7 +105,7 @@ export function Hero() {
               color: "rgba(255,255,255,0.80)",
               border: "1px solid rgba(255,255,255,0.18)",
               letterSpacing: "-0.01em",
-              borderRadius: "2px",
+              borderRadius: "4px",
             }}
           >
             Explore products

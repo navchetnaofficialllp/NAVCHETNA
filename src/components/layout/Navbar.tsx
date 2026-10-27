@@ -110,7 +110,7 @@ export function Navbar() {
                 background: white ? "rgba(255,255,255,0.10)" : "#0A0A0A",
                 color: "#ffffff",
                 border: white ? "1px solid rgba(255,255,255,0.20)" : "1px solid #0A0A0A",
-                borderRadius: "2px",
+                borderRadius: "4px",
                 letterSpacing: "-0.01em",
               }}
             >
@@ -142,7 +142,7 @@ export function Navbar() {
               aria-label="Toggle navigation"
               aria-expanded={open}
               className="flex size-8 flex-col items-center justify-center gap-[5px]"
-              style={{ background: white ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.04)", borderRadius: "2px" }}
+              style={{ background: white ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.04)", borderRadius: "4px" }}
               onClick={() => setOpen((v) => !v)}
             >
               <span
@@ -173,7 +173,7 @@ export function Navbar() {
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="block px-4 py-3 text-[14px] font-normal text-black/80 transition-colors hover:bg-black/[0.04] hover:text-black"
-                    style={{ borderRadius: "2px" }}
+                    style={{ borderRadius: "4px" }}
                   >
                     {link.label}
                   </Link>
@@ -182,7 +182,7 @@ export function Navbar() {
                   href="/contact"
                   onClick={() => setOpen(false)}
                   className="mt-4 flex h-11 items-center justify-center bg-black text-[14px] font-normal text-white"
-                  style={{ borderRadius: "2px" }}
+                  style={{ borderRadius: "4px" }}
                 >
                   Schedule meeting
                 </Link>

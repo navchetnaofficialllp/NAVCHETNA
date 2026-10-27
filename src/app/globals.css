@@ -72,7 +72,7 @@
   --border: 0 0% 89%;
   --input: 0 0% 89%;
   --ring: 0 0% 3.9%;
-  --radius: 0.125rem;
+  --radius: 0.25rem;
 
   /* ── wild.as two-tone semantic vars ── */
   --ink: #0A0A0A;
@@ -105,7 +105,7 @@
   --border-default: var(--line);
   --border-strong: rgba(10,10,10,0.22);
 
-  /* Radius scale — sharp, almost none */
+  /* Radius scale — restrained, slightly softened corners */
   --radius-sm: 8px;
   --radius-md: 8px;
   --radius-lg: 8px;
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 6px;
   padding: 4px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
@@ -305,22 +305,22 @@ h1, h2, h3, h4, h5, h6 {
   .section-container { padding-inline: 2rem; }
 }
 
-/* Card — flat, hairline border, no shadow, no radius */
+/* Card — flat, hairline border, and no shadow */
 .shadcn-card {
   background: var(--card-bg);
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .el-surface {
   background: rgba(255,255,255,0.70);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .el-card {
   background: rgba(255,255,255,0.92);
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .el-card-hover {
@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6 {
 .el-muted-panel {
   background: rgba(0,0,0,0.025);
   border: 1px solid var(--line-subtle);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 /* ── Grid overlay — REMOVED (wild.as has no grid patterns) ── */
@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
 .el-section-grid::before { display: none; }
 
 /* ═══════════════════════════════════════════
-   BUTTONS — flat, dark, sharp corners (like Schedule button)
+   BUTTONS — flat, dark, subtly rounded corners
    ═══════════════════════════════════════════ */
 .btn {
   display: inline-flex;
@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   gap: 0.5rem;
   white-space: nowrap;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 0.8125rem;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #0A0A0A;
   color: #FFFFFF;
   border: 1px solid #0A0A0A;
-  border-radius: 2px;
+  border-radius: 4px;
   font-size: 13px;
   font-weight: 400;
   font-family: var(--font-body), sans-serif;
@@ -389,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   font-weight: 400;
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: 4px;
   letter-spacing: -0.01em;
   transition: all 0.25s var(--ease-smooth);
 }
@@ -403,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
   color: rgba(0,0,0,0.60);
   padding: 0.5rem 0.875rem;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 .btn-ghost:hover {
   background: rgba(0,0,0,0.04);
@@ -459,9 +459,9 @@ h1, h2, h3, h4, h5, h6 {
    ═══════════════════════════════════════════ */
 .section-divider {
   width: 100%;
-  height: 1px;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1.2px, transparent 1.2px);
-  background-size: 48px 1px;
+  height: 2px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1px, transparent 1px);
+  background-size: 6px 2px;
   background-repeat: repeat-x;
 }
 
@@ -469,10 +469,31 @@ h1, h2, h3, h4, h5, h6 {
 .section-sep {
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 1px;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1.2px, transparent 1.2px);
-  background-size: 48px 1px;
+  height: 2px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1px, transparent 1px);
+  background-size: 6px 2px;
   background-repeat: repeat-x;
+}
+
+@media (min-width: 640px) {
+  .section-sep {
+    left: 2rem;
+    right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-sep {
+    left: max(4rem, calc((100% - 64rem) / 2 + 4rem));
+    right: max(4rem, calc((100% - 64rem) / 2 + 4rem));
+  }
+}
+
+@media (min-width: 1440px) {
+  .section-sep {
+    left: calc((100% - 64rem) / 2 + 2rem);
+    right: calc((100% - 64rem) / 2 + 2rem);
+  }
 }
 
 /* ── Grid dot pattern — removed ── */
@@ -556,7 +577,7 @@ html.modal-open header {
 .glass-card {
   background: rgba(255,255,255,0.92);
   border: 1px solid var(--line);
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 /* ═══════════════════════════════════════════
@@ -568,7 +589,7 @@ html.modal-open header {
   justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: 2px;
+  border-radius: 4px;
   background: rgba(0,0,0,0.04);
   flex-shrink: 0;
   color: rgba(0,0,0,0.55);
@@ -580,7 +601,7 @@ html.modal-open header {
 .badge {
   display: inline-flex;
   align-items: center;
-  border-radius: 2px;
+  border-radius: 4px;
   padding: 3px 8px;
   font-size: 10px;
   font-weight: 600;
@@ -620,7 +641,7 @@ html.modal-open header {
   height: 22px;
   background: var(--ink);
   color: #fff;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 /* ═══════════════════════════════════════════
@@ -686,17 +707,17 @@ html.modal-open header {
    DOTTED LINE DIVIDERS (Original Style)
    ═══════════════════════════════════════════ */
 .dotted-line-x {
-  height: 1px;
+  height: 2px;
   width: 100%;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1.2px, transparent 1.2px);
-  background-size: 48px 1px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1px, transparent 1px);
+  background-size: 6px 2px;
   background-repeat: repeat-x;
 }
 .dotted-line-y {
-  width: 1px;
+  width: 2px;
   height: 100%;
-  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1.2px, transparent 1.2px);
-  background-size: 1px 48px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.16) 1px, transparent 1px);
+  background-size: 2px 6px;
   background-repeat: repeat-y;
 }
 
@@ -710,7 +731,7 @@ html.modal-open header {
   gap: 0.5rem;
   background: var(--ink);
   color: #fff;
-  border-radius: 2px;
+  border-radius: 4px;
   border: 1px solid rgba(255,255,255,0.08);
   font-size: 13px;
   font-weight: 500;

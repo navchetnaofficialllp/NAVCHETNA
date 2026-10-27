@@ -66,7 +66,7 @@ export function Products() {
                     target={product.href.startsWith("http") ? "_blank" : undefined}
                     rel={product.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   >
-                    <div className="relative mb-3 aspect-[16/11] w-full overflow-hidden bg-black/[0.02] transition-all duration-300" style={{ borderRadius: "2px", border: "1px solid rgba(10,10,10,0.12)" }}>
+                    <div className="relative mb-3 aspect-[16/11] w-full overflow-hidden bg-black/[0.02] transition-all duration-300" style={{ borderRadius: "4px", border: "1px solid rgba(10,10,10,0.12)" }}>
                       <Image
                         src={product.bg}
                         alt={product.name}

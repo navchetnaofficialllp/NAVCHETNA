@@ -188,7 +188,7 @@ export default function ProductBlogPage() {
                     className="relative w-full overflow-hidden"
                     style={{
                       aspectRatio: "16/9",
-                      borderRadius: "2px",
+                      borderRadius: "4px",
                       border: "1px solid rgba(0,0,0,0.07)",
                       background: "rgba(0,0,0,0.02)",
                     }}
@@ -269,7 +269,7 @@ export default function ProductBlogPage() {
                   <div
                     style={{
                       border: "1px solid rgba(0,0,0,0.07)",
-                      borderRadius: "2px",
+                      borderRadius: "4px",
                       padding: "16px 18px",
                       marginBottom: "16px",
                     }}
@@ -301,7 +301,7 @@ export default function ProductBlogPage() {
                         key={m.label}
                         style={{
                           border: "1px solid rgba(0,0,0,0.07)",
-                          borderRadius: "2px",
+                          borderRadius: "4px",
                           padding: "12px 10px",
                           textAlign: "center",
                         }}

@@ -50,7 +50,7 @@ export function Platforms() {
           <div className="grid md:grid-cols-3" style={{ borderTop: "1px solid rgba(10,10,10,0.12)", borderBottom: "1px solid rgba(10,10,10,0.12)" }}>
             {pillars.map((pillar, index) => (
               <div key={pillar.title} className="p-6 md:p-10" style={{ borderRight: index !== 2 ? "1px solid rgba(10,10,10,0.12)" : "none", borderBottom: index !== 2 ? "1px solid rgba(10,10,10,0.12)" : "none" }}>
-                <div className="inline-flex size-10 items-center justify-center mb-6" style={{ border: "1px solid rgba(10,10,10,0.12)", borderRadius: "2px" }}>
+                <div className="inline-flex size-10 items-center justify-center mb-6" style={{ border: "1px solid rgba(10,10,10,0.12)", borderRadius: "4px" }}>
                   <pillar.icon className="size-[18px] text-black/80 stroke-[1.5]" />
                 </div>
                 <h3 className="mb-3 text-[1.15rem] text-black font-normal leading-tight tracking-tight" style={{ fontFamily: "var(--font-waldenburg)", fontWeight: 400 }}>

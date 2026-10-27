@@ -463,7 +463,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
         {/* Callout — clean minimal */}
         {article.callout && (
           <ScrollReveal>
-            <div className="mb-16 overflow-hidden bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
+            <div className="mb-16 overflow-hidden bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "4px" }}>
               <div className="flex">
                 <div className="w-[3px] shrink-0 bg-black/70" />
                 <div className="px-7 py-6">
@@ -530,7 +530,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {article.achievements.map((a) => (
-                  <div key={a.title} className="border border-black/[0.08] p-6 hover:border-black/[0.14] transition-colors bg-white" style={{ borderRadius: "2px" }}>
+                  <div key={a.title} className="border border-black/[0.08] p-6 hover:border-black/[0.14] transition-colors bg-white" style={{ borderRadius: "4px" }}>
                     <h3 className="text-[0.95rem] text-black font-medium mb-3" style={{ fontFamily: "var(--font-heading)", letterSpacing: "-0.04em" }}>{a.title}</h3>
                     <p className="text-[0.82rem] text-black/58 leading-[1.7] mb-4" style={{ fontFamily: "var(--font-body)" }}>{a.desc}</p>
                     <span className="inline-block text-[0.72rem] font-medium px-2.5 py-1 text-black/60 rounded-full border border-black/[0.08] bg-black/[0.03]" style={{ fontFamily: "var(--font-body)" }}>{a.tag}</span>
@@ -574,7 +574,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <h2 className="text-black mb-5" style={{ fontFamily: "var(--font-heading)", fontSize: "1.35rem", letterSpacing: "-0.025em", lineHeight: 1.2 }}>
                 Performance Benchmarks
               </h2>
-              <div className="p-7 sm:p-9 mb-6 bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
+              <div className="p-7 sm:p-9 mb-6 bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "4px" }}>
                 <h3 className="text-[0.95rem] text-black font-medium mb-8" style={{ fontFamily: "var(--font-heading)" }}>{article.benchmarks.title}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {article.benchmarks.columns.map((col) => (
@@ -599,7 +599,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
         {/* Benchmark Callout */}
         {article.benchmarkCallout && (
           <ScrollReveal>
-            <div className="mb-16 overflow-hidden bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
+            <div className="mb-16 overflow-hidden bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "4px" }}>
               <div className="flex">
                 <div className="w-[3px] shrink-0 bg-black/70" />
                 <div className="px-7 py-6">
@@ -621,7 +621,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <p className="text-[0.9rem] text-black/68 leading-[1.75] mb-8" style={{ fontFamily: "var(--font-body)" }}>{article.enterprise.intro}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {article.enterprise.columns.map((col) => (
-                  <div key={col.heading} className="p-6 bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "2px" }}>
+                  <div key={col.heading} className="p-6 bg-black/[0.02] border border-black/[0.08]" style={{ borderRadius: "4px" }}>
                     <h3 className="text-[0.9rem] font-medium text-black mb-5" style={{ fontFamily: "var(--font-heading)" }}>{col.heading}</h3>
                     <ul className="space-y-3">
                       {col.items.map((item, i) => (
@@ -674,7 +674,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
               <div className="space-y-3">
                 {article.migration.steps.map((step, i) => (
                   <div key={i} className="flex items-start gap-4 px-5 py-4  border border-black/[0.06]" style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.018) 0%, rgba(0,0,0,0.005) 100%)" }}>
-                    <span className="shrink-0 size-6 flex items-center justify-center bg-black/[0.06] text-[0.72rem] font-medium text-black/80 mt-[1px]" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>{i + 1}</span>
+                    <span className="shrink-0 size-6 flex items-center justify-center bg-black/[0.06] text-[0.72rem] font-medium text-black/80 mt-[1px]" style={{ borderRadius: "4px", fontFamily: "var(--font-body)" }}>{i + 1}</span>
                     <span className="text-[0.875rem] text-black/72 leading-[1.7] pt-[2px]" style={{ fontFamily: "var(--font-body)" }}>{step}</span>
                   </div>
                 ))}
@@ -705,7 +705,7 @@ export default function ProductArticlePage({ params }: { params: Promise<{ slug:
             {article.tags && article.tags.length > 0 && (
               <div className="flex flex-wrap gap-1.5">
                 {article.tags.map((tag) => (
-                  <span key={tag} className="border border-black/[0.07] px-2.5 py-1 text-[11px] font-normal text-black/50" style={{ borderRadius: "2px", fontFamily: "var(--font-body)" }}>
+                  <span key={tag} className="border border-black/[0.07] px-2.5 py-1 text-[11px] font-normal text-black/50" style={{ borderRadius: "4px", fontFamily: "var(--font-body)" }}>
                     #{tag}
                   </span>
                 ))}

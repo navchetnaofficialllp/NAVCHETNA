@@ -557,7 +557,7 @@ export default function ProductsPage() {
               style={{
                 background: "#FAFAFA",
                 border: "1px solid rgba(10,10,10,0.12)",
-                borderRadius: "2px",
+                borderRadius: "4px",
                 padding: "clamp(2.5rem, 8vw, 4rem) clamp(1.5rem, 5vw, 3rem)",
               }}
             >

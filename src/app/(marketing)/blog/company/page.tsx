@@ -183,7 +183,7 @@ export default function CompanyBlogPage() {
                   <div
                     style={{
                       border: "1px solid rgba(0,0,0,0.07)",
-                      borderRadius: "2px",
+                      borderRadius: "4px",
                       padding: "18px 20px",
                       marginTop: "4px",
                     }}

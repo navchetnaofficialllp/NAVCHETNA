@@ -41,7 +41,7 @@ const values = [
 ];
 
 const stats = [
-  { value: "15+", label: "Team Members", Icon: Users, sub: "And growing fast" },
+  { value: "9.6k", label: "Organic Users", Icon: Users, sub: "" },
   { value: "4", label: "Core Products", Icon: Layers, sub: "Live in market" },
   { value: "2024", label: "Founded", Icon: Calendar, sub: "September 6th" },
   { value: "5", label: "Co-Founders", Icon: Heart, sub: "One shared dream" },

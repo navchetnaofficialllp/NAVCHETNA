@@ -185,7 +185,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center text-black/50 hover:text-black/70 hover:bg-black/[0.05] transition-colors" style={{ borderRadius: "2px" }}
+          className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center text-black/50 hover:text-black/70 hover:bg-black/[0.05] transition-colors" style={{ borderRadius: "4px" }}
         >
           <X size={15} />
         </button>
@@ -193,7 +193,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
         <div className="p-8">
           {sent ? (
             <div className="flex flex-col items-center justify-center py-10 text-center">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center bg-black/[0.05]" style={{ borderRadius: "2px" }}>
+              <div className="mb-4 flex h-14 w-14 items-center justify-center bg-black/[0.05]" style={{ borderRadius: "4px" }}>
                 <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6 text-black/80" stroke="currentColor" strokeWidth="1.8">
                   <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -202,7 +202,7 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
                 Inquiry Sent
               </h3>
               <p className="text-black/45 text-sm mb-6 leading-relaxed">We&apos;ll get back to you within 24 hours.</p>
-              <button onClick={onClose} className="bg-black text-white text-[13px] font-normal px-6 py-2.5 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "2px" }}>
+              <button onClick={onClose} className="bg-black text-white text-[13px] font-normal px-6 py-2.5 hover:bg-[#3b5bd9] transition-colors" style={{ borderRadius: "4px" }}>
                 Close
               </button>
             </div>
@@ -274,14 +274,14 @@ function QuoteModal({ service, onClose }: { service: Service; onClose: () => voi
                 <button
                   type="button"
                   onClick={onClose}
-                  className="h-11 border border-black/12 text-sm font-normal text-black/80 hover:bg-black/[0.04] hover:text-black/80 transition-colors" style={{ borderRadius: "2px" }}
+                  className="h-11 border border-black/12 text-sm font-normal text-black/80 hover:bg-black/[0.04] hover:text-black/80 transition-colors" style={{ borderRadius: "4px" }}
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-11 bg-black text-white text-sm font-normal hover:bg-[#3b5bd9] transition-colors disabled:opacity-50 disabled:cursor-wait" style={{ borderRadius: "2px" }}
+                  className="h-11 bg-black text-white text-sm font-normal hover:bg-[#3b5bd9] transition-colors disabled:opacity-50 disabled:cursor-wait" style={{ borderRadius: "4px" }}
                 >
                   {isSubmitting ? "Sending..." : "Send Inquiry"}
                 </button>
@@ -321,14 +321,14 @@ export default function ServicesPage() {
                 From planning to engineering, AI, infrastructure, and brand experience, we help teams build clear systems without adding unnecessary complexity.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn btn-primary:bg-[#3b5bd9]" style={{ borderRadius: "2px" }}>
+                <Link href="/contact" className="btn btn-primary:bg-[#3b5bd9]" style={{ borderRadius: "4px" }}>
                   Schedule a Call
                   <CaretRight weight="bold" className="size-3.5 text-white/52" />
                 </Link>
                 <button
                   type="button"
                   onClick={() => scrollRef.current?.scrollIntoView({ behavior: "smooth" })}
-                  className="inline-flex h-10 items-center justify-center gap-2 border border-black/10 px-5 text-[13px] font-normal text-black/70 transition-colors hover:bg-black/5" style={{ borderRadius: "2px" }}
+                  className="inline-flex h-10 items-center justify-center gap-2 border border-black/10 px-5 text-[13px] font-normal text-black/70 transition-colors hover:bg-black/5" style={{ borderRadius: "4px" }}
                 >
                   View Services
                   <ArrowDown weight="bold" className="size-3.5" />
@@ -435,7 +435,7 @@ export default function ServicesPage() {
               style={{
                 background: "#FAFAFA",
                 border: "1px solid rgba(10,10,10,0.12)",
-                borderRadius: "2px",
+                borderRadius: "4px",
                 padding: "clamp(2.5rem, 8vw, 4rem) clamp(1.5rem, 5vw, 3rem)",
               }}
             >

@@ -169,7 +169,7 @@ export default function CareerPage() {
             className="relative isolate overflow-hidden flex flex-col items-center text-center bg-[#fafafa]"
             style={{
               border: "1px solid rgba(0,0,0,0.08)",
-              borderRadius: "2px",
+              borderRadius: "4px",
               padding: "clamp(2.5rem, 8vw, 3.5rem) clamp(1.5rem, 5vw, 3rem)",
             }}
           >
