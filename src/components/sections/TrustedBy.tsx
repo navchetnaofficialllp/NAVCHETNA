@@ -2,7 +2,7 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const logos = [
-  { src: "/assets/aws.svg",      alt: "AWS",      w: 112, h: 36 },
+  { src: "/assets/aws.svg",      alt: "AWS",      w: 130, h: 42 },
   { src: "/assets/homeguru.svg", alt: "Homeguru", w: 140, h: 32 },
   // istart — 500x122 aspect ratio
   { src: "/istart.png",          alt: "iStart",   w: 164, h: 40 },
