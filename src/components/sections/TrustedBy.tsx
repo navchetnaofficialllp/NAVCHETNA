@@ -2,16 +2,14 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const logos = [
-  // aws.svg — wide SVG, ~3:1 approx
-  { src: "/assets/aws.svg",      alt: "AWS",      w: 96,  h: 32 },
-  // homeguru.svg — wide wordmark
+  { src: "/assets/aws.svg",      alt: "AWS",      w: 112, h: 36 },
   { src: "/assets/homeguru.svg", alt: "Homeguru", w: 140, h: 32 },
-  // plaur.svg — wide wordmark
-  { src: "/assets/plaur.svg",    alt: "Plaur",    w: 120, h: 32 },
-  // istart — 1:1 square (500x500)
-  { src: "/istart.png",          alt: "iStart",   w: 32,  h: 32 },
-  // rasen — 3.34:1 (137x41)
-  { src: "/rasen-logo-removebg-preview.png", alt: "Rasen", w: 107, h: 32 },
+  // istart — 500x122 aspect ratio
+  { src: "/istart.png",          alt: "iStart",   w: 164, h: 40 },
+  // dpiit — 1969x655 aspect ratio
+  { src: "/DPIIT-header.png",    alt: "DPIIT",    w: 120, h: 40 },
+  // rasen — 137x41 aspect ratio
+  { src: "/rasen-logo-removebg-preview.png", alt: "Rasen", w: 80, h: 24 },
 ];
 
 export function TrustedBy() {

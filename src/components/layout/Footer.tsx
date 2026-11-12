@@ -93,13 +93,13 @@ export function Footer() {
         </div>
 
         {/* Badge row — visually balanced heights per logo */}
-        <div style={{ borderTop: "1px solid rgba(10,10,10,0.12)", padding: "1.5rem 0", display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" as const }}>
-          <img src="/assets/aws startup.png"                            alt="AWS Startups"    style={{ height: "44px", width: "auto", flexShrink: 0 }} />
-          <img src="/assets/Oracle-Logo-1.png"                          alt="Oracle"          style={{ height: "44px", width: "auto", flexShrink: 0 }} />
-          <img src="/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception" style={{ height: "44px", width: "auto", flexShrink: 0 }} />
-          <img src="/DPIIT-header.png"                                   alt="DPIIT"           style={{ height: "44px", width: "auto", flexShrink: 0 }} />
-          <img src="/istart.png"                                         alt="iStart"          style={{ height: "44px", width: "auto", flexShrink: 0 }} />
-          <img src="/rasen-logo-removebg-preview.png"                    alt="Rasen"           style={{ height: "22px", width: "auto", flexShrink: 0 }} />
+        <div className="flex flex-wrap items-center gap-5 sm:gap-7" style={{ borderTop: "1px solid rgba(10,10,10,0.12)", padding: "1.25rem 0" }}>
+          <img src="/assets/aws startup.png"                            alt="AWS Startups"    style={{ height: "32px", width: "auto", maxHeight: "32px", objectFit: "contain", flexShrink: 0 }} />
+          <img src="/assets/Oracle-Logo-1.png"                          alt="Oracle"          style={{ height: "32px", width: "auto", maxHeight: "32px", objectFit: "contain", flexShrink: 0 }} />
+          <img src="/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception" style={{ height: "32px", width: "auto", maxHeight: "32px", objectFit: "contain", flexShrink: 0 }} />
+          <img src="/DPIIT-header.png"                                   alt="DPIIT"           style={{ height: "auto", width: "96px",  maxWidth: "96px",  objectFit: "contain", flexShrink: 0 }} />
+          <img src="/istart.png"                                         alt="iStart"          style={{ height: "auto", width: "96px",  maxWidth: "96px",  objectFit: "contain", flexShrink: 0 }} />
+          <img src="/rasen-logo-removebg-preview.png"                    alt="Rasen"           style={{ height: "18px", width: "auto", maxHeight: "18px", objectFit: "contain", flexShrink: 0 }} />
         </div>
 
         {/* Bottom bar */}
