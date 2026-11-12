@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const productLinks = [
   { href: "/products", label: "All Products" },
@@ -93,16 +92,14 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Badge row */}
-        <div style={{ borderTop: "1px solid rgba(10,10,10,0.12)", padding: "1.5rem 0", display: "flex", alignItems: "center", gap: "1.5rem", flexWrap: "wrap" as const }}>
-          <span className="relative block h-12 w-28 overflow-hidden">
-            <Image src="/assets/aws%20startup.png" alt="AWS Startups logo" fill sizes="112px" className="object-cover" />
-          </span>
-          <span className="relative block h-12 w-24">
-            <Image src="/assets/Oracle-Logo-1.png" alt="Oracle logo" fill sizes="96px" className="object-contain" />
-          </span>
-          <img src="/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception" style={{ height: "48px", width: "auto" }} />
-          <img src="/DPIIT-header.png" alt="DPIIT Recognized" className="dpiit-logo" style={{ height: "48px", width: "auto" }} />
+        {/* Badge row — visually balanced heights per logo */}
+        <div style={{ borderTop: "1px solid rgba(10,10,10,0.12)", padding: "1.5rem 0", display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" as const }}>
+          <img src="/assets/aws startup.png"                            alt="AWS Startups"    style={{ height: "44px", width: "auto", flexShrink: 0 }} />
+          <img src="/assets/Oracle-Logo-1.png"                          alt="Oracle"          style={{ height: "44px", width: "auto", flexShrink: 0 }} />
+          <img src="/nvidia-inception-program-badge-rgb-for-screen.svg" alt="NVIDIA Inception" style={{ height: "44px", width: "auto", flexShrink: 0 }} />
+          <img src="/DPIIT-header.png"                                   alt="DPIIT"           style={{ height: "44px", width: "auto", flexShrink: 0 }} />
+          <img src="/istart.png"                                         alt="iStart"          style={{ height: "44px", width: "auto", flexShrink: 0 }} />
+          <img src="/rasen-logo-removebg-preview.png"                    alt="Rasen"           style={{ height: "22px", width: "auto", flexShrink: 0 }} />
         </div>
 
         {/* Bottom bar */}

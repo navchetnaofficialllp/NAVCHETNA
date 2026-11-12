@@ -22,11 +22,11 @@ export function LatestInsights() {
       image: "/assets/nataraj_mockup.png"
     },
     {
-      title: "One on One: Where Teaching Meets Intelligence",
-      date: "Apr 15, 2025",
+      title: "Connectt.live: Meetings That Think With You",
+      date: "Now Available",
       tag: "Product Launch",
-      link: "/blog/product/vedsegment",
-      image: "/assets/vedsegment-new.png"
+      link: "/blog/product/connectt",
+      image: "/assets/connecttbg.png"
     }
   ];
 

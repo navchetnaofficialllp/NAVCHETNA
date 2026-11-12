@@ -2,9 +2,16 @@ import Image from "next/image";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 const logos = [
-  { src: "/assets/aws.svg",      alt: "AWS",      w: "w-20 md:w-24",  h: "h-10 md:h-12" },
-  { src: "/assets/homeguru.svg", alt: "Homeguru", w: "w-36 md:w-44",  h: "h-9 md:h-11" },
-  { src: "/assets/plaur.svg",    alt: "Plaur",    w: "w-32 md:w-40",  h: "h-9 md:h-11" },
+  // aws.svg — wide SVG, ~3:1 approx
+  { src: "/assets/aws.svg",      alt: "AWS",      w: 96,  h: 32 },
+  // homeguru.svg — wide wordmark
+  { src: "/assets/homeguru.svg", alt: "Homeguru", w: 140, h: 32 },
+  // plaur.svg — wide wordmark
+  { src: "/assets/plaur.svg",    alt: "Plaur",    w: 120, h: 32 },
+  // istart — 1:1 square (500x500)
+  { src: "/istart.png",          alt: "iStart",   w: 32,  h: 32 },
+  // rasen — 3.34:1 (137x41)
+  { src: "/rasen-logo-removebg-preview.png", alt: "Rasen", w: 107, h: 32 },
 ];
 
 export function TrustedBy() {
@@ -41,14 +48,15 @@ export function TrustedBy() {
                 {logos.map((logo) => (
                   <div
                     key={`${set}-${logo.alt}`}
-                    className={`relative ${logo.w} ${logo.h} opacity-30 hover:opacity-60 transition-opacity duration-300 grayscale flex-shrink-0`}
+                    className="relative opacity-30 hover:opacity-60 transition-opacity duration-300 grayscale flex-shrink-0"
+                    style={{ width: logo.w, height: logo.h }}
                   >
                     <Image
                       src={logo.src}
                       alt={logo.alt}
                       fill
                       className="object-contain"
-                      sizes="176px"
+                      sizes={`${logo.w}px`}
                     />
                   </div>
                 ))}
